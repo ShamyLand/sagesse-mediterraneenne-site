@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  /* Mediterranean Sand & Olive Color Palette */
+  --color-background: #f7f4ef;
+  --color-foreground: #2d2a26;
+  
+  --color-card: #ffffff;
+  --color-card-foreground: #2d2a26;
+  
+  --color-primary: #5c6b4a;
+  --color-primary-foreground: #ffffff;
+  
+  --color-secondary: #e8e2d8;
+  --color-secondary-foreground: #2d2a26;
+  
+  --color-muted: #d4cfc5;
+  --color-muted-foreground: #6b6560;
+  
+  --color-accent: #8b7355;
+  --color-accent-foreground: #ffffff;
+  
+  --color-border: #d4cfc5;
+  --color-ring: #5c6b4a;
+  
+  /* Typography */
+  --font-sans: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  
+  /* Border Radius */
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar for Mediterranean feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
