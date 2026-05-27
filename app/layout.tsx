@@ -16,6 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://project-7coik.vercel.app"),
   title: "Sagesse Méditerranéenne",
   description: "Une phrase par jour pour penser plus lentement. Découvrez la sagesse méditerranéenne à travers des citations inspirantes en français, anglais et espagnol.",
   keywords: ["sagesse", "méditerranée", "citations", "wisdom", "quotes", "philosophy"],
@@ -24,6 +25,12 @@ export const metadata: Metadata = {
     title: "Sagesse Méditerranéenne",
     description: "Une phrase par jour pour penser plus lentement.",
     type: "website",
+    url: "/",
+  },
+  twitter: {
+    card: "summary",
+    title: "Sagesse Méditerranéenne",
+    description: "Une phrase par jour pour penser plus lentement.",
   },
 };
 
