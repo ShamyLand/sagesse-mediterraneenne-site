@@ -2,10 +2,10 @@ interface EmptyStateProps {
   message?: string;
 }
 
-export function EmptyState({ message = "Aucune phrase disponible pour le moment." }: EmptyStateProps) {
+export function EmptyState({ message = "Aucun fragment disponible pour le moment." }: EmptyStateProps) {
   return (
     <div className="w-full max-w-3xl mx-auto">
-      <div className="bg-card rounded-2xl shadow-lg border border-border/50 p-6 md:p-10 lg:p-12 text-center">
+      <div className="bg-card rounded-2xl shadow-lg border border-border/60 p-6 md:p-10 lg:p-12 text-center">
         {/* Decorative icon */}
         <div className="text-muted-foreground/40 mb-4 md:mb-6">
           <svg
