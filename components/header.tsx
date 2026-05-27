@@ -1,7 +1,7 @@
 export function Header() {
   return (
     <header className="w-full py-8 md:py-12 text-center">
-      <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground/50 font-light mb-4">
+      <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground/80 font-light mb-4">
         Les Lois Invisibles
       </p>
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight text-balance">
