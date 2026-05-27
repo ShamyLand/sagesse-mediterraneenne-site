@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -18,26 +19,30 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://project-7coik.vercel.app"),
   title: "Sagesse Méditerranéenne",
-  description: "Une phrase par jour pour penser plus lentement. Découvrez la sagesse méditerranéenne à travers des citations inspirantes en français, anglais et espagnol.",
-  keywords: ["sagesse", "méditerranée", "citations", "wisdom", "quotes", "philosophy"],
+  description:
+    "Chaque jour, un fragment extrait des Lois Invisibles — parole, dette, honneur, ennemis, maison, mer, exil, silence.",
+  keywords: ["sagesse", "méditerranée", "lois invisibles", "fragments", "wisdom", "philosophy"],
   authors: [{ name: "Sagesse Méditerranéenne" }],
   openGraph: {
-    title: "Sagesse Méditerranéenne",
-    description: "Une phrase par jour pour penser plus lentement.",
+    title: "Sagesse Méditerranéenne — Les Lois Invisibles",
+    description: "Chaque jour, un fragment extrait des Lois Invisibles.",
     type: "website",
     url: "/",
   },
   twitter: {
     card: "summary",
-    title: "Sagesse Méditerranéenne",
-    description: "Une phrase par jour pour penser plus lentement.",
+    title: "Sagesse Méditerranéenne — Les Lois Invisibles",
+    description: "Chaque jour, un fragment extrait des Lois Invisibles.",
   },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f7f4ef",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f7f4ef" },
+    { media: "(prefers-color-scheme: dark)", color: "#1c1a14" },
+  ],
 };
 
 export default function RootLayout({
@@ -46,8 +51,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="bg-background">
+    <html lang="fr" className="bg-background" suppressHydrationWarning>
+      <head>
+        {/* Anti-flash : applique .dark avant le premier rendu si nécessaire */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var t=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&d)){document.documentElement.classList.add('dark')}}catch(e){}})();",
+          }}
+        />
+      </head>
       <body className={`${cormorant.variable} ${inter.variable} font-serif antialiased`}>
+        <ThemeToggle />
         {children}
       </body>
     </html>
