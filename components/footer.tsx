@@ -8,7 +8,7 @@ export function Footer() {
           href="/"
           className="text-sm text-muted-foreground hover:text-foreground transition-colors font-light tracking-wide"
         >
-          Phrase du jour
+          Fragment du jour
         </Link>
         <span className="text-muted-foreground/30" aria-hidden="true">·</span>
         <Link
@@ -19,7 +19,7 @@ export function Footer() {
         </Link>
       </nav>
       <p className="text-sm text-muted-foreground font-light tracking-wide">
-        Sagesse Méditerranéenne — projet éditorial automatisé
+        Sagesse Méditerranéenne — corpus vivant des{" "}<em>Lois Invisibles</em>
       </p>
     </footer>
   );
