@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const fragments = [
   {
     title: "Sable et sel",
-    text: "Qui renie sa parole n’a plus visage sous le soleil.",
+    text: "Qui renie sa parole n'a plus visage sous le soleil.",
   },
   {
     title: "Au seuil",
@@ -40,7 +40,7 @@ export default function LivrePage() {
 
           {/* En-tête */}
           <div className="mb-12 md:mb-16">
-            <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground/50 font-light mb-4">
+            <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground/80 font-light mb-4">
               Sagesse Méditerranéenne
             </p>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight">
@@ -52,13 +52,13 @@ export default function LivrePage() {
           <div className="mb-14 md:mb-20 pl-6 md:pl-8 border-l-2 border-primary/15 space-y-4">
             <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed">
               Les Lois Invisibles n&rsquo;est pas un essai. C&rsquo;est un recueil de fragments.
-              Chaque fragment tient comme une pierre sèche : peu de mots, beaucoup de poids.
+              Chaque fragment tient comme une pierre sèche : peu de mots, beaucoup de poids.
             </p>
             <p className="text-base md:text-lg text-muted-foreground font-light leading-relaxed">
-              Les thèmes sont ceux de toujours : la parole donnée, la dette,
+              Les thèmes sont ceux de toujours : la parole donnée, la dette,
               l&rsquo;honneur, les ennemis, la maison, la mer, l&rsquo;exil, le silence, la mort.
             </p>
-            <p className="text-sm text-muted-foreground/50 font-light italic">
+            <p className="text-sm text-muted-foreground/70 font-light italic">
               Sagesse Méditerranéenne est l&rsquo;écosystème.
               Les Lois Invisibles est le recueil.
             </p>
@@ -66,7 +66,7 @@ export default function LivrePage() {
 
           {/* Section */}
           <div className="mb-10 md:mb-12">
-            <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground/50 font-light">
+            <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground/80 font-light">
               Section I — La parole
             </p>
           </div>
@@ -86,9 +86,9 @@ export default function LivrePage() {
           </div>
 
           {/* Colophon */}
-          <div className="mt-16 md:mt-20 pt-8 border-t border-border/30 text-center">
-            <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground/40 font-light">
-              Corpus en constitution — Fragments validés : 3
+          <div className="mt-16 md:mt-20 pt-8 border-t border-border/40 text-center">
+            <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground/60 font-light">
+              Corpus en constitution — Fragments validés : 3
             </p>
           </div>
 
