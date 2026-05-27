@@ -27,7 +27,7 @@ export function QuoteDisplay() {
     fetcher,
     {
       revalidateOnFocus: false,
-      dedupingInterval: 60000, // Cache for 1 minute
+      dedupingInterval: 60000,
     }
   );
 
@@ -43,13 +43,13 @@ export function QuoteDisplay() {
         onLanguageChange={setLanguage}
       />
 
-      {/* Quote Content */}
+      {/* Fragment Content */}
       <div className="w-full min-h-[280px] md:min-h-[320px] flex items-center justify-center">
         {isLoading && <QuoteCardSkeleton />}
 
         {error && (
           <ErrorState
-            message="Une erreur est survenue lors du chargement de la phrase."
+            message="Une erreur est survenue lors du chargement du fragment."
             onRetry={handleRetry}
           />
         )}
