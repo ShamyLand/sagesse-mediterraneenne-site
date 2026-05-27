@@ -18,10 +18,10 @@ export function QuoteCard({ title, text, language }: QuoteCardProps) {
       className="w-full max-w-3xl mx-auto"
       lang={langAttribute[language]}
     >
-      <div className="bg-card rounded-2xl shadow-lg border border-border/50 p-6 md:p-10 lg:p-12 transition-all duration-500 ease-out">
+      <div className="bg-card rounded-2xl shadow-lg border border-border/60 p-6 md:p-10 lg:p-12 transition-all duration-500 ease-out">
         {/* Guillemet ouvrant */}
         <div
-          className="text-primary/20 text-6xl md:text-7xl leading-none font-serif mb-2 md:mb-4 select-none"
+          className="text-primary/30 text-6xl md:text-7xl leading-none font-serif mb-2 md:mb-4 select-none"
           aria-hidden="true"
         >
           &ldquo;
@@ -41,7 +41,7 @@ export function QuoteCard({ title, text, language }: QuoteCardProps) {
 
         {/* Guillemet fermant */}
         <div
-          className="text-primary/20 text-6xl md:text-7xl leading-none font-serif text-right mt-2 md:mt-4 select-none"
+          className="text-primary/30 text-6xl md:text-7xl leading-none font-serif text-right mt-2 md:mt-4 select-none"
           aria-hidden="true"
         >
           &rdquo;
@@ -49,7 +49,7 @@ export function QuoteCard({ title, text, language }: QuoteCardProps) {
 
         {/* Attribution éditoriale */}
         <footer className="mt-4 md:mt-6 text-center" aria-hidden="true">
-          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground/30 font-light">
+          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground/60 font-light">
             Les Lois Invisibles
           </p>
         </footer>
