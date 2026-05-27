@@ -1,7 +1,7 @@
 import { Language } from "@/types/quote";
 
 interface QuoteCardProps {
-  title: string;
+  title: string | null;
   text: string;
   language: Language;
 }
@@ -24,10 +24,12 @@ export function QuoteCard({ title, text, language }: QuoteCardProps) {
           &ldquo;
         </div>
 
-        {/* Quote title */}
-        <h2 className="text-lg md:text-xl text-accent font-medium mb-4 md:mb-6 tracking-wide uppercase">
-          {title}
-        </h2>
+        {/* Quote title — hidden if null */}
+        {title && (
+          <h2 className="text-lg md:text-xl text-accent font-medium mb-4 md:mb-6 tracking-wide uppercase">
+            {title}
+          </h2>
+        )}
 
         {/* Quote text */}
         <blockquote className="text-xl md:text-2xl lg:text-3xl text-foreground leading-relaxed font-light text-balance">
