@@ -10,7 +10,7 @@ export function Footer() {
         >
           Fragment du jour
         </Link>
-        <span className="text-muted-foreground/30" aria-hidden="true">·</span>
+        <span className="text-muted-foreground/50" aria-hidden="true">·</span>
         <Link
           href="/livre"
           className="text-sm text-muted-foreground hover:text-foreground transition-colors font-light tracking-wide"
