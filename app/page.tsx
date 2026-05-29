@@ -52,16 +52,16 @@ export default function Home() {
           {/* Portes d'entrée */}
           <nav className="w-full mt-10 md:mt-14 flex flex-wrap justify-center gap-4">
             <Link
-              href="/livre"
+              href="/manifeste"
               className="px-6 py-3 rounded-lg border border-primary/40 bg-card text-foreground text-base font-medium tracking-wide hover:bg-secondary hover:border-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
-              {t("cta.book")}
+              {t("cta.manifesto")}
             </Link>
             <Link
-              href="/manifeste"
+              href="/livre"
               className="px-6 py-3 rounded-lg border border-border bg-card text-foreground text-base font-medium tracking-wide hover:bg-secondary hover:border-primary/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
-              {t("cta.manifesto")}
+              {t("cta.book")}
             </Link>
 
             {/* Recevoir une sagesse — placeholder désactivé (structure préparée, non branchée) */}
