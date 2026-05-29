@@ -41,11 +41,11 @@ export default function Home() {
             <DailyFragment moment={primary} variant="primary" />
           </section>
 
-          {/* Autre fragment — accessible en second plan */}
-          <section className="w-full mt-10 md:mt-12 max-w-2xl mx-auto" aria-label={t("home.also")}>
-            <p className="text-sm tracking-[0.18em] uppercase text-muted-foreground font-normal text-center mb-4">
-              {t("home.also")}
-            </p>
+          {/* Autre fragment — présence fantôme, en attente d'apparition (révélé au survol/focus) */}
+          <section
+            className="w-full mt-10 md:mt-12 max-w-2xl mx-auto opacity-50 hover:opacity-100 focus-within:opacity-100 transition-opacity duration-700 ease-out"
+            aria-label={t(secondary === "morning" ? "home.morning.label" : "home.evening.label")}
+          >
             <DailyFragment moment={secondary} variant="secondary" />
           </section>
 
