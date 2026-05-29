@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { LanguageProvider } from "@/lib/i18n/LanguageProvider";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -62,8 +63,10 @@ export default function RootLayout({
         />
       </head>
       <body className={`${cormorant.variable} ${inter.variable} font-serif antialiased`}>
-        <ThemeToggle />
-        {children}
+        <LanguageProvider>
+          <ThemeToggle />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
