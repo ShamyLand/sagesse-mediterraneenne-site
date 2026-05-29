@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Aperçu éditorial — Premiers fragments en cours de sélection",
+  title: "Aperçu éditorial",
   description:
     "Aperçu de travail. Premiers fragments en cours de sélection pour Les Lois Invisibles. Ceci n'est pas l'Édition I finale.",
   robots: { index: false, follow: false },

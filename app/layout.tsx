@@ -19,21 +19,30 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://project-7coik.vercel.app"),
-  title: "Sagesse Méditerranéenne",
+  // Nom public = "Les Lois Invisibles" (l'œuvre). "Sagesse Méditerranéenne" = écosystème.
+  title: {
+    default: "Les Lois Invisibles — Sagesse Méditerranéenne",
+    template: "%s · Les Lois Invisibles",
+  },
+  applicationName: "Les Lois Invisibles",
   description:
-    "Chaque jour, un fragment extrait des Lois Invisibles — parole, dette, honneur, ennemis, maison, mer, exil, silence.",
-  keywords: ["sagesse", "méditerranée", "lois invisibles", "fragments", "wisdom", "philosophy"],
-  authors: [{ name: "Sagesse Méditerranéenne" }],
+    "Les Lois Invisibles — une sagesse ancienne relue pour les failles du monde moderne. Un projet de Sagesse Méditerranéenne.",
+  keywords: ["Les Lois Invisibles", "Sagesse Méditerranéenne", "sagesse", "méditerranée", "fragments", "aphorismes", "wisdom", "philosophy"],
+  authors: [{ name: "Les Lois Invisibles" }],
   openGraph: {
-    title: "Sagesse Méditerranéenne — Les Lois Invisibles",
-    description: "Chaque jour, un fragment extrait des Lois Invisibles.",
+    title: "Les Lois Invisibles",
+    siteName: "Les Lois Invisibles",
+    description:
+      "Une sagesse ancienne relue pour les failles du monde moderne. Un projet de Sagesse Méditerranéenne.",
     type: "website",
     url: "/",
+    locale: "fr_FR",
   },
   twitter: {
     card: "summary",
-    title: "Sagesse Méditerranéenne — Les Lois Invisibles",
-    description: "Chaque jour, un fragment extrait des Lois Invisibles.",
+    title: "Les Lois Invisibles",
+    description:
+      "Une sagesse ancienne relue pour les failles du monde moderne. Un projet de Sagesse Méditerranéenne.",
   },
 };
 
