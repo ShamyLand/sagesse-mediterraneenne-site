@@ -64,20 +64,13 @@ export default function Home() {
               {t("cta.book")}
             </Link>
 
-            {/* Recevoir une sagesse — placeholder désactivé (structure préparée, non branchée) */}
-            <span className="inline-flex flex-col items-center gap-1">
-              <button
-                type="button"
-                disabled
-                aria-disabled="true"
-                className="px-6 py-3 rounded-lg border border-border/60 text-base text-muted-foreground font-medium tracking-wide cursor-not-allowed select-none"
-              >
-                {t("cta.receive")}
-              </button>
-              <span className="text-xs tracking-[0.15em] uppercase text-muted-foreground">
-                {t("cta.receive.soon")}
-              </span>
-            </span>
+            {/* Recevoir une sagesse — mène vers /recevoir (inscription préparée, non branchée) */}
+            <Link
+              href="/recevoir"
+              className="px-6 py-3 rounded-lg border border-border bg-card text-foreground text-base font-medium tracking-wide hover:bg-secondary hover:border-primary/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            >
+              {t("cta.receive")}
+            </Link>
           </nav>
         </div>
       </main>
