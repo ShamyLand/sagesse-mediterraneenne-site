@@ -54,6 +54,12 @@
 
 * { border-color: var(--color-border); }
 
+/* Garde-fous responsive — jamais de débordement horizontal sur mobile.
+   N'affecte pas le desktop (le contenu n'a jamais dépassé en largeur). */
+html, body { max-width: 100%; overflow-x: hidden; }
+/* Les longs mots/titres se cassent au lieu de pousser la largeur */
+h1, h2, h3, blockquote, p { overflow-wrap: break-word; }
+
 html { scroll-behavior: smooth; }
 
 body {
