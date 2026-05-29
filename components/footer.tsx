@@ -6,20 +6,20 @@ export function Footer() {
       <nav className="flex justify-center gap-6">
         <Link
           href="/"
-          className="text-sm text-muted-foreground hover:text-foreground transition-colors font-light tracking-wide"
+          className="text-sm text-muted-foreground hover:text-foreground transition-colors font-normal tracking-wide"
         >
           Fragment du jour
         </Link>
-        <span className="text-muted-foreground/50" aria-hidden="true">·</span>
+        <span className="text-muted-foreground" aria-hidden="true">·</span>
         <Link
           href="/livre"
-          className="text-sm text-muted-foreground hover:text-foreground transition-colors font-light tracking-wide"
+          className="text-sm text-muted-foreground hover:text-foreground transition-colors font-normal tracking-wide"
         >
           Le Livre
         </Link>
       </nav>
-      <p className="text-sm text-muted-foreground font-light tracking-wide">
-        Sagesse Méditerranéenne — corpus vivant des{" "}<em>Lois Invisibles</em>
+      <p className="text-sm text-muted-foreground font-normal tracking-wide">
+        <span className="text-foreground">Les Lois Invisibles</span> — un projet de Sagesse Méditerranéenne
       </p>
     </footer>
   );

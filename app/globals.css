@@ -4,19 +4,20 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-background: #f7f4ef;
-  --color-foreground: #2d2a26;
-  --color-card: #ffffff;
-  --color-card-foreground: #2d2a26;
+  /* Clair — parchemin chaud (V2 : moins blanc, plus papier ancien) */
+  --color-background: #f2e9d8;
+  --color-foreground: #26221c;
+  --color-card: #fbf5e9;
+  --color-card-foreground: #26221c;
   --color-primary: #5c6b4a;
   --color-primary-foreground: #ffffff;
-  --color-secondary: #e8e2d8;
-  --color-secondary-foreground: #2d2a26;
-  --color-muted: #d4cfc5;
-  --color-muted-foreground: #554e47;
-  --color-accent: #8b7355;
+  --color-secondary: #e6dcc9;
+  --color-secondary-foreground: #26221c;
+  --color-muted: #cdc3b0;
+  --color-muted-foreground: #4a4239;
+  --color-accent: #7c5e3c;
   --color-accent-foreground: #ffffff;
-  --color-border: #d4cfc5;
+  --color-border: #cdc3b0;
   --color-ring: #5c6b4a;
   --font-sans: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -35,11 +36,20 @@
   --color-secondary: #2c2a21;
   --color-secondary-foreground: #ede8dc;
   --color-muted: #3a362c;
-  --color-muted-foreground: #a09888;
+  --color-muted-foreground: #b3ab9a;
   --color-accent: #c4a27d;
   --color-accent-foreground: #1c1a14;
-  --color-border: #4a4538;
+  --color-border: #544e3f;
   --color-ring: #8fa674;
+}
+
+/* Accessibilité — respecter prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 * { border-color: var(--color-border); }
