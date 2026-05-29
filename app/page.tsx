@@ -11,13 +11,16 @@ import { useLanguage } from "@/lib/i18n/LanguageProvider";
 export default function Home() {
   const { t } = useLanguage();
 
-  // Mise en avant matin/soir selon l'heure locale (client uniquement, purement visuelle).
-  // Défaut neutre côté serveur pour éviter tout mismatch d'hydratation.
-  const [moment, setMoment] = useState<"morning" | "evening" | null>(null);
+  // Fragment mis en avant selon l'heure locale :
+  //   06h–18h → matin en avant ; 18h–06h → soir en avant.
+  // Défaut déterministe "morning" pour éviter tout mismatch d'hydratation ;
+  // corrigé après le montage selon l'heure réelle du visiteur.
+  const [primary, setPrimary] = useState<"morning" | "evening">("morning");
   useEffect(() => {
     const h = new Date().getHours();
-    setMoment(h >= 5 && h < 17 ? "morning" : "evening");
+    setPrimary(h >= 6 && h < 18 ? "morning" : "evening");
   }, []);
+  const secondary: "morning" | "evening" = primary === "morning" ? "evening" : "morning";
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -30,13 +33,20 @@ export default function Home() {
             <LanguageSelector />
           </section>
 
-          {/* Fragments du matin et du soir */}
+          {/* Fragment de l'heure — mis en avant */}
           <section
-            className="w-full flex flex-col md:flex-row gap-6 md:gap-8"
-            aria-label={`${t("home.morning.label")} / ${t("home.evening.label")}`}
+            className="w-full"
+            aria-label={t(primary === "morning" ? "home.morning.label" : "home.evening.label")}
           >
-            <DailyFragment moment="morning" emphasized={moment === "morning"} />
-            <DailyFragment moment="evening" emphasized={moment === "evening"} />
+            <DailyFragment moment={primary} variant="primary" />
+          </section>
+
+          {/* Autre fragment — accessible en second plan */}
+          <section className="w-full mt-10 md:mt-12 max-w-2xl mx-auto" aria-label={t("home.also")}>
+            <p className="text-sm tracking-[0.18em] uppercase text-muted-foreground font-normal text-center mb-4">
+              {t("home.also")}
+            </p>
+            <DailyFragment moment={secondary} variant="secondary" />
           </section>
 
           {/* Portes d'entrée */}

@@ -17,11 +17,11 @@ export function Header() {
         {t("work.title")}
       </h1>
 
-      {/* Intention éditoriale */}
-      <p className="mt-5 md:mt-6 text-lg md:text-xl text-foreground/90 font-normal leading-relaxed max-w-xl mx-auto text-pretty">
+      {/* Intention éditoriale — taille et contraste renforcés (lisible en mode sombre) */}
+      <p className="mt-5 md:mt-6 text-xl md:text-2xl text-foreground font-normal leading-relaxed max-w-2xl mx-auto text-pretty">
         {t("site.tagline")}
       </p>
-      <p className="mt-3 text-base text-muted-foreground font-normal leading-relaxed max-w-lg mx-auto text-pretty">
+      <p className="mt-3 text-base md:text-lg text-muted-foreground font-normal leading-relaxed max-w-xl mx-auto text-pretty">
         {t("site.intro")}
       </p>
 

@@ -24,10 +24,15 @@ export type I18nKey =
   | "home.evening.label"
   | "home.evening.intent"
   | "home.attribution"
+  | "home.also"
   | "cta.book"
   | "cta.manifesto"
   | "cta.receive"
-  | "cta.receive.soon";
+  | "cta.receive.soon"
+  | "nav.back.home"
+  | "manifesto.heading"
+  | "manifesto.intro"
+  | "manifesto.socle";
 
 export const dict: Record<Language, Record<I18nKey, string>> = {
   fr: {
@@ -45,10 +50,17 @@ export const dict: Record<Language, Record<I18nKey, string>> = {
     "home.evening.label": "Fragment du soir",
     "home.evening.intent": "Pour apaiser, prendre du recul, réparer.",
     "home.attribution": "Les Lois Invisibles",
+    "home.also": "Aussi disponible maintenant",
     "cta.book": "Lire le Livre",
     "cta.manifesto": "Lire le Manifeste",
     "cta.receive": "Recevoir une sagesse",
     "cta.receive.soon": "Bientôt",
+    "nav.back.home": "← Accueil",
+    "manifesto.heading": "Manifeste",
+    "manifesto.intro":
+      "Les Lois Invisibles ne sont pas un livre religieux, ni un recueil de citations, ni du développement personnel. C’est une relecture moderne des sagesses anciennes pour comprendre les failles humaines contemporaines.",
+    "manifesto.socle":
+      "Sagesse Méditerranéenne est le socle civilisationnel du projet : l’héritage des textes religieux, philosophiques, juridiques et moraux nés autour de la Méditerranée — Bible, Torah, Coran, traditions abrahamiques, stoïcisme, sagesse populaire.",
   },
   en: {
     "work.title": "The Invisible Laws",
@@ -65,10 +77,17 @@ export const dict: Record<Language, Record<I18nKey, string>> = {
     "home.evening.label": "Evening Fragment",
     "home.evening.intent": "To soften, to step back, to repair.",
     "home.attribution": "The Invisible Laws",
+    "home.also": "Also available now",
     "cta.book": "Read the Book",
     "cta.manifesto": "Read the Manifesto",
     "cta.receive": "Receive a wisdom",
     "cta.receive.soon": "Soon",
+    "nav.back.home": "← Home",
+    "manifesto.heading": "Manifesto",
+    "manifesto.intro":
+      "The Invisible Laws is not a religious book, nor a collection of quotations, nor self-help. It is a modern rereading of ancient wisdom to understand the contemporary fractures of human nature.",
+    "manifesto.socle":
+      "Mediterranean Wisdom is the civilizational foundation of the project: the heritage of the religious, philosophical, legal and moral texts born around the Mediterranean — Bible, Torah, Quran, Abrahamic traditions, Stoicism, popular wisdom.",
   },
   es: {
     "work.title": "Las Leyes Invisibles",
@@ -85,9 +104,16 @@ export const dict: Record<Language, Record<I18nKey, string>> = {
     "home.evening.label": "Fragmento de la noche",
     "home.evening.intent": "Para serenar, tomar distancia, reparar.",
     "home.attribution": "Las Leyes Invisibles",
+    "home.also": "También disponible ahora",
     "cta.book": "Leer el Libro",
     "cta.manifesto": "Leer el Manifiesto",
     "cta.receive": "Recibir una sabiduría",
     "cta.receive.soon": "Pronto",
+    "nav.back.home": "← Inicio",
+    "manifesto.heading": "Manifiesto",
+    "manifesto.intro":
+      "Las Leyes Invisibles no son un libro religioso, ni una colección de citas, ni desarrollo personal. Es una relectura moderna de las sabidurías antiguas para comprender las grietas humanas contemporáneas.",
+    "manifesto.socle":
+      "Sabiduría Mediterránea es el cimiento civilizatorio del proyecto: la herencia de los textos religiosos, filosóficos, jurídicos y morales nacidos en torno al Mediterráneo — Biblia, Torá, Corán, tradiciones abrahámicas, estoicismo, sabiduría popular.",
   },
 };
