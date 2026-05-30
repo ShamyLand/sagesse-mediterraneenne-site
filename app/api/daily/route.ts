@@ -42,7 +42,18 @@ function mapRow(r: Row): Loc {
   };
 }
 
+// ⛔ Correction de sécurité éditoriale (2026-05-29) :
+// L'accueil lit désormais un SET CURÉ STATIQUE (lib/curated-home-fragments.ts).
+// Supabase = réserve éditoriale, PAS source de publication directe.
+// Endpoint inerte tant que `final_editor_approved` n'existe pas + passe "éditeur de clarté".
+// Passer DAILY_FROM_SUPABASE à true UNIQUEMENT après ce gate.
+const DAILY_FROM_SUPABASE = false;
+
 export async function GET() {
+  if (!DAILY_FROM_SUPABASE) {
+    return Response.json(placeholderPayload("disabled_pending_final_editor_approved"), { status: 200 });
+  }
+
   const url = process.env.SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) {

@@ -1,14 +1,14 @@
 "use client";
 
-import useSWR from "swr";
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
-import { placeholderFragments, type Moment, type LocalizedFragment } from "@/lib/fragments-placeholder";
+import type { Moment } from "@/lib/fragments-placeholder";
+import { curatedHome, pickByDate } from "@/lib/curated-home-fragments";
 import type { I18nKey } from "@/lib/i18n/dictionary";
 import { cn } from "@/lib/utils";
 
 interface DailyFragmentProps {
   moment: Moment;
-  /** "primary" = mis en avant selon l'heure ; "secondary" = second plan accessible. */
   variant?: "primary" | "secondary";
 }
 
@@ -21,19 +21,20 @@ const INTENT_KEY: Record<Moment, I18nKey> = {
   evening: "home.evening.intent",
 };
 
-const fetcher = (u: string) => fetch(u).then((r) => r.json());
-
 export function DailyFragment({ moment, variant = "primary" }: DailyFragmentProps) {
   const { lang, t } = useLanguage();
   const isPrimary = variant === "primary";
+  const pool = curatedHome[moment];
 
-  // /api/daily fournit { morning, evening }. On NE met PAS de fallbackData (sinon SWR
-  // ne revalide pas le swap) : data est indéfini au montage → placeholder affiché,
-  // puis remplacé par les données réelles dès que le fetch résout. Placeholder = secours
-  // si l'API échoue (data reste indéfini).
-  const { data } = useSWR("/api/daily", fetcher, { revalidateOnFocus: false });
-  const fragment: LocalizedFragment =
-    (data && data[moment]) || placeholderFragments[moment];
+  // SOURCE STATIQUE CURÉE — l'accueil ne lit PLUS Supabase (réserve éditoriale).
+  // Index 0 au rendu serveur (stable) ; rotation par date après montage (client).
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const day = new Date().toLocaleDateString("en-CA"); // YYYY-MM-DD
+    const chosen = pickByDate(pool, day, moment);
+    setIdx(pool.indexOf(chosen));
+  }, [pool, moment]);
+  const fragment = pool[idx] || pool[0];
 
   return (
     <article
