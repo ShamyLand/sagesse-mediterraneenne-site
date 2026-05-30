@@ -1,7 +1,8 @@
 "use client";
 
+import useSWR from "swr";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
-import { placeholderFragments, type Moment } from "@/lib/fragments-placeholder";
+import { placeholderFragments, type Moment, type LocalizedFragment } from "@/lib/fragments-placeholder";
 import type { I18nKey } from "@/lib/i18n/dictionary";
 import { cn } from "@/lib/utils";
 
@@ -20,10 +21,19 @@ const INTENT_KEY: Record<Moment, I18nKey> = {
   evening: "home.evening.intent",
 };
 
+const fetcher = (u: string) => fetch(u).then((r) => r.json());
+
 export function DailyFragment({ moment, variant = "primary" }: DailyFragmentProps) {
   const { lang, t } = useLanguage();
-  const fragment = placeholderFragments[moment];
   const isPrimary = variant === "primary";
+
+  // /api/daily fournit { morning, evening } ; placeholders en secours immédiat.
+  const { data } = useSWR("/api/daily", fetcher, {
+    fallbackData: { morning: placeholderFragments.morning, evening: placeholderFragments.evening },
+    revalidateOnFocus: false,
+  });
+  const fragment: LocalizedFragment =
+    (data && data[moment]) || placeholderFragments[moment];
 
   return (
     <article
@@ -35,7 +45,6 @@ export function DailyFragment({ moment, variant = "primary" }: DailyFragmentProp
       )}
       aria-label={t(LABEL_KEY[moment])}
     >
-      {/* Moment + intention */}
       <header className={cn("mb-5", isPrimary ? "md:mb-7" : "md:mb-5")}>
         <p
           className={cn(
@@ -50,7 +59,6 @@ export function DailyFragment({ moment, variant = "primary" }: DailyFragmentProp
         </p>
       </header>
 
-      {/* Titre du fragment */}
       <h3
         className={cn(
           "tracking-[0.12em] uppercase text-foreground/70 font-medium mb-3",
@@ -60,7 +68,6 @@ export function DailyFragment({ moment, variant = "primary" }: DailyFragmentProp
         {fragment.title[lang]}
       </h3>
 
-      {/* Texte du fragment */}
       <blockquote
         className={cn(
           "text-foreground leading-relaxed font-normal text-balance",
@@ -70,7 +77,6 @@ export function DailyFragment({ moment, variant = "primary" }: DailyFragmentProp
         {fragment.text[lang]}
       </blockquote>
 
-      {/* Attribution */}
       <footer className={cn("border-t border-border", isPrimary ? "mt-7 pt-5" : "mt-5 pt-4")}>
         <p className="text-sm tracking-[0.18em] uppercase text-muted-foreground font-normal">
           {t("home.attribution")}
