@@ -27,11 +27,11 @@ export function DailyFragment({ moment, variant = "primary" }: DailyFragmentProp
   const { lang, t } = useLanguage();
   const isPrimary = variant === "primary";
 
-  // /api/daily fournit { morning, evening } ; placeholders en secours immédiat.
-  const { data } = useSWR("/api/daily", fetcher, {
-    fallbackData: { morning: placeholderFragments.morning, evening: placeholderFragments.evening },
-    revalidateOnFocus: false,
-  });
+  // /api/daily fournit { morning, evening }. On NE met PAS de fallbackData (sinon SWR
+  // ne revalide pas le swap) : data est indéfini au montage → placeholder affiché,
+  // puis remplacé par les données réelles dès que le fetch résout. Placeholder = secours
+  // si l'API échoue (data reste indéfini).
+  const { data } = useSWR("/api/daily", fetcher, { revalidateOnFocus: false });
   const fragment: LocalizedFragment =
     (data && data[moment]) || placeholderFragments[moment];
 
