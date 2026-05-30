@@ -56,6 +56,7 @@ export async function GET() {
       `?select=fr_title,fr_text,en_title,en_text,es_title,es_text,moment` +
       `&publication_status=eq.ready&human_validated=eq.true&clear_enough=eq.true` +
       `&moment=in.(morning,evening)&use_case=ov.{site,email}` +
+      `&fragment_type=in.(aphorism,law,short_fragment,dialogue)` + // wisdom_story exclu (doctrine clarté)
       `&en_text=not.is.null&es_text=not.is.null&en_title=not.is.null&es_title=not.is.null`;
 
     const res = await fetch(q, {
