@@ -1,9 +1,9 @@
 import type { Language } from "@/types/quote";
 
 /**
- * Extrait du livre affiché sur /livre — multilingue (fr/en/es), provisoire.
- * Traductions EN/ES de travail, à affiner par le pipeline éditorial plus tard.
- * "text" : paragraphes séparés par \n\n ; sauts de ligne internes (dialogue) par \n.
+ * Vitrine du Livre (/livre) — fragments GOLDÉS + sourcés (doctrine actuelle), pas les anciens V1/V2.
+ * 4 sentences courtes + 1 méditation longue. Aucune citation directe ; "format" = tradition d'inspiration.
+ * "text" : paragraphes séparés par \n\n.
  */
 
 export interface BookFragment {
@@ -14,55 +14,48 @@ export interface BookFragment {
 
 export const bookExtract: BookFragment[] = [
   {
-    title: {
-      fr: "Mémoire sous abonnement",
-      en: "Memory on Subscription",
-      es: "Memoria por suscripción",
-    },
-    format: { fr: "aphorisme · la mort", en: "aphorism · death", es: "aforismo · la muerte" },
+    title: { fr: "L'orgueil sourd", en: "Deaf Pride", es: "El orgullo sordo" },
+    format: { fr: "Proverbes", en: "Proverbs", es: "Proverbios" },
     text: {
-      fr: "Le marchand met la mémoire des morts sous abonnement; les vivants paient pour pleurer.",
-      en: "The merchant puts the memory of the dead on subscription; the living pay to mourn.",
-      es: "El mercader pone la memoria de los muertos en suscripción; los vivos pagan por llorar.",
+      fr: "L'orgueil ne se voit pas dans ce qu'on dit de soi, mais dans tout ce qu'on refuse d'entendre.",
+      en: "Pride is not seen in what one says about oneself, but in everything one refuses to hear.",
+      es: "El orgullo no se muestra en lo que uno dice de sí mismo, sino en todo lo que se niega a escuchar.",
     },
   },
   {
-    title: {
-      fr: "Le Nom Gravé",
-      en: "The Engraved Name",
-      es: "El nombre grabado",
-    },
-    format: { fr: "loi · la mort", en: "law · death", es: "ley · la muerte" },
+    title: { fr: "Le don qui oblige", en: "The Gift That Binds", es: "El don que obliga" },
+    format: { fr: "Stoïcisme", en: "Stoicism", es: "Estoicismo" },
     text: {
-      fr: "La tombe reçoit le nom du mort; les vivants y déposent les paroles que la honte ou l’orgueil ont retenues. La mort n’absout pas le retard.",
-      en: "The grave receives the name of the dead; the living lay there the words that shame or pride held back. Death does not absolve delay.",
-      es: "La tumba recibe el nombre del muerto; los vivos depositan allí las palabras que la vergüenza o el orgullo retuvieron. La muerte no absuelve la tardanza.",
+      fr: "Un cadeau qui attend de la reconnaissance n'en est plus un : c'est un prêt qui n'ose pas dire son nom.",
+      en: "A gift that expects recognition is no longer a gift: it is a loan that does not dare speak its name.",
+      es: "Un regalo que espera reconocimiento ya no es un regalo: es un préstamo que no se atreve a decir su nombre.",
     },
   },
   {
-    title: {
-      fr: "La rumeur vendue",
-      en: "The Sold Rumor",
-      es: "El rumor vendido",
-    },
-    format: { fr: "dialogue · la parole", en: "dialogue · speech", es: "diálogo · la palabra" },
+    title: { fr: "Le flatteur", en: "The Flatterer", es: "El adulador" },
+    format: { fr: "Proverbes", en: "Proverbs", es: "Proverbios" },
     text: {
-      fr: "— Marchand, tu as vendu le nom d’un homme sans l’avoir vu fauter.\n— Je n’ai rien inventé; la parole était déjà dans la foule.\n— Le témoin souleva le drap de l’étal : sous les pièces, le sceau du marchand collait encore à la tablette.",
-      en: "— Merchant, you sold a man’s name without ever seeing him sin.\n— I invented nothing; the word was already in the crowd.\n— The witness lifted the cloth of the stall: beneath the coins, the merchant’s seal still clung to the slab.",
-      es: "— Mercader, vendiste el nombre de un hombre sin haberlo visto faltar.\n— No inventé nada; la palabra ya estaba en la multitud.\n— El testigo levantó el paño del puesto: bajo las monedas, el sello del mercader aún se pegaba a la tabla.",
+      fr: "Le flatteur ne t'admire pas : il étudie l'endroit où tu baisses la garde.",
+      en: "The flatterer does not admire you: he studies where you let your guard down.",
+      es: "El adulador no te admira: estudia el lugar donde bajas la guardia.",
     },
   },
   {
-    title: {
-      fr: "Les trois colonnes",
-      en: "The Three Columns",
-      es: "Las tres columnas",
-    },
-    format: { fr: "récit · la mort", en: "tale · death", es: "relato · la muerte" },
+    title: { fr: "Jamais rassasié", en: "Never Satisfied", es: "Nunca saciado" },
+    format: { fr: "Sagesse biblique", en: "Biblical wisdom", es: "Sabiduría bíblica" },
     text: {
-      fr: "À sa mort, il ne laissa presque rien. Seulement un cahier avec trois colonnes : ce qu’il avait reçu, ce qu’il avait rendu, et ce qu’il avait gardé pour lui.\n\nL’héritier comprit alors qu’une vie ne se juge pas à ce qu’elle possède, mais à ce qu’elle restitue.",
-      en: "At his death, he left almost nothing. Only a notebook with three columns: what he had received, what he had given back, and what he had kept for himself.\n\nThe heir understood then that a life is judged not by what it owns, but by what it gives back.",
-      es: "A su muerte, no dejó casi nada. Solo un cuaderno con tres columnas: lo que había recibido, lo que había devuelto, y lo que había guardado para sí.\n\nEl heredero comprendió entonces que una vida no se juzga por lo que posee, sino por lo que restituye.",
+      fr: "Celui qui aime l'argent n'en a jamais assez : ce n'est pas la richesse qu'il poursuit, c'est l'angoisse de manquer.",
+      en: "He who loves money is never satisfied: it is not wealth he seeks, but the anxiety of lacking.",
+      es: "Quien ama el dinero nunca tiene suficiente: no busca la riqueza, sino la angustia de carecer.",
+    },
+  },
+  {
+    title: { fr: "Ce qu'on transmet", en: "What We Pass On", es: "Lo que transmitimos" },
+    format: { fr: "Méditation", en: "Meditation", es: "Meditación" },
+    text: {
+      fr: "On croit transmettre à ses enfants une maison, un nom, un métier. Mais ce qui passe vraiment, sans qu'on le décide, ce sont les peurs qu'on n'a pas regardées et les colères qu'on n'a pas réglées.\n\nL'héritage le plus lourd n'est pas écrit sur le testament : c'est tout ce qu'on n'a pas eu le courage de finir.",
+      en: "We believe we pass on to our children a house, a name, a trade. But what truly passes, without our deciding it, are the fears we never faced and the angers we never settled.\n\nThe heaviest inheritance is not written in the will: it is everything we lacked the courage to finish.",
+      es: "Creemos transmitir a nuestros hijos una casa, un nombre, un oficio. Pero lo que de verdad pasa, sin que lo decidamos, son los miedos que no miramos y las cóleras que no resolvimos.\n\nLa herencia más pesada no está escrita en el testamento: es todo lo que no tuvimos el valor de terminar.",
     },
   },
 ];
