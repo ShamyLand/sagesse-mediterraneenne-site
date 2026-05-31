@@ -60,6 +60,14 @@ export async function GET() {
     if (!res.ok) return NextResponse.json(fallback(`supabase_${res.status}`), { status: 200 });
 
     const rows = await res.json();
+    // CRÉDIBILITÉ : jamais "à confirmer" en public.
+    //  - on retire toute mention "(à confirmer)" des champs affichés ;
+    //  - une référence PRÉCISE n'est montrée QUE si verified_by est renseigné ;
+    //  - sinon : référence supprimée, on ne garde que la tradition générale.
+    const clean = (v: unknown): string | null => {
+      const s = (v == null ? "" : String(v)).replace(/\s*\(?\s*à\s+confirmer\s*\)?/gi, "").replace(/\s{2,}/g, " ").replace(/\s+([;,.])/g, "$1").trim();
+      return s ? s : null;
+    };
     const items: Item[] = (Array.isArray(rows) ? rows : [])
       .map((r: Record<string, unknown>): Item | null => {
         const srcs = (r.fragment_sources as Record<string, unknown>[]) || [];
@@ -67,6 +75,7 @@ export async function GET() {
         if (!s) return null; // jamais de fragment sans source
         const fr = String(r.final_fr_text || "");
         const title = String(r.fr_title || "");
+        const verified = !!s.verified_by;
         return {
           id: String(r.id),
           title: { fr: title, en: title, es: title },
@@ -78,12 +87,12 @@ export async function GET() {
           theme: (r.theme as string) || null,
           inspiration: {
             type: String(s.source_type || ""),
-            tradition: (s.source_tradition as string) || null,
-            author: (s.source_author as string) || null,
-            reference: (s.source_reference as string) || null,
-            summary: (s.source_summary as string) || null,
-            reading: (s.contemporary_reading as string) || null,
-            disclaimer: (s.display_disclaimer as string) || null,
+            tradition: clean(s.source_tradition),               // formulation générale honnête
+            author: clean(s.source_author),
+            reference: verified ? clean(s.source_reference) : null, // précis seulement si vérifié
+            summary: clean(s.source_summary),
+            reading: clean(s.contemporary_reading),
+            disclaimer: clean(s.display_disclaimer),
             confidence: (s.source_confidence as string) || null,
           },
         };
