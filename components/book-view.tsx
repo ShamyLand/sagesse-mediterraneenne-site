@@ -22,9 +22,11 @@ const S: Record<Language, Record<string, string>> = {
       "Les Lois Invisibles n’est pas un essai. C’est un recueil de fragments. Chaque fragment tient comme une pierre sèche : peu de mots, beaucoup de poids.",
     forewordP2:
       "Une sagesse ancienne, relue pour les failles du monde moderne. Ce n’est pas un texte qui change : c’est une édition, figée, versionnée, signée. Le corpus peut grandir ; le livre, lui, ne revient pas en arrière.",
-    extractBadge: "Extrait en cours de sélection",
+    extractBadge: "Fragments choisis",
     extractTitle: "Quelques fragments",
-    extractSubtitle: "Un aperçu, encore provisoire, de ce que le livre rassemble.",
+    extractSubtitle: "Un aperçu du corpus : des fragments validés, sobres et denses.",
+    extractInspiration: "Chaque fragment est relié à une inspiration ancienne ou philosophique.",
+    exploreRitual: "Explorer le rituel quotidien",
     cTitle: "Titre",
     cEdition: "Édition",
     cCorpus: "Corpus",
@@ -49,9 +51,11 @@ const S: Record<Language, Record<string, string>> = {
       "The Invisible Laws is not an essay. It is a collection of fragments. Each fragment holds like a dry stone: few words, much weight.",
     forewordP2:
       "Ancient wisdom, reread for the fractures of the modern world. This is not a text that changes: it is an edition — fixed, versioned, signed. The corpus may grow; the book never goes back.",
-    extractBadge: "Excerpt being selected",
+    extractBadge: "Selected fragments",
     extractTitle: "A few fragments",
-    extractSubtitle: "A still-provisional glimpse of what the book gathers.",
+    extractSubtitle: "A glimpse of the corpus: validated fragments, sober and dense.",
+    extractInspiration: "Each fragment is linked to an ancient or philosophical inspiration.",
+    exploreRitual: "Explore the daily ritual",
     cTitle: "Title",
     cEdition: "Edition",
     cCorpus: "Corpus",
@@ -76,9 +80,11 @@ const S: Record<Language, Record<string, string>> = {
       "Las Leyes Invisibles no es un ensayo. Es una recopilación de fragmentos. Cada fragmento se sostiene como una piedra seca: pocas palabras, mucho peso.",
     forewordP2:
       "Una sabiduría antigua, releída para las grietas del mundo moderno. No es un texto que cambia: es una edición, fija, versionada, firmada. El corpus puede crecer; el libro no retrocede.",
-    extractBadge: "Extracto en selección",
+    extractBadge: "Fragmentos elegidos",
     extractTitle: "Algunos fragmentos",
-    extractSubtitle: "Un vistazo, aún provisional, de lo que el libro reúne.",
+    extractSubtitle: "Un vistazo del corpus: fragmentos validados, sobrios y densos.",
+    extractInspiration: "Cada fragmento está vinculado a una inspiración antigua o filosófica.",
+    exploreRitual: "Explorar el ritual diario",
     cTitle: "Título",
     cEdition: "Edición",
     cCorpus: "Corpus",
@@ -205,11 +211,20 @@ export function BookView() {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold text-foreground tracking-tight">{s.extractTitle}</h2>
               <p className="mt-3 text-base md:text-lg text-muted-foreground font-normal">{s.extractSubtitle}</p>
+              <p className="mt-2 text-sm md:text-base text-accent/90 font-normal italic">{s.extractInspiration}</p>
             </header>
             <div className="space-y-14 md:space-y-16">
               {bookExtract.map((f, i) => (
                 <FragmentBlock key={i} fragment={f} lang={lang} />
               ))}
+            </div>
+            <div className="mt-12 md:mt-16 text-center">
+              <Link
+                href="/"
+                className="inline-flex items-center px-6 py-3 rounded-lg border border-primary/40 bg-card text-foreground text-base font-medium tracking-wide hover:bg-secondary hover:border-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              >
+                {s.exploreRitual} →
+              </Link>
             </div>
           </section>
 
