@@ -1,21 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
-
-type Loc = { fr: string; en: string; es: string };
-type Inspiration = {
-  type: string;
-  tradition: string | null;
-  author: string | null;
-  reference: string | null;
-  summary: string | null;
-  reading: string | null;
-  disclaimer: string | null;
-  confidence: string | null;
-};
-type Item = { id: string; title: Loc; text: Loc; theme: string | null; inspiration: Inspiration | null };
-type Payload = { source: string; reason?: string; count: number; items: Item[] };
+import type { Loc, Item, Payload } from "@/lib/site-fragments";
 
 const TYPE_LABEL: Record<string, string> = {
   direct: "Source directe",
@@ -24,19 +11,10 @@ const TYPE_LABEL: Record<string, string> = {
   parallel: "Parallèle philosophique",
 };
 
-export function FragmentsClient() {
+// Reçoit les données en props (SSR) → présentes dans le HTML initial. Gère seulement l'interaction.
+export function FragmentsView({ data }: { data: Payload }) {
   const { lang } = useLanguage();
-  const [data, setData] = useState<Payload | null>(null);
-  const [error, setError] = useState<string | null>(null);
   const [open, setOpen] = useState<string | null>(null);
-
-  useEffect(() => {
-    fetch("/api/fragments", { cache: "no-store" })
-      .then((r) => r.json())
-      .then(setData)
-      .catch((e) => setError(String(e)));
-  }, []);
-
   const L = (loc: Loc) => loc[lang] || loc.fr;
 
   return (
@@ -48,18 +26,13 @@ export function FragmentsClient() {
           <p className="mt-3 text-base text-muted-foreground">
             Des vérités humaines simples, adaptées au monde moderne — chacune adossée à une sagesse ancienne.
           </p>
-          {data && (
-            <p className="mt-2 text-xs text-muted-foreground">
-              {data.source === "supabase" ? `${data.count} fragments` : "Affichage de secours (set curé)"}
-            </p>
-          )}
+          <p className="mt-2 text-xs text-muted-foreground">
+            {data.source === "supabase" ? `${data.count} fragments` : "Affichage de secours (set curé)"}
+          </p>
         </header>
 
-        {error && <p className="text-sm text-red-600">Erreur de chargement.</p>}
-        {!data && !error && <p className="text-sm text-muted-foreground">Chargement…</p>}
-
         <div className="space-y-6">
-          {data?.items.map((it) => {
+          {data.items.map((it: Item) => {
             const isOpen = open === it.id;
             const insp = it.inspiration;
             return (
