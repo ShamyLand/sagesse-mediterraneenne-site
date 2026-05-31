@@ -4,10 +4,10 @@ import { useState } from "react";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import type { Moment } from "@/lib/fragments-placeholder";
 import type { I18nKey } from "@/lib/i18n/dictionary";
-import type { Inspiration } from "@/lib/site-fragments";
+import type { Inspiration, Loc, Lang } from "@/lib/site-fragments";
 import { cn } from "@/lib/utils";
 
-export type HomeFragment = { title: string; text: string; source: Inspiration | null };
+export type HomeFragment = { title: string; text: Loc; source: Inspiration | null };
 
 interface DailyFragmentProps {
   moment: Moment;
@@ -15,26 +15,31 @@ interface DailyFragmentProps {
   fragment: HomeFragment;
 }
 
-const LABEL_KEY: Record<Moment, I18nKey> = {
-  morning: "home.morning.label",
-  evening: "home.evening.label",
+const LABEL_KEY: Record<Moment, I18nKey> = { morning: "home.morning.label", evening: "home.evening.label" };
+const INTENT_KEY: Record<Moment, I18nKey> = { morning: "home.morning.intent", evening: "home.evening.intent" };
+
+const TYPE_LABEL: Record<string, Loc> = {
+  direct: { fr: "Source directe", en: "Direct source", es: "Fuente directa" },
+  thematic: { fr: "Inspiration thématique", en: "Thematic inspiration", es: "Inspiración temática" },
+  echo: { fr: "Écho doctrinal", en: "Doctrinal echo", es: "Eco doctrinal" },
+  parallel: { fr: "Parallèle philosophique", en: "Philosophical parallel", es: "Paralelo filosófico" },
 };
-const INTENT_KEY: Record<Moment, I18nKey> = {
-  morning: "home.morning.intent",
-  evening: "home.evening.intent",
-};
-const TYPE_LABEL: Record<string, string> = {
-  direct: "Source directe",
-  thematic: "Inspiration thématique",
-  echo: "Écho doctrinal",
-  parallel: "Parallèle philosophique",
+const UI: Record<string, Loc> = {
+  see: { fr: "Voir la source", en: "View the source", es: "Ver la fuente" },
+  hide: { fr: "Masquer la source", en: "Hide the source", es: "Ocultar la fuente" },
+  source: { fr: "Source d'inspiration", en: "Source of inspiration", es: "Fuente de inspiración" },
+  type: { fr: "Type :", en: "Type:", es: "Tipo:" },
+  ancient: { fr: "Idée ancienne", en: "Ancient idea", es: "Idea antigua" },
+  modern: { fr: "Lecture contemporaine", en: "Contemporary reading", es: "Lectura contemporánea" },
 };
 
 export function DailyFragment({ moment, variant = "primary", fragment }: DailyFragmentProps) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const L = lang as Lang;
   const isPrimary = variant === "primary";
   const [open, setOpen] = useState(false);
   const insp = fragment.source;
+  const pick = (loc: Loc | null) => (loc ? loc[L] || loc.fr : null);
 
   return (
     <article
@@ -56,10 +61,9 @@ export function DailyFragment({ moment, variant = "primary", fragment }: DailyFr
       </h3>
 
       <blockquote className={cn("text-foreground leading-relaxed font-normal text-balance", isPrimary ? "text-2xl md:text-3xl" : "text-lg md:text-xl")}>
-        {fragment.text}
+        {fragment.text[L] || fragment.text.fr}
       </blockquote>
 
-      {/* Puce discrète — couche source optionnelle */}
       {insp && (
         <div className="mt-5">
           <button
@@ -69,37 +73,37 @@ export function DailyFragment({ moment, variant = "primary", fragment }: DailyFr
             className="inline-flex items-center gap-1 text-sm font-medium text-accent underline-offset-4 hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
           >
             <span aria-hidden>{open ? "–" : "+"}</span>
-            {open ? "Masquer la source" : "Voir la source"}
+            {open ? UI.hide[L] : UI.see[L]}
           </button>
 
           {open && (
             <div className="mt-3 rounded-xl border border-border bg-background/60 p-4 md:p-5 text-left">
-              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Source d'inspiration</p>
+              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{UI.source[L]}</p>
               <p className="mt-2 text-sm leading-relaxed">
-                <span className="font-medium">Type :</span> {TYPE_LABEL[insp.type] || insp.type}
+                <span className="font-medium">{UI.type[L]}</span> {(TYPE_LABEL[insp.type] && TYPE_LABEL[insp.type][L]) || insp.type}
               </p>
               {insp.tradition && (
                 <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                  {insp.tradition}
+                  {pick(insp.tradition)}
                   {insp.author ? ` — ${insp.author}` : ""}
                   {insp.reference ? ` (${insp.reference})` : ""}
                 </p>
               )}
               {insp.summary && (
                 <>
-                  <p className="mt-3 text-sm font-medium">Idée ancienne</p>
-                  <p className="mt-1 text-sm leading-relaxed">{insp.summary}</p>
+                  <p className="mt-3 text-sm font-medium">{UI.ancient[L]}</p>
+                  <p className="mt-1 text-sm leading-relaxed">{pick(insp.summary)}</p>
                 </>
               )}
               {insp.reading && (
                 <>
-                  <p className="mt-3 text-sm font-medium">Lecture contemporaine</p>
-                  <p className="mt-1 text-sm leading-relaxed">{insp.reading}</p>
+                  <p className="mt-3 text-sm font-medium">{UI.modern[L]}</p>
+                  <p className="mt-1 text-sm leading-relaxed">{pick(insp.reading)}</p>
                 </>
               )}
               {insp.disclaimer && (
                 <p className="mt-4 border-t border-border pt-3 text-xs italic leading-relaxed text-muted-foreground">
-                  {insp.disclaimer}
+                  {pick(insp.disclaimer)}
                 </p>
               )}
             </div>

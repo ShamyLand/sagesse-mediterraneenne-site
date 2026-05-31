@@ -1,0 +1,344 @@
+{
+  "Le délit de faciès": {
+    "text": {
+      "en": "Judging someone by their face is not enforcing the law: it is giving your prejudices the uniform of authority.",
+      "es": "Juzgar a alguien por su rostro no es hacer cumplir la ley: es dar a tus prejuicios el uniforme de la autoridad."
+    },
+    "summary": {
+      "en": "True justice looks at neither rank nor face, only the law.",
+      "es": "La verdadera justicia no mira ni el rango ni el rostro, solo el derecho."
+    },
+    "reading": {
+      "en": "Power does not invent prejudice: it lends it its uniform.",
+      "es": "El poder no inventa el prejuicio: le presta su uniforme."
+    },
+    "tradition": {
+      "en": "biblical wisdom (impartiality of the judge) + Stoicism",
+      "es": "sabiduría bíblica (imparcialidad del juez) + estoicismo"
+    }
+  },
+  "La justice rancunière": {
+    "text": {
+      "en": "A judge who condemns out of resentment does not deliver justice: he uses the law to take revenge, and his impunity becomes his fault.",
+      "es": "Un juez que condena por rencor no imparte justicia: utiliza la ley para vengarse, y su impunidad se convierte en su culpa."
+    },
+    "summary": {
+      "en": "The judge must follow the law, not his passions; taking revenge under the guise of the law is outside justice.",
+      "es": "El juez debe seguir la ley, no sus pasiones; vengarse bajo la apariencia de la ley está fuera de la justicia."
+    },
+    "reading": {
+      "en": "Condemning out of resentment turns the law into an instrument of revenge.",
+      "es": "Condenar por rencor convierte la ley en un instrumento de venganza."
+    },
+    "tradition": {
+      "en": "biblical wisdom (impartial judge) + legal parallel",
+      "es": "sabiduría bíblica (juez imparcial) + paralelo jurídico"
+    }
+  },
+  "Le pardon stratégique": {
+    "text": {
+      "en": "Forgiving out loud to appear noble is keeping the debt while taking on the role of the generous one.",
+      "es": "Perdonar en voz alta para parecer grande es conservar la deuda mientras se presenta como generoso."
+    },
+    "summary": {
+      "en": "Forgiving with words while holding a grudge erases nothing.",
+      "es": "Perdonar de palabra mientras se guarda rencor no borra nada."
+    },
+    "reading": {
+      "en": "Staged forgiveness becomes a posture that keeps the debt.",
+      "es": "El perdón escenificado se convierte en una actitud que mantiene la deuda."
+    },
+    "tradition": {
+      "en": "forgiveness 'from the heart' + Stoicism",
+      "es": "perdón 'de corazón' + estoicismo"
+    }
+  },
+  "La générosité filmée": {
+    "text": {
+      "en": "When I film my generous act, I turn the other person into a backdrop for my virtue.",
+      "es": "Cuando filmo mi acto generoso, convierto al otro en el decorado de mi virtud."
+    },
+    "summary": {
+      "en": "A good deed done to be seen loses its value.",
+      "es": "Un beneficio realizado para ser visto pierde su valor."
+    },
+    "reading": {
+      "en": "One films their act of giving; the other becomes the backdrop for a staged virtue.",
+      "es": "Uno filma su donación; el otro se convierte en el decorado de una virtud puesta en escena."
+    },
+    "tradition": {
+      "en": "gospel wisdom + Stoicism + Abrahamic ethics (riyā')",
+      "es": "sabiduría evangélica + estoicismo + ética abrahámica (riyā')"
+    }
+  },
+  "Le don qui oblige": {
+    "text": {
+      "en": "A gift that expects recognition is no longer a gift: it is a loan that does not dare speak its name.",
+      "es": "Un regalo que espera reconocimiento ya no es un regalo: es un préstamo que no se atreve a decir su nombre."
+    },
+    "summary": {
+      "en": "A true benefit expects nothing in return.",
+      "es": "Un verdadero beneficio no espera nada a cambio."
+    },
+    "reading": {
+      "en": "A gift that demands gratitude is a disguised debt.",
+      "es": "El don que exige gratitud es una deuda disfrazada."
+    },
+    "tradition": {
+      "en": "Stoicism",
+      "es": "Estoicismo"
+    }
+  },
+  "La rumeur": {
+    "text": {
+      "en": "Repeating a rumor is selling someone's reputation—and gaining, in the process, the small benefit of being the one who knows.",
+      "es": "Repetir un rumor es vender la reputación de alguien y obtener, de paso, el pequeño beneficio de ser quien sabe."
+    },
+    "summary": {
+      "en": "Spreading an unproven statement about someone destroys a name.",
+      "es": "Difundir una afirmación no probada sobre alguien destruye un nombre."
+    },
+    "reading": {
+      "en": "Spreading a rumor is false testimony that does not say its name.",
+      "es": "Difundir un rumor es un falso testimonio que no dice su nombre."
+    },
+    "tradition": {
+      "en": "prohibition of false testimony + slander (lashon hara)",
+      "es": "prohibición del falso testimonio + difamación (lashon hara)"
+    }
+  },
+  "Le prêt qui tient": {
+    "text": {
+      "en": "Lending to someone close is sometimes buying the right to remind them they owe us.",
+      "es": "Prestar a un ser cercano es a veces comprar el derecho de recordarle que nos debe."
+    },
+    "summary": {
+      "en": "Debt turns the relationship into a power dynamic.",
+      "es": "La deuda convierte la relación en una cuestión de poder."
+    },
+    "reading": {
+      "en": "Helping by lending is sometimes buying oneself an advantage.",
+      "es": "Ayudar prestando es a veces comprar una ventaja para uno mismo."
+    },
+    "tradition": {
+      "en": "Proverbs",
+      "es": "Proverbios"
+    }
+  },
+  "La vie à valider": {
+    "text": {
+      "en": "Constantly showing your life is not sharing it: it is asking strangers to decide if it is worth anything.",
+      "es": "Mostrar constantemente tu vida no es compartirla: es pedir a desconocidos que decidan si vale algo."
+    },
+    "summary": {
+      "en": "Letting others judge your worth is making yourself their slave.",
+      "es": "Dejar que otros juzguen tu valor es hacerse su esclavo."
+    },
+    "reading": {
+      "en": "We ask strangers to decide if our life is worth anything.",
+      "es": "Pedimos a desconocidos que decidan si nuestra vida vale algo."
+    },
+    "tradition": {
+      "en": "Stoicism + Ecclesiastes",
+      "es": "Estoicismo + Eclesiastés"
+    }
+  },
+  "Le mérite et l'oubli": {
+    "text": {
+      "en": "To give all the credit to the one we see is to confuse the light with the work—and to forget those who did it in the shadows.",
+      "es": "Dar todo el mérito a quien vemos es confundir la luz avec el trabajo y olvidar a quienes lo hicieron en la sombra."
+    },
+    "summary": {
+      "en": "The one whose work saves is often the one we forget.",
+      "es": "A menudo, quien salva par son trabajo es quien olvidamos."
+    },
+    "reading": {
+      "en": "We reward visibility, not real work.",
+      "es": "Se recompensa la visibilidad, no el trabajo real."
+    },
+    "tradition": {
+      "en": "biblical wisdom",
+      "es": "sabiduría bíblica"
+    }
+  },
+  "L'humiliation faible": {
+    "text": {
+      "en": "To humiliate someone weaker than yourself is not strength: it is admitting that you need someone else's smallness.",
+      "es": "Humillar a alguien más débil que uno mismo no es ser fuerte: es admitir que se necesita la pequeñez de otro."
+    },
+    "summary": {
+      "en": "Attacking the weakest is not strength.",
+      "es": "Atacarse al más débil no es una muestra de fuerza."
+    },
+    "reading": {
+      "en": "Who humiliates admits needing the smallness of others.",
+      "es": "Quien humilla admite que necesita la pequeñez de los demás."
+    },
+    "tradition": {
+      "en": "Proverbs + Stoicism",
+      "es": "Proverbios + estoicismo"
+    }
+  },
+  "L'orgueil sourd": {
+    "text": {
+      "en": "Pride is not seen in what one says about oneself, but in everything one refuses to hear.",
+      "es": "El orgullo no se muestra en lo que uno dice de sí mismo, sino en todo lo que se niega a escuchar."
+    },
+    "summary": {
+      "en": "The proud person closes himself off to advice, and that is how he falls.",
+      "es": "El orgulloso se cierra al consejo, y por eso cae."
+    },
+    "reading": {
+      "en": "Pride is measured by everything one refuses to listen to.",
+      "es": "El orgullo se mide por todo lo que uno se niega a escuchar."
+    },
+    "tradition": {
+      "en": "Proverbs",
+      "es": "Proverbios"
+    }
+  },
+  "La colère qui se trompe de cible": {
+    "text": {
+      "en": "Anger almost always blames the wrong person: it strikes whoever is present, not the one who caused it.",
+      "es": "La ira casi siempre culpa a la persona equivocada: golpea a quien está presente, no a quien la causó."
+    },
+    "summary": {
+      "en": "Blind anger strikes at random and punishes the innocent.",
+      "es": "La ira ciega golpea al azar y castiga al inocente."
+    },
+    "reading": {
+      "en": "We take out our anger on whoever is there, not on the one who caused it.",
+      "es": "Descargamos nuestra ira sobre quien está presente, no sobre quien la causó."
+    },
+    "tradition": {
+      "en": "Stoicism + Proverbs",
+      "es": "Estoicismo + Proverbios"
+    }
+  },
+  "Le flatteur": {
+    "text": {
+      "en": "The flatterer does not admire you: he studies where you let your guard down.",
+      "es": "El adulador no te admira: estudia el lugar donde bajas la guardia."
+    },
+    "summary": {
+      "en": "Flattery is a trap set in your path.",
+      "es": "La adulación es una trampa tendida bajo tus pasos."
+    },
+    "reading": {
+      "en": "Self-interested admiration looks for your weakness, not your worth.",
+      "es": "La admiración interesada busca la falla, no el aprecio."
+    },
+    "tradition": {
+      "en": "Proverbs",
+      "es": "Proverbios"
+    }
+  },
+  "Le serment de trop": {
+    "text": {
+      "en": "He who swears to be believed admits that his word alone is no longer enough.",
+      "es": "Quien jura para ser creído admite que su palabra, por sí sola, ya no basta."
+    },
+    "summary": {
+      "en": "Multiplying oaths devalues one's word.",
+      "es": "Multiplicar los juramentos devalúa la palabra."
+    },
+    "reading": {
+      "en": "Adding promises betrays a word that is already weak.",
+      "es": "Multiplicar las promesas delata una palabra ya débil."
+    },
+    "tradition": {
+      "en": "Ecclesiastes + evangelical wisdom",
+      "es": "Eclesiastés + sabiduría evangélica"
+    }
+  },
+  "La porte fermée": {
+    "text": {
+      "en": "We close our door to the stranger out of fear of what they might take, and we will never know what they could have brought.",
+      "es": "Cerramos la puerta al extranjero por miedo a lo que pueda llevarse, y nunca sabremos lo que podría haber traído."
+    },
+    "summary": {
+      "en": "Welcoming the stranger is a duty, against fear.",
+      "es": "Acoger al extranjero es un deber, frente al miedo."
+    },
+    "reading": {
+      "en": "Fear closes the door before knowing what the other could have brought.",
+      "es": "El miedo cierra la puerta antes de saber lo que el otro podría haber traído."
+    },
+    "tradition": {
+      "en": "Leviticus/Deuteronomy + Mediterranean hospitality",
+      "es": "Levítico/Deuteronomio + hospitalidad mediterránea"
+    }
+  },
+  "Entre deux absences": {
+    "text": {
+      "en": "The exile lives between two absences: a country that no longer holds him back, and another that does not yet recognize him.",
+      "es": "El exiliado vive entre dos ausencias: un país que ya no lo retiene y otro que aún no lo reconoce."
+    },
+    "summary": {
+      "en": "Exile is the pain of belonging nowhere.",
+      "es": "El exilio es el dolor de no pertenecer a ningún lugar."
+    },
+    "reading": {
+      "en": "The uprooted person carries two absences, the one before and the one after.",
+      "es": "La persona desarraigada lleva dos ausencias, la de antes y la de después."
+    },
+    "tradition": {
+      "en": "tradition of exile (Psalms)",
+      "es": "tradición del exilio (Salmos)"
+    }
+  },
+  "Le mépris des anciens": {
+    "text": {
+      "en": "An era that sets aside its elders forgets that it is preparing to be set aside in turn.",
+      "es": "Una época que aparta a sus ancianos olvida que se prepara para ser apartada a su vez."
+    },
+    "summary": {
+      "en": "Honoring the old is a duty; scorning them turns against oneself.",
+      "es": "Honrar a los mayores es un deber; despreciarlos se vuelve en contra de uno mismo."
+    },
+    "reading": {
+      "en": "A society that discards its old people prepares its own rejection.",
+      "es": "Una sociedad que desecha a sus ancianos prepara su propio rechazo."
+    },
+    "tradition": {
+      "en": "biblical wisdom",
+      "es": "sabiduría bíblica"
+    }
+  },
+  "Jamais rassasié": {
+    "text": {
+      "en": "He who loves money is never satisfied: it is not wealth he seeks, but the anxiety of lacking.",
+      "es": "Quien ama el dinero nunca tiene suficiente: no busca la riqueza, sino la angustia de carecer."
+    },
+    "summary": {
+      "en": "The love of money knows no satisfaction.",
+      "es": "El amor al dinero no conoce saciedad."
+    },
+    "reading": {
+      "en": "Greed pursues a fear of lacking, never a limit.",
+      "es": "La avidez persigue el miedo a la carencia, nunca un umbral."
+    },
+    "tradition": {
+      "en": "biblical wisdom",
+      "es": "sabiduría bíblica"
+    }
+  },
+  "La vérité qu'on ne veut pas entendre": {
+    "text": {
+      "en": "We forgive the pleasant liar more easily than the one who tells the truth we do not want to hear.",
+      "es": "Perdonamos más fácilmente al mentiroso agradable que a quien dice la verdad que no queremos oír."
+    },
+    "summary": {
+      "en": "The truth disturbs more than a pleasant lie.",
+      "es": "La verdad molesta más que una mentira agradable."
+    },
+    "reading": {
+      "en": "We resent frankness and reward flattery.",
+      "es": "Se reprocha la franqueza y se recompensa la adulación."
+    },
+    "tradition": {
+      "en": "Proverbs + prophetic tradition",
+      "es": "Proverbios + tradición profética"
+    }
+  }
+}

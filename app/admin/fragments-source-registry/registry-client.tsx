@@ -49,10 +49,10 @@ export function RegistryClient({ data }: { data: Payload }) {
                     {isOpen && (
                       <div className="mt-3 rounded-md border border-gray-200 bg-gray-50 p-4 text-sm">
                         <p><span className="font-semibold">Type :</span> {TYPE_LABEL[insp.type] || insp.type} · <span className="text-gray-600">{insp.confidence}</span></p>
-                        {insp.tradition && <p className="mt-1 text-gray-700">{insp.tradition}{insp.author ? ` — ${insp.author}` : ""}{insp.reference ? ` (${insp.reference})` : ""}</p>}
-                        {insp.summary && <p className="mt-2"><span className="font-semibold">Idée ancienne :</span> {insp.summary}</p>}
-                        {insp.reading && <p className="mt-1"><span className="font-semibold">Lecture contemporaine :</span> {insp.reading}</p>}
-                        {insp.disclaimer && <p className="mt-2 border-t border-gray-200 pt-2 text-xs italic text-gray-500">{insp.disclaimer}</p>}
+                        {insp.tradition && <p className="mt-1 text-gray-700">{insp.tradition.fr}{insp.author ? ` — ${insp.author}` : ""}{insp.reference ? ` (${insp.reference})` : ""}</p>}
+                        {insp.summary && <p className="mt-2"><span className="font-semibold">Idée ancienne :</span> {insp.summary.fr}</p>}
+                        {insp.reading && <p className="mt-1"><span className="font-semibold">Lecture contemporaine :</span> {insp.reading.fr}</p>}
+                        {insp.disclaimer && <p className="mt-2 border-t border-gray-200 pt-2 text-xs italic text-gray-500">{insp.disclaimer.fr}</p>}
                       </div>
                     )}
                   </>

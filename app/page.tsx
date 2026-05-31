@@ -28,17 +28,17 @@ export default async function Home() {
     if (ei === mi) ei = (ei + 1) % n;
     const toFrag = (it: (typeof data.items)[number]): HomeFragment => ({
       title: it.title.fr,
-      text: it.text.fr,
+      text: it.text, // Loc {fr,en,es}
       source: it.inspiration,
     });
     morning = toFrag(data.items[mi]);
     evening = toFrag(data.items[ei]);
   } else {
-    // Fallback set curé statique (pas de source associée).
+    // Fallback set curé statique (pas de source associée) — curatedHome a déjà fr/en/es.
     const m = pickByDate(curatedHome.morning, day, "morning");
     const e = pickByDate(curatedHome.evening, day, "evening");
-    morning = { title: m.title.fr, text: m.text.fr, source: null };
-    evening = { title: e.title.fr, text: e.text.fr, source: null };
+    morning = { title: m.title.fr, text: m.text, source: null };
+    evening = { title: e.title.fr, text: e.text, source: null };
   }
 
   return <HomeView morning={morning} evening={evening} />;
