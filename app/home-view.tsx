@@ -1,0 +1,69 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { LanguageSelector } from "@/components/language-selector";
+import { DailyFragment, type HomeFragment } from "@/components/daily-fragment";
+import { useLanguage } from "@/lib/i18n/LanguageProvider";
+
+export function HomeView({ morning, evening }: { morning: HomeFragment; evening: HomeFragment }) {
+  const { t } = useLanguage();
+
+  // Fragment mis en avant selon l'heure locale : 06h–18h → matin ; sinon → soir.
+  const [primary, setPrimary] = useState<"morning" | "evening">("morning");
+  useEffect(() => {
+    const h = new Date().getHours();
+    setPrimary(h >= 6 && h < 18 ? "morning" : "evening");
+  }, []);
+  const secondary: "morning" | "evening" = primary === "morning" ? "evening" : "morning";
+  const frag = (m: "morning" | "evening") => (m === "morning" ? morning : evening);
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-1 flex flex-col items-center px-4 md:px-6 lg:px-8 py-8 md:py-12">
+        <div className="w-full max-w-4xl mx-auto flex flex-col items-center">
+          <Header />
+
+          <section className="w-full mt-2 mb-8 md:mb-10" aria-label="Langue">
+            <LanguageSelector />
+          </section>
+
+          <section className="w-full" aria-label={t(primary === "morning" ? "home.morning.label" : "home.evening.label")}>
+            <DailyFragment moment={primary} variant="primary" fragment={frag(primary)} />
+          </section>
+
+          <section
+            className="w-full mt-10 md:mt-12 max-w-2xl mx-auto opacity-50 hover:opacity-100 focus-within:opacity-100 transition-opacity duration-700 ease-out"
+            aria-label={t(secondary === "morning" ? "home.morning.label" : "home.evening.label")}
+          >
+            <DailyFragment moment={secondary} variant="secondary" fragment={frag(secondary)} />
+          </section>
+
+          <nav className="w-full mt-10 md:mt-14 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/manifeste"
+              className="px-6 py-3 rounded-lg border border-primary/40 bg-card text-foreground text-base font-medium tracking-wide hover:bg-secondary hover:border-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            >
+              {t("cta.manifesto")}
+            </Link>
+            <Link
+              href="/livre"
+              className="px-6 py-3 rounded-lg border border-border bg-card text-foreground text-base font-medium tracking-wide hover:bg-secondary hover:border-primary/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            >
+              {t("cta.book")}
+            </Link>
+            <Link
+              href="/recevoir"
+              className="px-6 py-3 rounded-lg border border-border bg-card text-foreground text-base font-medium tracking-wide hover:bg-secondary hover:border-primary/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            >
+              {t("cta.receive")}
+            </Link>
+          </nav>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+}
