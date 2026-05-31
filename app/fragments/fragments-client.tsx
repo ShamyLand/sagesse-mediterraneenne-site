@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useLanguage } from "@/lib/i18n/LanguageProvider";
-import type { Loc, Item, Payload } from "@/lib/site-fragments";
+import type { Item, Payload } from "@/lib/site-fragments";
 
 const TYPE_LABEL: Record<string, string> = {
   direct: "Source directe",
@@ -12,10 +11,10 @@ const TYPE_LABEL: Record<string, string> = {
 };
 
 // Reçoit les données en props (SSR) → présentes dans le HTML initial. Gère seulement l'interaction.
+// FR-ONLY assumé : on affiche toujours le français (les traductions EN/ES ne sont pas encore faites,
+// on n'expose donc PAS de fallback trompeur). Une mention « traductions à venir » le précise.
 export function FragmentsView({ data }: { data: Payload }) {
-  const { lang } = useLanguage();
   const [open, setOpen] = useState<string | null>(null);
-  const L = (loc: Loc) => loc[lang] || loc.fr;
 
   return (
     <main className="min-h-screen bg-background text-foreground">
@@ -28,6 +27,8 @@ export function FragmentsView({ data }: { data: Payload }) {
           </p>
           <p className="mt-2 text-xs text-muted-foreground">
             {data.source === "supabase" ? `${data.count} fragments` : "Affichage de secours (set curé)"}
+            <span className="mx-1">·</span>
+            <span className="italic">Version française — traductions anglaise et espagnole à venir.</span>
           </p>
         </header>
 
@@ -41,7 +42,7 @@ export function FragmentsView({ data }: { data: Payload }) {
                   <p className="mb-3 text-xs uppercase tracking-[0.14em] text-muted-foreground">{it.theme}</p>
                 )}
                 <blockquote className="text-xl md:text-2xl leading-relaxed font-normal text-balance text-foreground">
-                  {L(it.text)}
+                  {it.text.fr}
                 </blockquote>
 
                 {insp && (
