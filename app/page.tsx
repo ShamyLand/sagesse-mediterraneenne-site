@@ -1,80 +1,45 @@
-"use client";
+import { getSiteFragments } from "@/lib/site-fragments";
+import { curatedHome, pickByDate } from "@/lib/curated-home-fragments";
+import { HomeView } from "./home-view";
+import type { HomeFragment } from "@/components/daily-fragment";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
-import { LanguageSelector } from "@/components/language-selector";
-import { DailyFragment } from "@/components/daily-fragment";
-import { useLanguage } from "@/lib/i18n/LanguageProvider";
+// Accueil = rituel quotidien. Composant SERVEUR : lit les fragments validés+sourcés (getSiteFragments),
+// choisit 1 fragment matin + 1 soir du jour (rotation déterministe), fallback set curé si Supabase échoue.
+// Chaque carte porte une puce « Voir la source ». /api/daily n'est pas utilisé ; aucun vieux corpus.
+export const dynamic = "force-dynamic";
 
-export default function Home() {
-  const { t } = useLanguage();
+function hash(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+  return Math.abs(h);
+}
 
-  // Fragment mis en avant selon l'heure locale :
-  //   06h–18h → matin en avant ; 18h–06h → soir en avant.
-  // Défaut déterministe "morning" pour éviter tout mismatch d'hydratation ;
-  // corrigé après le montage selon l'heure réelle du visiteur.
-  const [primary, setPrimary] = useState<"morning" | "evening">("morning");
-  useEffect(() => {
-    const h = new Date().getHours();
-    setPrimary(h >= 6 && h < 18 ? "morning" : "evening");
-  }, []);
-  const secondary: "morning" | "evening" = primary === "morning" ? "evening" : "morning";
+export default async function Home() {
+  const data = await getSiteFragments();
+  const day = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/Paris" });
 
-  return (
-    <div className="min-h-screen flex flex-col">
-      <main className="flex-1 flex flex-col items-center px-4 md:px-6 lg:px-8 py-8 md:py-12">
-        <div className="w-full max-w-4xl mx-auto flex flex-col items-center">
-          <Header />
+  let morning: HomeFragment;
+  let evening: HomeFragment;
 
-          {/* Sélecteur de langue — pilote toute l'interface */}
-          <section className="w-full mt-2 mb-8 md:mb-10" aria-label="Langue">
-            <LanguageSelector />
-          </section>
+  if (data.source === "supabase" && data.items.length >= 2) {
+    const n = data.items.length;
+    const mi = hash(day + ":m") % n;
+    let ei = hash(day + ":e") % n;
+    if (ei === mi) ei = (ei + 1) % n;
+    const toFrag = (it: (typeof data.items)[number]): HomeFragment => ({
+      title: it.title.fr,
+      text: it.text.fr,
+      source: it.inspiration,
+    });
+    morning = toFrag(data.items[mi]);
+    evening = toFrag(data.items[ei]);
+  } else {
+    // Fallback set curé statique (pas de source associée).
+    const m = pickByDate(curatedHome.morning, day, "morning");
+    const e = pickByDate(curatedHome.evening, day, "evening");
+    morning = { title: m.title.fr, text: m.text.fr, source: null };
+    evening = { title: e.title.fr, text: e.text.fr, source: null };
+  }
 
-          {/* Fragment de l'heure — mis en avant */}
-          <section
-            className="w-full"
-            aria-label={t(primary === "morning" ? "home.morning.label" : "home.evening.label")}
-          >
-            <DailyFragment moment={primary} variant="primary" />
-          </section>
-
-          {/* Autre fragment — présence fantôme, en attente d'apparition (révélé au survol/focus) */}
-          <section
-            className="w-full mt-10 md:mt-12 max-w-2xl mx-auto opacity-50 hover:opacity-100 focus-within:opacity-100 transition-opacity duration-700 ease-out"
-            aria-label={t(secondary === "morning" ? "home.morning.label" : "home.evening.label")}
-          >
-            <DailyFragment moment={secondary} variant="secondary" />
-          </section>
-
-          {/* Portes d'entrée */}
-          <nav className="w-full mt-10 md:mt-14 flex flex-wrap justify-center gap-4">
-            <Link
-              href="/manifeste"
-              className="px-6 py-3 rounded-lg border border-primary/40 bg-card text-foreground text-base font-medium tracking-wide hover:bg-secondary hover:border-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-            >
-              {t("cta.manifesto")}
-            </Link>
-            <Link
-              href="/livre"
-              className="px-6 py-3 rounded-lg border border-border bg-card text-foreground text-base font-medium tracking-wide hover:bg-secondary hover:border-primary/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-            >
-              {t("cta.book")}
-            </Link>
-
-            {/* Recevoir une sagesse — mène vers /recevoir (inscription préparée, non branchée) */}
-            <Link
-              href="/recevoir"
-              className="px-6 py-3 rounded-lg border border-border bg-card text-foreground text-base font-medium tracking-wide hover:bg-secondary hover:border-primary/40 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-            >
-              {t("cta.receive")}
-            </Link>
-          </nav>
-        </div>
-      </main>
-      <Footer />
-    </div>
-  );
+  return <HomeView morning={morning} evening={evening} />;
 }
