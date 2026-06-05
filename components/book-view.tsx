@@ -202,7 +202,6 @@ export function BookView() {
 
           {/* 1 — Hero */}
           <header className="mb-16 md:mb-24 text-center">
-            <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">{t("eco.name")}</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight mb-5">{t("work.title")}</h1>
             <p className="text-base md:text-lg text-muted-foreground mb-6">{s.subtitle}</p>
             <div className="mx-auto mb-8 flex justify-center">

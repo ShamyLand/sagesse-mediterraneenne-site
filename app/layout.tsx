@@ -19,21 +19,21 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://project-7coik.vercel.app"),
-  // Nom public = "Les Lois Invisibles" (l'œuvre). "Sagesse Méditerranéenne" = écosystème.
+  // Œuvre éditoriale autonome. Intitulé officiel = titre + sous-titre.
   title: {
-    default: "Les Lois Invisibles — Sagesse Méditerranéenne",
+    default: "Les Lois Invisibles — Fragments de sagesse pour le monde moderne",
     template: "%s · Les Lois Invisibles",
   },
   applicationName: "Les Lois Invisibles",
   description:
-    "Les Lois Invisibles — une sagesse ancienne relue pour les failles du monde moderne. Un projet de Sagesse Méditerranéenne.",
-  keywords: ["Les Lois Invisibles", "Sagesse Méditerranéenne", "sagesse", "méditerranée", "fragments", "aphorismes", "wisdom", "philosophy"],
+    "Les Lois Invisibles — fragments de sagesse pour le monde moderne. Une sagesse ancienne relue pour les failles du monde moderne.",
+  keywords: ["Les Lois Invisibles", "fragments de sagesse", "sagesse", "fragments", "aphorismes", "wisdom", "philosophy"],
   authors: [{ name: "Les Lois Invisibles" }],
   openGraph: {
     title: "Les Lois Invisibles",
     siteName: "Les Lois Invisibles",
     description:
-      "Une sagesse ancienne relue pour les failles du monde moderne. Un projet de Sagesse Méditerranéenne.",
+      "Fragments de sagesse pour le monde moderne — une sagesse ancienne relue pour les failles du monde moderne.",
     type: "website",
     url: "/",
     locale: "fr_FR",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Les Lois Invisibles",
     description:
-      "Une sagesse ancienne relue pour les failles du monde moderne. Un projet de Sagesse Méditerranéenne.",
+      "Fragments de sagesse pour le monde moderne — une sagesse ancienne relue pour les failles du monde moderne.",
   },
 };
 

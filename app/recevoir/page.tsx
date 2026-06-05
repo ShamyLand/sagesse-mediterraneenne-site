@@ -76,7 +76,7 @@ export default function RecevoirPage() {
           {/* En-tête */}
           <div className="mb-10 md:mb-12 text-center">
             <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground font-normal mb-4">
-              {t("eco.name")}
+              {t("work.title")}
             </p>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight">
               {s.title}

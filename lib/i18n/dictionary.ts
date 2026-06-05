@@ -2,19 +2,18 @@ import type { Language } from "@/types/quote";
 
 /**
  * Dictionnaire i18n maison — toutes les chaînes d'interface en fr/en/es.
- * Règle : le titre de l'œuvre ET le nom de l'écosystème sont TRADUITS selon la langue
- * (l'œuvre existe vraiment dans chaque langue, pas comme un site FR traduit).
- *   FR : Les Lois Invisibles      / Sagesse Méditerranéenne
- *   EN : The Invisible Laws       / Mediterranean Wisdom
- *   ES : Las Leyes Invisibles     / Sabiduría Mediterránea
+ * L'œuvre est présentée comme une œuvre éditoriale AUTONOME (pas « un projet de… »).
+ * Intitulé officiel = le titre + le sous-titre, traduits selon la langue :
+ *   FR : Les Lois Invisibles  — Fragments de sagesse pour le monde moderne
+ *   EN : The Invisible Laws   — Fragments of wisdom for the modern world
+ *   ES : Las Leyes Invisibles — Fragmentos de sabiduría para el mundo moderno
  */
 
 export type I18nKey =
   | "work.title"
-  | "eco.name"
+  | "work.subtitle"
   | "site.tagline"
   | "site.intro"
-  | "signature.prefix"
   | "nav.home"
   | "nav.book"
   | "nav.manifesto"
@@ -37,10 +36,9 @@ export type I18nKey =
 export const dict: Record<Language, Record<I18nKey, string>> = {
   fr: {
     "work.title": "Les Lois Invisibles",
-    "eco.name": "Sagesse Méditerranéenne",
+    "work.subtitle": "Fragments de sagesse pour le monde moderne",
     "site.tagline": "Une sagesse ancienne relue pour les failles du monde moderne.",
     "site.intro": "Des fragments pour comprendre ce que les anciens textes savaient déjà de l’homme.",
-    "signature.prefix": "un projet de",
     "nav.home": "Accueil",
     "nav.book": "Le Livre",
     "nav.manifesto": "Manifeste",
@@ -64,10 +62,9 @@ export const dict: Record<Language, Record<I18nKey, string>> = {
   },
   en: {
     "work.title": "The Invisible Laws",
-    "eco.name": "Mediterranean Wisdom",
+    "work.subtitle": "Fragments of wisdom for the modern world",
     "site.tagline": "Ancient wisdom reread for the fractures of the modern world.",
     "site.intro": "Fragments to grasp what the old texts already knew about man.",
-    "signature.prefix": "a project of",
     "nav.home": "Home",
     "nav.book": "The Book",
     "nav.manifesto": "Manifesto",
@@ -91,10 +88,9 @@ export const dict: Record<Language, Record<I18nKey, string>> = {
   },
   es: {
     "work.title": "Las Leyes Invisibles",
-    "eco.name": "Sabiduría Mediterránea",
+    "work.subtitle": "Fragmentos de sabiduría para el mundo moderno",
     "site.tagline": "Una sabiduría antigua releída para las grietas del mundo moderno.",
     "site.intro": "Fragmentos para comprender lo que los textos antiguos ya sabían del hombre.",
-    "signature.prefix": "un proyecto de",
     "nav.home": "Inicio",
     "nav.book": "El Libro",
     "nav.manifesto": "Manifiesto",

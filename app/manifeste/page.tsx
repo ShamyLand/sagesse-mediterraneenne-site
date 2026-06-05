@@ -45,7 +45,7 @@ export default function ManifestePage() {
           {/* Signature écosystème */}
           <div className="mt-14 md:mt-20 pt-8 border-t border-border text-center">
             <p className="text-base text-muted-foreground font-normal tracking-wide">
-              <span className="text-foreground">{t("work.title")}</span> — {t("signature.prefix")} {t("eco.name")}
+              <span className="text-foreground">{t("work.title")}</span> — {t("work.subtitle")}
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link

@@ -245,7 +245,7 @@ export default function ApercuPage() {
           {/* En-tête — bandeau "aperçu de travail" */}
           <div className="mb-12 md:mb-16 text-center">
             <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground/80 font-light mb-4">
-              Sagesse Méditerranéenne
+              Les Lois Invisibles
             </p>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight mb-6">
               Aperçu éditorial
