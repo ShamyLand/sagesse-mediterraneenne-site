@@ -20,7 +20,7 @@ const DOMAINES: { n: string; name: Record<Language, string> }[] = [
 const S: Record<Language, Record<string, string>> = {
   fr: {
     subtitle: "Fragments de sagesse pour le monde moderne",
-    numero: "Livre I",
+    coverTagline: "Fragments de sagesse",
     promise: "Une sagesse ancienne relue pour les failles du monde moderne.",
     bmTop: "Haut", bmPromesse: "Le livre", bmExtrait: "Extraits", bmDomaines: "Domaines", bmObjet: "Se procurer",
     promesseTitle: "Le livre",
@@ -56,7 +56,7 @@ const S: Record<Language, Record<string, string>> = {
   },
   en: {
     subtitle: "Fragments of wisdom for the modern world",
-    numero: "Book I",
+    coverTagline: "Fragments of wisdom",
     promise: "Ancient wisdom, reread for the fractures of the modern world.",
     bmTop: "Top", bmPromesse: "The book", bmExtrait: "Excerpts", bmDomaines: "Parts", bmObjet: "Get the book",
     promesseTitle: "The book",
@@ -92,7 +92,7 @@ const S: Record<Language, Record<string, string>> = {
   },
   es: {
     subtitle: "Fragmentos de sabiduría para el mundo moderno",
-    numero: "Libro I",
+    coverTagline: "Fragmentos de sabiduría",
     promise: "Una sabiduría antigua releída para las grietas del mundo moderno.",
     bmTop: "Arriba", bmPromesse: "El libro", bmExtrait: "Extractos", bmDomaines: "Partes", bmObjet: "Conseguir",
     promesseTitle: "El libro",
@@ -128,17 +128,37 @@ const S: Record<Language, Record<string, string>> = {
   },
 };
 
+/**
+ * Typographie d'affichage (couche site, non destructive) :
+ * - apostrophe courbe ’ partout ;
+ * - en français, espace insécable avant ; : ! ? et à l'intérieur des guillemets « ».
+ * Ne modifie aucun fragment canonique : conversion purement visuelle au rendu.
+ */
+function typo(text: string, lang: Language): string {
+  let out = text.replace(/'/g, "’");
+  if (lang === "fr") {
+    out = out.replace(/ ([;:!?])/g, " $1");
+    out = out.replace(/«\s+/g, "« ").replace(/\s+»/g, " »");
+  }
+  return out;
+}
+
+/** Guillemets localisés autour d'un texte (déjà passé par typo). */
+function quote(text: string, lang: Language): string {
+  return lang === "en" ? `“${text}”` : `« ${text} »`;
+}
+
 function FragmentBlock({ fragment, lang }: { fragment: BookFragment; lang: Language }) {
   const blocks = fragment.text[lang].split(/\n\n+/);
   return (
     <article className="border-l-2 border-primary/20 pl-6 md:pl-8">
       <div className="flex items-baseline gap-3 mb-4 flex-wrap">
-        <h3 className="text-sm tracking-[0.18em] uppercase text-accent font-medium">{fragment.title[lang]}</h3>
+        <h3 className="text-sm tracking-[0.18em] uppercase text-accent font-medium">{typo(fragment.title[lang], lang)}</h3>
         <span className="text-xs tracking-[0.14em] uppercase text-muted-foreground font-normal">{fragment.format[lang]}</span>
       </div>
       <div className="space-y-4">
         {blocks.map((b, i) => (
-          <p key={i} className="text-xl md:text-2xl text-foreground leading-relaxed font-normal whitespace-pre-line text-balance">{b}</p>
+          <p key={i} className="text-xl md:text-2xl text-foreground leading-relaxed font-normal whitespace-pre-line text-balance">{typo(b, lang)}</p>
         ))}
       </div>
     </article>
@@ -147,7 +167,10 @@ function FragmentBlock({ fragment, lang }: { fragment: BookFragment; lang: Langu
 
 export function BookView() {
   const { lang, t } = useLanguage();
-  const s = S[lang];
+  // Typographie d'affichage appliquée à toutes les chaînes de page (non destructif).
+  const s = Object.fromEntries(
+    Object.entries(S[lang]).map(([k, v]) => [k, typo(v, lang)]),
+  ) as Record<string, string>;
 
   const bookmark = [
     { id: "haut", label: s.bmTop },
@@ -183,15 +206,14 @@ export function BookView() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight mb-5">{t("work.title")}</h1>
             <p className="text-base md:text-lg text-muted-foreground mb-6">{s.subtitle}</p>
             <div className="mx-auto mb-8 flex justify-center">
-              <div className="w-44 md:w-52 aspect-[13/20] rounded-sm shadow-sm flex flex-col items-center justify-center px-5 text-center"
-                   style={{ background: "#F3EEE3", border: "1px solid rgba(176,137,79,0.25)" }}>
-                <span className="font-semibold tracking-tight" style={{ color: "#1a1a1a", fontSize: "1.25rem", lineHeight: 1.2 }}>Les Lois<br />Invisibles</span>
+              <div className="w-44 md:w-52 aspect-[13/20] rounded-sm shadow-md flex flex-col items-center justify-center px-5 text-center"
+                   style={{ background: "#F3EEE3", border: "1px solid rgba(176,137,79,0.45)" }}>
+                <span className="font-semibold tracking-tight" style={{ color: "#1a1a1a", fontSize: "1.2rem", lineHeight: 1.2 }}>{t("work.title")}</span>
                 <span className="block my-3" style={{ height: 1, width: 56, background: "#B0894F" }} aria-hidden="true" />
-                <span style={{ color: "#8a8a8a", fontStyle: "italic", fontSize: "0.7rem" }}>Fragments de sagesse</span>
-                <span className="mt-6 tracking-[0.2em] uppercase" style={{ color: "#B0894F", fontSize: "0.6rem" }}>{s.numero}</span>
+                <span style={{ color: "#8a8a8a", fontStyle: "italic", fontSize: "0.7rem" }}>{s.coverTagline}</span>
               </div>
             </div>
-            <p className="text-lg md:text-xl text-foreground/90 italic max-w-xl mx-auto text-balance">« {s.promise} »</p>
+            <p className="text-lg md:text-xl text-foreground/90 italic max-w-xl mx-auto text-balance">{quote(s.promise, lang)}</p>
           </header>
 
           {/* 2 — Promesse */}
