@@ -24,7 +24,7 @@ export function Footer() {
         </Link>
       </nav>
       <p className="text-sm text-muted-foreground font-normal tracking-wide">
-        <span className="text-foreground">{t("work.title")}</span> — {t("signature.prefix")} {t("eco.name")}
+        <span className="text-foreground">{t("work.title")}</span> — {t("work.subtitle")}
       </p>
     </footer>
   );
