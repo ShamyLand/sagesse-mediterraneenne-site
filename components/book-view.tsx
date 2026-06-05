@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
-import { bookExtract, type BookFragment } from "@/lib/book-extract";
+import { bookExtract, firstPages, type BookFragment, type ExcerptFragment } from "@/lib/book-extract";
 import { typo, quote } from "@/lib/typography";
 import type { Language } from "@/types/quote";
 
@@ -28,9 +28,14 @@ const S: Record<Language, Record<string, string>> = {
     promesseP1: "Ce livre ne prêche pas. Il transpose. Il puise dans les anciennes sagesses méditerranéennes — bibliques, évangéliques, coraniques, juridiques et philosophiques — pour en proposer des fragments brefs, graves et contemporains.",
     promesseP2: "Ni traité religieux, ni manuel de développement personnel : une parole ancienne rendue lisible pour aujourd'hui — sur l'orgueil, la peur, l'argent, le pouvoir, la justice, le temps.",
     promesseP3: "À offrir à un ami comme à un adversaire : un monde où chacun voit un peu mieux ses propres failles est déjà un monde moins brutal.",
-    extraitBadge: "Fragments choisis",
-    extraitTitle: "Quelques fragments",
-    extraitSubtitle: "Un aperçu : des fragments courts, sobres et denses.",
+    premieresBadge: "Premières pages",
+    premieresTitle: "Lire les premières pages",
+    premieresIntro: "Le livre s'ouvre sur le Domaine I. En voici les premières pages, telles qu'on les découvre.",
+    domaineLabel: "Domaine",
+    medLabel: "Méditation",
+    medCut: "[…] la méditation se poursuit dans le livre.",
+    ailleursTitle: "Ailleurs dans le livre",
+    ailleursSubtitle: "Quelques fragments d'autres Domaines, pour l'amplitude des thèmes.",
     extraitInspiration: "Chaque fragment est librement inspiré d'une tradition ancienne ou philosophique — jamais une citation.",
     domainesTitle: "Les huit Domaines",
     domainesIntro: "Environ 205 fragments, répartis en huit Domaines, ouverts chacun par une méditation. 138 pages.",
@@ -64,9 +69,14 @@ const S: Record<Language, Record<string, string>> = {
     promesseP1: "This book does not preach. It transposes. It draws on the old Mediterranean wisdoms — biblical, evangelical, Qur'anic, juridical and philosophical — to offer fragments that are short, grave and contemporary.",
     promesseP2: "Neither a religious treatise nor a self-help manual: an ancient voice made legible for today — on pride, fear, money, power, justice, time.",
     promesseP3: "To give to a friend as much as to an adversary: a world where each sees their own flaws a little better is already a less brutal world.",
-    extraitBadge: "Selected fragments",
-    extraitTitle: "A few fragments",
-    extraitSubtitle: "A glimpse: short, sober, dense fragments.",
+    premieresBadge: "First pages",
+    premieresTitle: "Read the first pages",
+    premieresIntro: "The book opens on Part I. Here are its first pages, just as you would find them.",
+    domaineLabel: "Part",
+    medLabel: "Meditation",
+    medCut: "[…] the meditation continues in the book.",
+    ailleursTitle: "Elsewhere in the book",
+    ailleursSubtitle: "A few fragments from other Parts, to show the range of themes.",
     extraitInspiration: "Each fragment is freely inspired by an ancient or philosophical tradition — never a quotation.",
     domainesTitle: "The eight Parts",
     domainesIntro: "About 205 fragments, across eight Parts, each opened by a meditation. 138 pages.",
@@ -100,9 +110,14 @@ const S: Record<Language, Record<string, string>> = {
     promesseP1: "Este libro no predica. Transpone. Bebe de las antiguas sabidurías mediterráneas — bíblicas, evangélicas, coránicas, jurídicas y filosóficas — para proponer fragmentos breves, graves y contemporáneos.",
     promesseP2: "Ni tratado religioso, ni manual de desarrollo personal: una palabra antigua hecha legible para hoy — sobre el orgullo, el miedo, el dinero, el poder, la justicia, el tiempo.",
     promesseP3: "Para regalar a un amigo tanto como a un adversario: un mundo donde cada uno ve un poco mejor sus propias grietas ya es un mundo menos brutal.",
-    extraitBadge: "Fragmentos elegidos",
-    extraitTitle: "Algunos fragmentos",
-    extraitSubtitle: "Un vistazo: fragmentos breves, sobrios y densos.",
+    premieresBadge: "Primeras páginas",
+    premieresTitle: "Leer las primeras páginas",
+    premieresIntro: "El libro se abre con la Parte I. Estas son sus primeras páginas, tal como se descubren.",
+    domaineLabel: "Parte",
+    medLabel: "Meditación",
+    medCut: "[…] la meditación continúa en el libro.",
+    ailleursTitle: "En otras partes del libro",
+    ailleursSubtitle: "Algunos fragmentos de otras Partes, para mostrar la amplitud de los temas.",
     extraitInspiration: "Cada fragmento está libremente inspirado en una tradición antigua o filosófica — nunca una cita.",
     domainesTitle: "Las ocho Partes",
     domainesIntro: "Unos 205 fragmentos, en ocho Partes, abiertas cada una por una meditación. 138 páginas.",
@@ -206,11 +221,50 @@ export function BookView() {
             </div>
           </section>
 
-          {/* 3 — Extraits */}
+          {/* 3 — Lire les premières pages (extrait continu, Domaine I) */}
           <section id="extrait" className="mb-16 md:mb-24 scroll-mt-20">
-            <p className="text-xs tracking-[0.18em] uppercase text-accent mb-2">{s.extraitBadge}</p>
-            <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-3">{s.extraitTitle}</h2>
-            <p className="text-muted-foreground mb-10">{s.extraitSubtitle}</p>
+            <p className="text-xs tracking-[0.18em] uppercase text-accent mb-2">{s.premieresBadge}</p>
+            <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-3">{s.premieresTitle}</h2>
+            <p className="text-muted-foreground mb-10">{s.premieresIntro}</p>
+
+            {/* « page » du livre — ouverture du Domaine I */}
+            <div className="rounded-lg border border-primary/15 bg-primary/[0.03] p-6 md:p-10">
+              {/* Titre de Domaine */}
+              <div className="text-center mb-8">
+                <p className="text-xs tracking-[0.2em] uppercase text-accent mb-2">{s.domaineLabel} {DOMAINES[0].n}</p>
+                <h3 className="text-xl md:text-2xl font-semibold text-foreground">{DOMAINES[0].name[lang]}</h3>
+              </div>
+
+              {/* Épigraphe */}
+              <figure className="text-center my-8">
+                <span className="block mx-auto mb-4" style={{ height: 1, width: 48, background: "#B0894F" }} aria-hidden="true" />
+                <blockquote className="text-lg md:text-xl text-foreground/90 italic max-w-lg mx-auto text-balance">{typo(firstPages.epigraph[lang], lang)}</blockquote>
+              </figure>
+
+              {/* Méditation (extrait court, coupure élégante) */}
+              <div className="mt-10 mb-10 max-w-xl mx-auto">
+                <p className="text-xs tracking-[0.18em] uppercase text-accent mb-1 text-center">{s.medLabel}</p>
+                <h4 className="text-lg md:text-xl font-semibold text-foreground italic text-center mb-5">{typo(firstPages.meditationTitle[lang], lang)}</h4>
+                <p className="text-lg md:text-xl text-foreground/90 leading-relaxed text-pretty">{typo(firstPages.meditationExcerpt[lang], lang)}</p>
+                <p className="mt-3 text-sm text-muted-foreground italic">{s.medCut}</p>
+              </div>
+
+              {/* Premiers fragments (titre + texte, comme dans le livre) */}
+              <div className="mt-10 space-y-8 max-w-xl mx-auto">
+                {firstPages.fragments.map((f: ExcerptFragment, i) => (
+                  <article key={i}>
+                    <h4 className="text-sm tracking-[0.16em] uppercase text-accent mb-2">{typo(f.title[lang], lang)}</h4>
+                    <p className="text-lg md:text-xl text-foreground leading-relaxed text-pretty">{typo(f.text[lang], lang)}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 3b — Ailleurs dans le livre (sélection représentative) */}
+          <section className="mb-16 md:mb-24">
+            <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-3">{s.ailleursTitle}</h2>
+            <p className="text-muted-foreground mb-10">{s.ailleursSubtitle}</p>
             <div className="space-y-12">
               {bookExtract.map((f, i) => (<FragmentBlock key={i} fragment={f} lang={lang} />))}
             </div>
