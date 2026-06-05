@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 import { bookExtract, type BookFragment } from "@/lib/book-extract";
+import { typo, quote } from "@/lib/typography";
 import type { Language } from "@/types/quote";
 
 /** Les huit Domaines du Livre I (paratexte, FR/EN/ES). */
@@ -127,26 +128,6 @@ const S: Record<Language, Record<string, string>> = {
     backTop: "↑ Volver arriba",
   },
 };
-
-/**
- * Typographie d'affichage (couche site, non destructive) :
- * - apostrophe courbe ’ partout ;
- * - en français, espace insécable avant ; : ! ? et à l'intérieur des guillemets « ».
- * Ne modifie aucun fragment canonique : conversion purement visuelle au rendu.
- */
-function typo(text: string, lang: Language): string {
-  let out = text.replace(/'/g, "’");
-  if (lang === "fr") {
-    out = out.replace(/ ([;:!?])/g, " $1");
-    out = out.replace(/«\s+/g, "« ").replace(/\s+»/g, " »");
-  }
-  return out;
-}
-
-/** Guillemets localisés autour d'un texte (déjà passé par typo). */
-function quote(text: string, lang: Language): string {
-  return lang === "en" ? `“${text}”` : `« ${text} »`;
-}
 
 function FragmentBlock({ fragment, lang }: { fragment: BookFragment; lang: Language }) {
   const blocks = fragment.text[lang].split(/\n\n+/);

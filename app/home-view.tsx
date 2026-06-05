@@ -43,7 +43,7 @@ export function HomeView({ morning, evening }: { morning: HomeFragment; evening:
 
           <nav className="w-full mt-10 md:mt-14 flex flex-wrap justify-center gap-4">
             <Link
-              href="/manifeste"
+              href="/intention"
               className="px-6 py-3 rounded-lg border border-primary/40 bg-card text-foreground text-base font-medium tracking-wide hover:bg-secondary hover:border-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             >
               {t("cta.manifesto")}
