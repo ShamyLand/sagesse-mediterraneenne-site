@@ -12,12 +12,9 @@ export function Header() {
         {t("work.title")}
       </h1>
 
-      {/* Accroche éditoriale — taille et contraste renforcés (lisible en mode sombre) */}
+      {/* Sous-titre — accroche unique, sobre */}
       <p className="mt-5 md:mt-6 text-xl md:text-2xl text-foreground font-normal leading-relaxed max-w-2xl mx-auto text-pretty">
         {t("site.tagline")}
-      </p>
-      <p className="mt-3 text-base md:text-lg text-muted-foreground font-normal leading-relaxed max-w-xl mx-auto text-pretty">
-        {t("site.intro")}
       </p>
     </header>
   );

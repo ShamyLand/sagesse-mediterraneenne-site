@@ -63,7 +63,7 @@ export const dict: Record<Language, Record<I18nKey, string>> = {
   en: {
     "work.title": "The Invisible Laws",
     "work.subtitle": "Fragments of wisdom for the modern world",
-    "site.tagline": "Fragments of wisdom to read our times more clearly.",
+    "site.tagline": "Fragments of wisdom to better read our time.",
     "site.intro": "Short texts to shed light on our flaws, our choices and our contradictions.",
     "nav.home": "Home",
     "nav.book": "The Book",
