@@ -22,11 +22,11 @@ const S: Record<Language, Record<string, string>> = {
   fr: {
     subtitle: "Fragments de sagesse pour le monde moderne",
     coverTagline: "Fragments de sagesse",
-    promise: "Une sagesse ancienne relue pour les failles du monde moderne.",
+    promise: "Un recueil de fragments pour éclairer ce qui nous gouverne en silence.",
     bmTop: "Haut", bmPromesse: "Le livre", bmExtrait: "Extraits", bmDomaines: "Domaines", bmObjet: "Se procurer",
     promesseTitle: "Le livre",
-    promesseP1: "Ce livre ne prêche pas. Il transpose. Il puise dans les anciennes sagesses méditerranéennes — bibliques, évangéliques, coraniques, juridiques et philosophiques — pour en proposer des fragments brefs, graves et contemporains.",
-    promesseP2: "Ni traité religieux, ni manuel de développement personnel : une parole ancienne rendue lisible pour aujourd'hui — sur l'orgueil, la peur, l'argent, le pouvoir, la justice, le temps.",
+    promesseP1: "Ce livre ne prêche pas. Il transpose. Il puise dans les héritages de sagesse de la Méditerranée — bibliques, évangéliques, coraniques, juridiques et philosophiques — pour en proposer des formes brèves, graves et actuelles.",
+    promesseP2: "Ni traité religieux, ni manuel de développement personnel : des traditions méditerranéennes rendues lisibles pour notre époque — sur l'orgueil, la peur, l'argent, le pouvoir, la justice, le temps.",
     promesseP3: "À offrir à un ami comme à un adversaire : un monde où chacun voit un peu mieux ses propres failles est déjà un monde moins brutal.",
     premieresBadge: "Premières pages",
     premieresTitle: "Lire les premières pages",
@@ -36,7 +36,7 @@ const S: Record<Language, Record<string, string>> = {
     medCut: "[…] la méditation se poursuit dans le livre.",
     ailleursTitle: "Ailleurs dans le livre",
     ailleursSubtitle: "Quelques fragments d'autres Domaines, pour l'amplitude des thèmes.",
-    extraitInspiration: "Chaque fragment est librement inspiré d'une tradition ancienne ou philosophique — jamais une citation.",
+    extraitInspiration: "Chaque fragment est librement inspiré d'une tradition de sagesse — jamais une citation.",
     domainesTitle: "Les huit Domaines",
     domainesIntro: "Environ 205 fragments, répartis en huit Domaines, ouverts chacun par une méditation. 138 pages.",
     objetTitle: "Se procurer le livre",
@@ -63,11 +63,11 @@ const S: Record<Language, Record<string, string>> = {
   en: {
     subtitle: "Fragments of wisdom for the modern world",
     coverTagline: "Fragments of wisdom",
-    promise: "Ancient wisdom, reread for the fractures of the modern world.",
+    promise: "A book of fragments to illuminate what governs us in silence.",
     bmTop: "Top", bmPromesse: "The book", bmExtrait: "Excerpts", bmDomaines: "Parts", bmObjet: "Get the book",
     promesseTitle: "The book",
-    promesseP1: "This book does not preach. It transposes. It draws on the old Mediterranean wisdoms — biblical, evangelical, Qur'anic, juridical and philosophical — to offer fragments that are short, grave and contemporary.",
-    promesseP2: "Neither a religious treatise nor a self-help manual: an ancient voice made legible for today — on pride, fear, money, power, justice, time.",
+    promesseP1: "This book does not preach. It transposes. It draws on the wisdom heritages of the Mediterranean — biblical, evangelical, Qur'anic, juridical and philosophical — to offer brief forms that are grave and current.",
+    promesseP2: "Neither a religious treatise nor a self-help manual: Mediterranean traditions made legible for our times — on pride, fear, money, power, justice, time.",
     promesseP3: "To give to a friend as much as to an adversary: a world where each sees their own flaws a little better is already a less brutal world.",
     premieresBadge: "First pages",
     premieresTitle: "Read the first pages",
@@ -77,7 +77,7 @@ const S: Record<Language, Record<string, string>> = {
     medCut: "[…] the meditation continues in the book.",
     ailleursTitle: "Elsewhere in the book",
     ailleursSubtitle: "A few fragments from other Parts, to show the range of themes.",
-    extraitInspiration: "Each fragment is freely inspired by an ancient or philosophical tradition — never a quotation.",
+    extraitInspiration: "Each fragment is freely inspired by a tradition of wisdom — never a quotation.",
     domainesTitle: "The eight Parts",
     domainesIntro: "About 205 fragments, across eight Parts, each opened by a meditation. 138 pages.",
     objetTitle: "Get the book",
@@ -104,11 +104,11 @@ const S: Record<Language, Record<string, string>> = {
   es: {
     subtitle: "Fragmentos de sabiduría para el mundo moderno",
     coverTagline: "Fragmentos de sabiduría",
-    promise: "Una sabiduría antigua releída para las grietas del mundo moderno.",
+    promise: "Un libro de fragmentos para alumbrar lo que nos gobierna en silencio.",
     bmTop: "Arriba", bmPromesse: "El libro", bmExtrait: "Extractos", bmDomaines: "Partes", bmObjet: "Conseguir",
     promesseTitle: "El libro",
-    promesseP1: "Este libro no predica. Transpone. Bebe de las antiguas sabidurías mediterráneas — bíblicas, evangélicas, coránicas, jurídicas y filosóficas — para proponer fragmentos breves, graves y contemporáneos.",
-    promesseP2: "Ni tratado religioso, ni manual de desarrollo personal: una palabra antigua hecha legible para hoy — sobre el orgullo, el miedo, el dinero, el poder, la justicia, el tiempo.",
+    promesseP1: "Este libro no predica. Transpone. Bebe de los legados de sabiduría del Mediterráneo — bíblicos, evangélicos, coránicos, jurídicos y filosóficos — para proponer formas breves, graves y actuales.",
+    promesseP2: "Ni tratado religioso, ni manual de desarrollo personal: tradiciones mediterráneas hechas legibles para nuestra época — sobre el orgullo, el miedo, el dinero, el poder, la justicia, el tiempo.",
     promesseP3: "Para regalar a un amigo tanto como a un adversario: un mundo donde cada uno ve un poco mejor sus propias grietas ya es un mundo menos brutal.",
     premieresBadge: "Primeras páginas",
     premieresTitle: "Leer las primeras páginas",
@@ -118,7 +118,7 @@ const S: Record<Language, Record<string, string>> = {
     medCut: "[…] la meditación continúa en el libro.",
     ailleursTitle: "En otras partes del libro",
     ailleursSubtitle: "Algunos fragmentos de otras Partes, para mostrar la amplitud de los temas.",
-    extraitInspiration: "Cada fragmento está libremente inspirado en una tradición antigua o filosófica — nunca una cita.",
+    extraitInspiration: "Cada fragmento está libremente inspirado en una tradición de sabiduría — nunca una cita.",
     domainesTitle: "Las ocho Partes",
     domainesIntro: "Unos 205 fragmentos, en ocho Partes, abiertas cada una por una meditación. 138 páginas.",
     objetTitle: "Conseguir el libro",
@@ -198,8 +198,7 @@ export function BookView() {
 
           {/* 1 — Hero */}
           <header className="mb-16 md:mb-24 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight mb-5">{t("work.title")}</h1>
-            <p className="text-base md:text-lg text-muted-foreground mb-6">{s.subtitle}</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground tracking-tight mb-6">{t("work.title")}</h1>
             <div className="mx-auto mb-8 flex justify-center">
               <div className="w-44 md:w-52 aspect-[13/20] rounded-sm shadow-md flex flex-col items-center justify-center px-5 text-center"
                    style={{ background: "#F3EEE3", border: "1px solid rgba(176,137,79,0.45)" }}>

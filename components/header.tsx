@@ -12,12 +12,7 @@ export function Header() {
         {t("work.title")}
       </h1>
 
-      {/* Sous-titre officiel de l'œuvre */}
-      <p className="mt-3 text-sm md:text-base tracking-[0.12em] uppercase text-muted-foreground font-normal">
-        {t("work.subtitle")}
-      </p>
-
-      {/* Intention éditoriale — taille et contraste renforcés (lisible en mode sombre) */}
+      {/* Accroche éditoriale — taille et contraste renforcés (lisible en mode sombre) */}
       <p className="mt-5 md:mt-6 text-xl md:text-2xl text-foreground font-normal leading-relaxed max-w-2xl mx-auto text-pretty">
         {t("site.tagline")}
       </p>

@@ -37,8 +37,8 @@ export const dict: Record<Language, Record<I18nKey, string>> = {
   fr: {
     "work.title": "Les Lois Invisibles",
     "work.subtitle": "Fragments de sagesse pour le monde moderne",
-    "site.tagline": "Une sagesse ancienne relue pour les failles du monde moderne.",
-    "site.intro": "Des fragments pour comprendre ce que les anciens textes savaient déjà de l’homme.",
+    "site.tagline": "Des fragments de sagesse pour mieux lire notre époque.",
+    "site.intro": "Des textes brefs pour éclairer nos failles, nos choix et nos contradictions.",
     "nav.home": "Accueil",
     "nav.book": "Le Livre",
     "nav.manifesto": "Manifeste",
@@ -63,8 +63,8 @@ export const dict: Record<Language, Record<I18nKey, string>> = {
   en: {
     "work.title": "The Invisible Laws",
     "work.subtitle": "Fragments of wisdom for the modern world",
-    "site.tagline": "Ancient wisdom reread for the fractures of the modern world.",
-    "site.intro": "Fragments to grasp what the old texts already knew about man.",
+    "site.tagline": "Fragments of wisdom to read our times more clearly.",
+    "site.intro": "Short texts to shed light on our flaws, our choices and our contradictions.",
     "nav.home": "Home",
     "nav.book": "The Book",
     "nav.manifesto": "Manifesto",
@@ -89,8 +89,8 @@ export const dict: Record<Language, Record<I18nKey, string>> = {
   es: {
     "work.title": "Las Leyes Invisibles",
     "work.subtitle": "Fragmentos de sabiduría para el mundo moderno",
-    "site.tagline": "Una sabiduría antigua releída para las grietas del mundo moderno.",
-    "site.intro": "Fragmentos para comprender lo que los textos antiguos ya sabían del hombre.",
+    "site.tagline": "Fragmentos de sabiduría para leer mejor nuestra época.",
+    "site.intro": "Textos breves para alumbrar nuestras grietas, nuestras decisiones y nuestras contradicciones.",
     "nav.home": "Inicio",
     "nav.book": "El Libro",
     "nav.manifesto": "Manifiesto",
