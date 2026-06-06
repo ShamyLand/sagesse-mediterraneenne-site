@@ -57,7 +57,7 @@ const S: Record<Language, Record<string, string>> = {
     sourcesTitle: "Sur les sources",
     sourcesP1: "Les fragments sont librement inspirés de grandes familles de sagesse — sapientiale et biblique, évangélique, coranique et méditerranéenne, stoïcienne, grecque, juridique. Ce ne sont pas des citations ; aucune référence précise n'est donnée comme preuve, et aucune fausse référence n'est avancée. Le livre reste laïque dans son usage.",
     finalTitle: "Recevoir les premiers fragments et être prévenu de la sortie.",
-    finalSub: "Gratuit. Un fragment de sagesse, à votre rythme.",
+    finalSub: "Gratuit. Deux fragments par semaine, sans abonnement payant.",
     backTop: "↑ Retour au début",
   },
   en: {
@@ -98,7 +98,7 @@ const S: Record<Language, Record<string, string>> = {
     sourcesTitle: "On the sources",
     sourcesP1: "The fragments are freely inspired by great families of wisdom — sapiential and biblical, evangelical, Qur'anic and Mediterranean, Stoic, Greek, juridical. They are not quotations; no precise reference is given as proof, and no false reference is made. The book remains secular in use.",
     finalTitle: "Receive the first fragments and be notified of the release.",
-    finalSub: "Free. A fragment of wisdom, at your own pace.",
+    finalSub: "Free. Two fragments a week, no paid subscription.",
     backTop: "↑ Back to top",
   },
   es: {
@@ -139,7 +139,7 @@ const S: Record<Language, Record<string, string>> = {
     sourcesTitle: "Sobre las fuentes",
     sourcesP1: "Los fragmentos están libremente inspirados en grandes familias de sabiduría — sapiencial y bíblica, evangélica, coránica y mediterránea, estoica, griega, jurídica. No son citas; ninguna referencia precisa se da como prueba, y no se inventa ninguna referencia falsa. El libro es laico en su uso.",
     finalTitle: "Recibe los primeros fragmentos y entérate de la salida.",
-    finalSub: "Gratis. Un fragmento de sabiduría, a tu ritmo.",
+    finalSub: "Gratis. Dos fragmentos por semana, sin suscripción de pago.",
     backTop: "↑ Volver arriba",
   },
 };
@@ -306,7 +306,6 @@ export function BookView() {
             <div className="flex flex-wrap gap-3">
               <Link href="/recevoir" className="rounded-md bg-foreground text-background px-5 py-2.5 text-sm font-medium hover:opacity-90 transition">{s.ctaPrevenu}</Link>
               <a href="#extrait" className="rounded-md border border-primary/30 px-5 py-2.5 text-sm font-medium text-foreground hover:bg-primary/5 transition">{s.ctaExtrait}</a>
-              <Link href="/" className="rounded-md border border-primary/30 px-5 py-2.5 text-sm font-medium text-foreground hover:bg-primary/5 transition">{s.ctaRituel}</Link>
             </div>
           </section>
 
@@ -316,9 +315,6 @@ export function BookView() {
             <div className="space-y-4 text-lg leading-relaxed text-foreground/90">
               <p>{s.ritualP1}</p>
               <p>{s.ritualP2}</p>
-            </div>
-            <div className="mt-6">
-              <Link href="/recevoir" className="inline-block rounded-md bg-accent text-background px-5 py-2.5 text-sm font-medium hover:opacity-90 transition">{s.ctaFragments}</Link>
             </div>
           </section>
 
