@@ -1,65 +1,111 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
+import { typo } from "@/lib/typography";
 import type { Language } from "@/types/quote";
 
-/** Page "Recevoir une sagesse" — inscription préparée, NON fonctionnelle.
- *  Aucun email/SMS/paiement branché. Aucune donnée collectée. */
+/**
+ * Page "Recevoir les fragments" — porte d'entrée GRATUITE.
+ * Formulaire de préparation : AUCUN service email branché, AUCUNE donnée
+ * collectée ni envoyée. La liste ouvrira au lancement. Aucun paiement.
+ */
 const S: Record<Language, Record<string, string>> = {
   fr: {
-    title: "Recevoir une sagesse",
-    intro1: "Chaque matin, une sagesse pour entrer dans la journée.",
-    intro2: "Chaque soir, une sagesse pour en sortir avec plus de paix.",
-    desc: "Bientôt, vous pourrez recevoir deux fragments par jour :",
-    morning: "Matin — courage, responsabilité, action juste.",
-    evening: "Soir — recul, silence, réparation, apaisement.",
-    emailLabel: "Votre adresse e-mail",
+    title: "Recevoir les fragments",
+    subtitle: "Deux fois par semaine, un texte bref pour retrouver du recul, du discernement et de la mémoire.",
+    free1: "Les fragments sont gratuits.",
+    free2: "Pas de publicité.",
+    free3: "Pas d'abonnement payant.",
+    free4: "Désinscription possible à tout moment.",
+    prenomLabel: "Prénom (facultatif)",
+    prenomPlaceholder: "Votre prénom",
+    emailLabel: "Adresse e-mail",
     emailPlaceholder: "vous@exemple.com",
-    freqLabel: "Fréquence",
-    freqMorning: "Matin",
-    freqEvening: "Soir",
-    freqBoth: "Matin et soir",
-    button: "Bientôt disponible",
-    note: "Aucune inscription n’est encore active. Aucune donnée n’est collectée.",
+    consent: "J'accepte de recevoir les fragments par e-mail. Je peux me désinscrire à tout moment.",
+    button: "Recevoir gratuitement les fragments",
+    formNote: "Votre adresse ne sert qu'à l'envoi des fragments — jamais de spam, jamais de revente.",
+    previewNote: "Page en préparation : la liste ouvrira au lancement. Pour l'instant, aucune donnée n'est enregistrée.",
+    okTitle: "Merci de votre intérêt.",
+    okBody: "La liste n'est pas encore ouverte : vous serez prévenu·e dès le lancement. Aucune donnée n'a été enregistrée.",
+    recevrezTitle: "Ce que vous recevrez",
+    recevrez1: "Un fragment bref.",
+    recevrez2: "Parfois une note d'intention.",
+    recevrez3: "Les nouvelles du livre.",
+    recevrez4: "Jamais de spam.",
+    rythmeTitle: "Le rythme",
+    rythme1: "Deux fragments par semaine, pas plus.",
+    rythme2: "Le site garde le rituel quotidien — l'e-mail reste plus rare, et plus précieux.",
+    ctaIntro: "Pendant ce temps, le projet se découvre ici :",
+    ctaLivre: "Découvrir le livre",
+    ctaIntention: "Lire l'intention",
   },
   en: {
-    title: "Receive a wisdom",
-    intro1: "Each morning, a wisdom to enter the day.",
-    intro2: "Each evening, a wisdom to leave it with more peace.",
-    desc: "Soon, you will be able to receive two fragments a day:",
-    morning: "Morning — courage, responsibility, just action.",
-    evening: "Evening — distance, silence, repair, calm.",
-    emailLabel: "Your email address",
+    title: "Receive the fragments",
+    subtitle: "Twice a week, a short text to regain distance, discernment and memory.",
+    free1: "The fragments are free.",
+    free2: "No advertising.",
+    free3: "No paid subscription.",
+    free4: "Unsubscribe at any time.",
+    prenomLabel: "First name (optional)",
+    prenomPlaceholder: "Your first name",
+    emailLabel: "Email address",
     emailPlaceholder: "you@example.com",
-    freqLabel: "Frequency",
-    freqMorning: "Morning",
-    freqEvening: "Evening",
-    freqBoth: "Morning and evening",
-    button: "Coming soon",
-    note: "No sign-up is active yet. No data is collected.",
+    consent: "I agree to receive the fragments by email. I can unsubscribe at any time.",
+    button: "Get the fragments for free",
+    formNote: "Your address is used only to send the fragments — never spam, never resold.",
+    previewNote: "Page in preparation: the list will open at launch. For now, no data is stored.",
+    okTitle: "Thank you for your interest.",
+    okBody: "The list is not open yet: you will be notified at launch. No data has been stored.",
+    recevrezTitle: "What you will receive",
+    recevrez1: "A short fragment.",
+    recevrez2: "Sometimes a note of intention.",
+    recevrez3: "News about the book.",
+    recevrez4: "Never spam.",
+    rythmeTitle: "The rhythm",
+    rythme1: "Two fragments a week, no more.",
+    rythme2: "The site keeps the daily ritual — the email stays rarer, and more precious.",
+    ctaIntro: "Meanwhile, the project unfolds here:",
+    ctaLivre: "Discover the book",
+    ctaIntention: "Read the intention",
   },
   es: {
-    title: "Recibir una sabiduría",
-    intro1: "Cada mañana, una sabiduría para entrar en el día.",
-    intro2: "Cada noche, una sabiduría para salir de él con más paz.",
-    desc: "Pronto podrás recibir dos fragmentos al día:",
-    morning: "Mañana — coraje, responsabilidad, acción justa.",
-    evening: "Noche — distancia, silencio, reparación, sosiego.",
-    emailLabel: "Tu dirección de correo",
+    title: "Recibir los fragmentos",
+    subtitle: "Dos veces por semana, un texto breve para recuperar distancia, discernimiento y memoria.",
+    free1: "Los fragmentos son gratuitos.",
+    free2: "Sin publicidad.",
+    free3: "Sin suscripción de pago.",
+    free4: "Puedes darte de baja en cualquier momento.",
+    prenomLabel: "Nombre (opcional)",
+    prenomPlaceholder: "Tu nombre",
+    emailLabel: "Correo electrónico",
     emailPlaceholder: "tu@ejemplo.com",
-    freqLabel: "Frecuencia",
-    freqMorning: "Mañana",
-    freqEvening: "Noche",
-    freqBoth: "Mañana y noche",
-    button: "Próximamente",
-    note: "Aún no hay inscripción activa. No se recopila ningún dato.",
+    consent: "Acepto recibir los fragmentos por correo. Puedo darme de baja en cualquier momento.",
+    button: "Recibir los fragmentos gratis",
+    formNote: "Tu dirección solo se usa para enviar los fragmentos — nunca spam, nunca se revende.",
+    previewNote: "Página en preparación: la lista se abrirá en el lanzamiento. Por ahora no se guarda ningún dato.",
+    okTitle: "Gracias por tu interés.",
+    okBody: "La lista aún no está abierta: te avisaremos en el lanzamiento. No se ha guardado ningún dato.",
+    recevrezTitle: "Lo que recibirás",
+    recevrez1: "Un fragmento breve.",
+    recevrez2: "A veces una nota de intención.",
+    recevrez3: "Noticias del libro.",
+    recevrez4: "Nunca spam.",
+    rythmeTitle: "El ritmo",
+    rythme1: "Dos fragmentos por semana, no más.",
+    rythme2: "El sitio conserva el ritual diario — el correo es más raro, y más valioso.",
+    ctaIntro: "Mientras tanto, el proyecto se descubre aquí:",
+    ctaLivre: "Descubrir el libro",
+    ctaIntention: "Leer la intención",
   },
 };
 
 export default function RecevoirPage() {
   const { lang, t } = useLanguage();
   const s = S[lang];
+  const tp = (x: string) => typo(x, lang);
+  const [sent, setSent] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -73,86 +119,86 @@ export default function RecevoirPage() {
             </Link>
           </div>
 
-          {/* En-tête */}
+          {/* 1 — Hero */}
           <div className="mb-10 md:mb-12 text-center">
-            <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground font-normal mb-4">
-              {t("work.title")}
-            </p>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight">
-              {s.title}
-            </h1>
+            <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground font-normal mb-4">{t("work.title")}</p>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight mb-5">{s.title}</h1>
+            <p className="text-lg md:text-xl text-foreground/90 leading-relaxed max-w-lg mx-auto text-pretty">{tp(s.subtitle)}</p>
           </div>
 
-          {/* Intention rituelle */}
-          <div className="space-y-2 text-lg md:text-xl text-foreground font-normal leading-relaxed text-center mb-10 md:mb-12">
-            <p>{s.intro1}</p>
-            <p>{s.intro2}</p>
-          </div>
-
-          {/* Description matin / soir */}
-          <div className="mb-10 md:mb-12 pl-6 md:pl-8 border-l-2 border-primary/20">
-            <p className="text-base md:text-lg text-muted-foreground font-normal mb-4">{s.desc}</p>
-            <ul className="space-y-3">
-              <li className="text-base md:text-lg text-foreground font-normal">
-                <span className="text-accent font-medium">●</span> {s.morning}
+          {/* 2 — Gratuité */}
+          <ul className="mb-10 md:mb-12 mx-auto max-w-md space-y-2 text-base text-muted-foreground">
+            {[s.free1, s.free2, s.free3, s.free4].map((f, i) => (
+              <li key={i} className="flex items-baseline gap-3">
+                <span className="text-accent" aria-hidden="true">—</span>
+                <span className="text-foreground/90">{tp(f)}</span>
               </li>
-              <li className="text-base md:text-lg text-foreground font-normal">
-                <span className="text-accent font-medium">○</span> {s.evening}
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
 
-          {/* Formulaire visuel — NON fonctionnel (aucun service branché) */}
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            aria-describedby="recevoir-note"
-            className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-6"
-          >
-            <div>
-              <label htmlFor="email" className="block text-sm tracking-[0.12em] uppercase text-muted-foreground font-medium mb-2">
-                {s.emailLabel}
-              </label>
-              <input
-                id="email"
-                type="email"
-                inputMode="email"
-                autoComplete="off"
-                disabled
-                placeholder={s.emailPlaceholder}
-                className="w-full max-w-full rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/70 disabled:opacity-70 disabled:cursor-not-allowed"
-              />
+          {/* 3 — Formulaire (préparation : aucune donnée envoyée) */}
+          {sent ? (
+            <div role="status" className="rounded-2xl border border-primary/20 bg-primary/5 p-6 md:p-8 text-center space-y-2">
+              <p className="text-lg font-medium text-foreground">{tp(s.okTitle)}</p>
+              <p className="text-base text-muted-foreground leading-relaxed">{tp(s.okBody)}</p>
             </div>
-
-            <fieldset disabled className="disabled:opacity-80">
-              <legend className="text-sm tracking-[0.12em] uppercase text-muted-foreground font-medium mb-3">
-                {s.freqLabel}
-              </legend>
-              <div className="flex flex-wrap gap-3">
-                {[s.freqMorning, s.freqEvening, s.freqBoth].map((label, i) => (
-                  <label
-                    key={i}
-                    className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-4 py-2.5 text-base text-foreground cursor-not-allowed"
-                  >
-                    <input type="radio" name="frequency" disabled defaultChecked={i === 2} className="accent-primary" />
-                    {label}
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-
-            <button
-              type="submit"
-              disabled
-              aria-disabled="true"
-              className="w-full rounded-lg border border-border bg-secondary px-6 py-3 text-base text-muted-foreground font-medium tracking-wide cursor-not-allowed select-none"
+          ) : (
+            <form
+              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+              className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-5"
             >
-              {s.button}
-            </button>
+              <div>
+                <label htmlFor="prenom" className="block text-sm tracking-[0.12em] uppercase text-muted-foreground font-medium mb-2">{s.prenomLabel}</label>
+                <input id="prenom" type="text" autoComplete="given-name" placeholder={s.prenomPlaceholder}
+                  className="w-full rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring" />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm tracking-[0.12em] uppercase text-muted-foreground font-medium mb-2">{s.emailLabel}</label>
+                <input id="email" type="email" inputMode="email" required autoComplete="email" placeholder={s.emailPlaceholder}
+                  className="w-full rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring" />
+              </div>
+              <label className="flex items-start gap-3 text-sm text-muted-foreground leading-relaxed">
+                <input type="checkbox" required className="mt-1 accent-primary shrink-0" />
+                <span>{tp(s.consent)}</span>
+              </label>
+              <button type="submit"
+                className="w-full rounded-lg bg-foreground text-background px-6 py-3 text-base font-medium tracking-wide hover:opacity-90 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+                {s.button}
+              </button>
+              <p className="text-sm text-muted-foreground text-center leading-relaxed">{tp(s.formNote)}</p>
+              <p className="text-xs text-muted-foreground/80 text-center italic leading-relaxed">{tp(s.previewNote)}</p>
+            </form>
+          )}
 
-            <p id="recevoir-note" className="text-sm text-muted-foreground font-normal text-center">
-              {s.note}
-            </p>
-          </form>
+          {/* 4 — Ce que vous recevrez */}
+          <section className="mt-12 md:mt-16">
+            <h2 className="text-xl md:text-2xl font-semibold text-foreground mb-4">{s.recevrezTitle}</h2>
+            <ul className="space-y-2 text-base md:text-lg text-foreground/90">
+              {[s.recevrez1, s.recevrez2, s.recevrez3, s.recevrez4].map((r, i) => (
+                <li key={i} className="flex items-baseline gap-3">
+                  <span className="text-accent" aria-hidden="true">·</span>{tp(r)}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* 5 — Rythme */}
+          <section className="mt-10 md:mt-12 rounded-lg bg-primary/5 border border-primary/10 p-6 md:p-8">
+            <h2 className="text-xl md:text-2xl font-semibold text-foreground mb-3">{s.rythmeTitle}</h2>
+            <div className="space-y-2 text-base md:text-lg text-foreground/90 leading-relaxed">
+              <p>{tp(s.rythme1)}</p>
+              <p>{tp(s.rythme2)}</p>
+            </div>
+          </section>
+
+          {/* 6 — CTA final */}
+          <div className="mt-12 md:mt-16 text-center">
+            <p className="text-muted-foreground mb-5">{tp(s.ctaIntro)}</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/livre" className="px-6 py-3 rounded-lg border border-primary/40 bg-card text-foreground text-base font-medium tracking-wide hover:bg-secondary hover:border-primary transition-colors">{s.ctaLivre}</Link>
+              <Link href="/intention" className="px-6 py-3 rounded-lg border border-border bg-card text-foreground text-base font-medium tracking-wide hover:bg-secondary hover:border-primary/40 transition-colors">{s.ctaIntention}</Link>
+            </div>
+          </div>
 
         </div>
       </main>
