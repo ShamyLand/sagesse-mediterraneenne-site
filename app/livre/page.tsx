@@ -6,7 +6,7 @@ import { BookView } from "@/components/book-view";
 // sont rendues côté client. Une vraie localisation des métadonnées exigerait des routes /en /es
 // (non en place) — documenté dans LIVRE_PAGE_PREVIEW_QA_REPORT.md.
 const DESCRIPTION =
-  "Les Lois Invisibles — un livre de fragments : une sagesse ancienne, méditerranéenne et philosophique, relue pour les failles du monde moderne. Extraits, les huit Domaines, et le rituel quotidien gratuit.";
+  "Les Lois Invisibles — un livre de fragments de sagesse pour mieux lire notre époque. Extraits, les huit Domaines, et le rituel quotidien gratuit.";
 
 export const metadata: Metadata = {
   title: "Le livre",

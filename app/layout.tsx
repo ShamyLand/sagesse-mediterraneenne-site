@@ -26,14 +26,14 @@ export const metadata: Metadata = {
   },
   applicationName: "Les Lois Invisibles",
   description:
-    "Les Lois Invisibles — fragments de sagesse pour le monde moderne. Une sagesse ancienne relue pour les failles du monde moderne.",
+    "Les Lois Invisibles — des fragments de sagesse pour mieux lire notre époque. Des textes brefs et denses, puisés dans de grandes traditions de sagesse.",
   keywords: ["Les Lois Invisibles", "fragments de sagesse", "sagesse", "fragments", "aphorismes", "wisdom", "philosophy"],
   authors: [{ name: "Les Lois Invisibles" }],
   openGraph: {
     title: "Les Lois Invisibles",
     siteName: "Les Lois Invisibles",
     description:
-      "Fragments de sagesse pour le monde moderne — une sagesse ancienne relue pour les failles du monde moderne.",
+      "Des fragments de sagesse pour mieux lire notre époque.",
     type: "website",
     url: "/",
     locale: "fr_FR",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Les Lois Invisibles",
     description:
-      "Fragments de sagesse pour le monde moderne — une sagesse ancienne relue pour les failles du monde moderne.",
+      "Des fragments de sagesse pour mieux lire notre époque.",
   },
 };
 

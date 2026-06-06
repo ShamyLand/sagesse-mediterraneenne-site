@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { IntentionView } from "@/components/intention-view";
 
 const DESCRIPTION =
-  "L'intention derrière Les Lois Invisibles : l'origine personnelle du projet, le lien avec la sagesse ancienne et la transmission, et pourquoi les fragments quotidiens restent gratuits.";
+  "L'intention derrière Les Lois Invisibles : l'origine personnelle du projet, le lien avec la sagesse et la transmission, et pourquoi les fragments quotidiens restent gratuits.";
 
 export const metadata: Metadata = {
   title: "L'intention",
