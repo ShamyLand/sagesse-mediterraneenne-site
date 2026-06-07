@@ -22,20 +22,20 @@ const SITE_URL = (process.env.SITE_URL || "https://project-7coik.vercel.app").re
 
 /** E-mail de bienvenue (J0) — sobre et premium, cohérent avec le site (en-tête, filet or, fond crème). */
 function buildWelcome(senderEmail: string) {
-  const subject = "Bienvenue — quelques mots avant les fragments";
+  const subject = "Bienvenue dans Les Lois Invisibles";
   const text = `LES LOIS INVISIBLES
 
 Bonjour,
 
 Merci d'avoir choisi de recevoir ces fragments.
 
-Des textes très brefs, puisés dans de grandes traditions et transposés pour notre époque : des phrases lentes pour retrouver un peu de recul. Deux par semaine, pas plus. C'est gratuit, et cela le restera.
+Des textes brefs, hérités de traditions de sagesse et écrits pour aujourd'hui. Deux par semaine, pas plus. C'est gratuit, et ça le restera.
 
 Découvrir l'intention du projet : ${SITE_URL}/intention
 
 — Les Lois Invisibles
 
-Vous recevez cet e-mail après inscription sur Les Lois Invisibles. Vous pouvez vous désinscrire à tout moment (répondez à cet e-mail).`;
+Vous recevez ce message à la suite de votre inscription sur Les Lois Invisibles. Vous pouvez vous désinscrire à tout moment (répondez à cet e-mail).`;
   const html = `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f3eee3;margin:0;padding:0">
   <tr><td align="center" style="padding:32px 16px">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border:1px solid #e7ded0;border-radius:8px">
@@ -44,13 +44,13 @@ Vous recevez cet e-mail après inscription sur Les Lois Invisibles. Vous pouvez 
         <div style="height:1px;width:48px;background:#b0894f;margin:14px auto 26px;font-size:0;line-height:1px">&nbsp;</div>
         <p style="font-size:17px;line-height:1.65;margin:0 0 16px">Bonjour,</p>
         <p style="font-size:17px;line-height:1.65;margin:0 0 16px">Merci d'avoir choisi de recevoir ces fragments.</p>
-        <p style="font-size:17px;line-height:1.65;margin:0 0 22px">Des textes très brefs, puisés dans de grandes traditions et transposés pour notre époque&nbsp;: des phrases lentes pour retrouver un peu de recul. Deux par semaine, pas plus. C'est gratuit, et cela le restera.</p>
+        <p style="font-size:17px;line-height:1.65;margin:0 0 22px">Des textes brefs, hérités de traditions de sagesse et écrits pour aujourd'hui. Deux par semaine, pas plus. C'est gratuit, et ça le restera.</p>
         <div style="text-align:center;margin:26px 0">
           <a href="${SITE_URL}/intention" style="display:inline-block;background:#1a1a1a;color:#ffffff;text-decoration:none;font-family:Georgia,'Times New Roman',serif;font-size:15px;padding:12px 28px;border-radius:6px">Découvrir l'intention</a>
         </div>
         <p style="font-size:17px;line-height:1.65;margin:0;color:#8a6d3b">— Les Lois Invisibles</p>
         <div style="border-top:1px solid #e7ded0;margin-top:26px;padding-top:16px;font-size:12px;line-height:1.55;color:#9a9a9a;text-align:center">
-          Vous recevez cet e-mail après inscription sur Les Lois Invisibles.<br>Vous pouvez vous désinscrire à tout moment — <a href="mailto:${senderEmail}?subject=Desinscription" style="color:#9a9a9a">se désinscrire</a>.
+          Vous recevez ce message à la suite de votre inscription sur Les Lois Invisibles.<br>Vous pouvez vous désinscrire à tout moment — <a href="mailto:${senderEmail}?subject=Desinscription" style="color:#9a9a9a">se désinscrire</a>.
         </div>
       </td></tr>
     </table>
