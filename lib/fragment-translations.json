@@ -15,6 +15,10 @@
     "tradition": {
       "en": "biblical wisdom (impartiality of the judge) + Stoicism",
       "es": "sabiduría bíblica (imparcialidad del juez) + estoicismo"
+    },
+    "title": {
+      "en": "Profiling by appearance",
+      "es": "El perfil por la apariencia"
     }
   },
   "La justice rancunière": {
@@ -33,6 +37,10 @@
     "tradition": {
       "en": "biblical wisdom (impartial judge) + legal parallel",
       "es": "sabiduría bíblica (juez imparcial) + paralelo jurídico"
+    },
+    "title": {
+      "en": "Vengeful justice",
+      "es": "La justicia rencorosa"
     }
   },
   "Le pardon stratégique": {
@@ -51,6 +59,10 @@
     "tradition": {
       "en": "forgiveness 'from the heart' + Stoicism",
       "es": "perdón 'de corazón' + estoicismo"
+    },
+    "title": {
+      "en": "Strategic forgiveness",
+      "es": "El perdón estratégico"
     }
   },
   "La générosité filmée": {
@@ -69,6 +81,10 @@
     "tradition": {
       "en": "gospel wisdom + Stoicism + Abrahamic ethics (riyā')",
       "es": "sabiduría evangélica + estoicismo + ética abrahámica (riyā')"
+    },
+    "title": {
+      "en": "Generosity on camera",
+      "es": "La generosidad filmada"
     }
   },
   "Le don qui oblige": {
@@ -87,6 +103,10 @@
     "tradition": {
       "en": "Stoicism",
       "es": "Estoicismo"
+    },
+    "title": {
+      "en": "The gift that binds",
+      "es": "El don que obliga"
     }
   },
   "La rumeur": {
@@ -105,6 +125,10 @@
     "tradition": {
       "en": "prohibition of false testimony + slander (lashon hara)",
       "es": "prohibición del falso testimonio + difamación (lashon hara)"
+    },
+    "title": {
+      "en": "Rumour",
+      "es": "El rumor"
     }
   },
   "Le prêt qui tient": {
@@ -123,6 +147,10 @@
     "tradition": {
       "en": "Proverbs",
       "es": "Proverbios"
+    },
+    "title": {
+      "en": "The loan that holds",
+      "es": "El préstamo que retiene"
     }
   },
   "La vie à valider": {
@@ -141,6 +169,10 @@
     "tradition": {
       "en": "Stoicism + Ecclesiastes",
       "es": "Estoicismo + Eclesiastés"
+    },
+    "title": {
+      "en": "A life to validate",
+      "es": "La vida por validar"
     }
   },
   "Le mérite et l'oubli": {
@@ -159,6 +191,10 @@
     "tradition": {
       "en": "biblical wisdom",
       "es": "sabiduría bíblica"
+    },
+    "title": {
+      "en": "Merit and oblivion",
+      "es": "El mérito y el olvido"
     }
   },
   "L'humiliation faible": {
@@ -177,6 +213,10 @@
     "tradition": {
       "en": "Proverbs + Stoicism",
       "es": "Proverbios + estoicismo"
+    },
+    "title": {
+      "en": "Humiliating the weak",
+      "es": "La humillación del débil"
     }
   },
   "L'orgueil sourd": {
@@ -195,6 +235,10 @@
     "tradition": {
       "en": "Proverbs",
       "es": "Proverbios"
+    },
+    "title": {
+      "en": "Deaf pride",
+      "es": "El orgullo sordo"
     }
   },
   "La colère qui se trompe de cible": {
@@ -213,6 +257,10 @@
     "tradition": {
       "en": "Stoicism + Proverbs",
       "es": "Estoicismo + Proverbios"
+    },
+    "title": {
+      "en": "Anger at the wrong target",
+      "es": "La cólera que yerra el blanco"
     }
   },
   "Le flatteur": {
@@ -231,6 +279,10 @@
     "tradition": {
       "en": "Proverbs",
       "es": "Proverbios"
+    },
+    "title": {
+      "en": "The flatterer",
+      "es": "El adulador"
     }
   },
   "Le serment de trop": {
@@ -249,6 +301,10 @@
     "tradition": {
       "en": "Ecclesiastes + evangelical wisdom",
       "es": "Eclesiastés + sabiduría evangélica"
+    },
+    "title": {
+      "en": "One oath too many",
+      "es": "El juramento de más"
     }
   },
   "La porte fermée": {
@@ -267,6 +323,10 @@
     "tradition": {
       "en": "Leviticus/Deuteronomy + Mediterranean hospitality",
       "es": "Levítico/Deuteronomio + hospitalidad mediterránea"
+    },
+    "title": {
+      "en": "The closed door",
+      "es": "La puerta cerrada"
     }
   },
   "Entre deux absences": {
@@ -285,6 +345,10 @@
     "tradition": {
       "en": "tradition of exile (Psalms)",
       "es": "tradición del exilio (Salmos)"
+    },
+    "title": {
+      "en": "Between two absences",
+      "es": "Entre dos ausencias"
     }
   },
   "Le mépris des anciens": {
@@ -303,6 +367,10 @@
     "tradition": {
       "en": "biblical wisdom",
       "es": "sabiduría bíblica"
+    },
+    "title": {
+      "en": "Contempt for elders",
+      "es": "El desprecio a los mayores"
     }
   },
   "Jamais rassasié": {
@@ -321,6 +389,10 @@
     "tradition": {
       "en": "biblical wisdom",
       "es": "sabiduría bíblica"
+    },
+    "title": {
+      "en": "Never sated",
+      "es": "Nunca saciado"
     }
   },
   "La vérité qu'on ne veut pas entendre": {
@@ -339,6 +411,10 @@
     "tradition": {
       "en": "Proverbs + prophetic tradition",
       "es": "Proverbios + tradición profética"
+    },
+    "title": {
+      "en": "The truth we refuse to hear",
+      "es": "La verdad que no se quiere oír"
     }
   }
 }

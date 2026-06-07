@@ -7,7 +7,7 @@ import type { I18nKey } from "@/lib/i18n/dictionary";
 import type { Inspiration, Loc, Lang } from "@/lib/site-fragments";
 import { cn } from "@/lib/utils";
 
-export type HomeFragment = { title: string; text: Loc; source: Inspiration | null };
+export type HomeFragment = { title: Loc; text: Loc; source: Inspiration | null };
 
 interface DailyFragmentProps {
   moment: Moment;
@@ -57,7 +57,7 @@ export function DailyFragment({ moment, variant = "primary", fragment }: DailyFr
       </header>
 
       <h3 className={cn("tracking-[0.12em] uppercase text-foreground/70 font-medium mb-3", isPrimary ? "text-sm md:text-base" : "text-sm")}>
-        {fragment.title}
+        {fragment.title[L] || fragment.title.fr}
       </h3>
 
       <blockquote className={cn("text-foreground leading-relaxed font-normal text-balance", isPrimary ? "text-2xl md:text-3xl" : "text-lg md:text-xl")}>
