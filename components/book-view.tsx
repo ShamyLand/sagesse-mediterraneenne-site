@@ -34,6 +34,7 @@ const S: Record<Language, Record<string, string>> = {
     domaineLabel: "Domaine",
     medLabel: "Méditation",
     medCut: "[…] la méditation se poursuit dans le livre.",
+    downloadExcerpt: "Télécharger l'extrait",
     ailleursTitle: "Ailleurs dans le livre",
     ailleursSubtitle: "Quelques fragments d'autres Domaines, pour l'amplitude des thèmes.",
     extraitInspiration: "Chaque fragment est librement inspiré d'une tradition de sagesse — jamais une citation.",
@@ -75,6 +76,7 @@ const S: Record<Language, Record<string, string>> = {
     domaineLabel: "Part",
     medLabel: "Meditation",
     medCut: "[…] the meditation continues in the book.",
+    downloadExcerpt: "Download the excerpt",
     ailleursTitle: "Elsewhere in the book",
     ailleursSubtitle: "A few fragments from other Parts, to show the range of themes.",
     extraitInspiration: "Each fragment is freely inspired by a tradition of wisdom — never a quotation.",
@@ -116,6 +118,7 @@ const S: Record<Language, Record<string, string>> = {
     domaineLabel: "Parte",
     medLabel: "Meditación",
     medCut: "[…] la meditación continúa en el libro.",
+    downloadExcerpt: "Descargar el extracto",
     ailleursTitle: "En otras partes del libro",
     ailleursSubtitle: "Algunos fragmentos de otras Partes, para mostrar la amplitud de los temas.",
     extraitInspiration: "Cada fragmento está libremente inspirado en una tradición de sabiduría — nunca una cita.",
@@ -257,6 +260,9 @@ export function BookView() {
                   </article>
                 ))}
               </div>
+            </div>
+            <div className="mt-6 text-center">
+              <a href="/LES_LOIS_INVISIBLES_EXTRAIT_V2.pdf" download className="inline-block rounded-md border border-primary/30 px-5 py-2.5 text-sm font-medium text-foreground hover:bg-primary/5 transition">{s.downloadExcerpt}</a>
             </div>
           </section>
 

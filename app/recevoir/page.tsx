@@ -8,8 +8,9 @@ import type { Language } from "@/types/quote";
 
 /**
  * Page "Recevoir les fragments" — porte d'entrée GRATUITE.
- * Formulaire de préparation : AUCUN service email branché, AUCUNE donnée
- * collectée ni envoyée. La liste ouvrira au lancement. Aucun paiement.
+ * Le formulaire POST vers /api/subscribe (Brevo, MODE TEST).
+ * Sans clés configurées, l'API répond mode:"preview" → aucun enregistrement réel.
+ * Aucun paiement. Aucune campagne publique.
  */
 const S: Record<Language, Record<string, string>> = {
   fr: {
@@ -25,10 +26,13 @@ const S: Record<Language, Record<string, string>> = {
     emailPlaceholder: "vous@exemple.com",
     consent: "J'accepte de recevoir les fragments par e-mail. Je peux me désinscrire à tout moment.",
     button: "Recevoir gratuitement les fragments",
+    sending: "Envoi…",
     formNote: "Votre adresse ne sert qu'à l'envoi des fragments — jamais de spam, jamais de revente.",
-    previewNote: "Page en préparation : la liste ouvrira au lancement. Pour l'instant, aucune donnée n'est enregistrée.",
-    okTitle: "Merci de votre intérêt.",
-    okBody: "La liste n'est pas encore ouverte : vous serez prévenu·e dès le lancement. Aucune donnée n'a été enregistrée.",
+    errorMsg: "Un souci est survenu. Merci de réessayer dans un instant.",
+    okTitle: "C'est fait — bienvenue.",
+    okBody: "Vous recevrez bientôt un premier message. Vous pouvez vous désinscrire à tout moment.",
+    previewTitle: "Merci de votre intérêt.",
+    previewBody: "La liste n'est pas encore ouverte : vous serez prévenu·e dès le lancement. Aucune donnée n'a été enregistrée.",
     recevrezTitle: "Ce que vous recevrez",
     recevrez1: "Un fragment bref.",
     recevrez2: "Parfois une note d'intention.",
@@ -54,10 +58,13 @@ const S: Record<Language, Record<string, string>> = {
     emailPlaceholder: "you@example.com",
     consent: "I agree to receive the fragments by email. I can unsubscribe at any time.",
     button: "Get the fragments for free",
+    sending: "Sending…",
     formNote: "Your address is used only to send the fragments — never spam, never resold.",
-    previewNote: "Page in preparation: the list will open at launch. For now, no data is stored.",
-    okTitle: "Thank you for your interest.",
-    okBody: "The list is not open yet: you will be notified at launch. No data has been stored.",
+    errorMsg: "Something went wrong. Please try again in a moment.",
+    okTitle: "Done — welcome.",
+    okBody: "You will soon receive a first message. You can unsubscribe at any time.",
+    previewTitle: "Thank you for your interest.",
+    previewBody: "The list is not open yet: you will be notified at launch. No data has been stored.",
     recevrezTitle: "What you will receive",
     recevrez1: "A short fragment.",
     recevrez2: "Sometimes a note of intention.",
@@ -83,10 +90,13 @@ const S: Record<Language, Record<string, string>> = {
     emailPlaceholder: "tu@ejemplo.com",
     consent: "Acepto recibir los fragmentos por correo. Puedo darme de baja en cualquier momento.",
     button: "Recibir los fragmentos gratis",
+    sending: "Enviando…",
     formNote: "Tu dirección solo se usa para enviar los fragmentos — nunca spam, nunca se revende.",
-    previewNote: "Página en preparación: la lista se abrirá en el lanzamiento. Por ahora no se guarda ningún dato.",
-    okTitle: "Gracias por tu interés.",
-    okBody: "La lista aún no está abierta: te avisaremos en el lanzamiento. No se ha guardado ningún dato.",
+    errorMsg: "Algo salió mal. Inténtalo de nuevo en un momento.",
+    okTitle: "Hecho — bienvenido·a.",
+    okBody: "Pronto recibirás un primer mensaje. Puedes darte de baja en cualquier momento.",
+    previewTitle: "Gracias por tu interés.",
+    previewBody: "La lista aún no está abierta: te avisaremos en el lanzamiento. No se ha guardado ningún dato.",
     recevrezTitle: "Lo que recibirás",
     recevrez1: "Un fragmento breve.",
     recevrez2: "A veces una nota de intención.",
@@ -101,11 +111,36 @@ const S: Record<Language, Record<string, string>> = {
   },
 };
 
+type Status = "idle" | "sending" | "ok" | "preview" | "error";
+
 export default function RecevoirPage() {
   const { lang, t } = useLanguage();
   const s = S[lang];
   const tp = (x: string) => typo(x, lang);
-  const [sent, setSent] = useState(false);
+
+  const [status, setStatus] = useState<Status>("idle");
+  const [email, setEmail] = useState("");
+  const [prenom, setPrenom] = useState("");
+  const [consent, setConsent] = useState(false);
+
+  async function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!consent || status === "sending") return;
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email, prenom, consent }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.ok && data.mode === "preview") setStatus("preview");
+      else if (res.ok && data.ok) setStatus("ok");
+      else setStatus("error");
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -136,37 +171,38 @@ export default function RecevoirPage() {
             ))}
           </ul>
 
-          {/* 3 — Formulaire (préparation : aucune donnée envoyée) */}
-          {sent ? (
+          {/* 3 — Formulaire (Brevo, mode test ; fallback preview sans clés) */}
+          {status === "ok" || status === "preview" ? (
             <div role="status" className="rounded-2xl border border-primary/20 bg-primary/5 p-6 md:p-8 text-center space-y-2">
-              <p className="text-lg font-medium text-foreground">{tp(s.okTitle)}</p>
-              <p className="text-base text-muted-foreground leading-relaxed">{tp(s.okBody)}</p>
+              <p className="text-lg font-medium text-foreground">{tp(status === "ok" ? s.okTitle : s.previewTitle)}</p>
+              <p className="text-base text-muted-foreground leading-relaxed">{tp(status === "ok" ? s.okBody : s.previewBody)}</p>
             </div>
           ) : (
-            <form
-              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-              className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-5"
-            >
+            <form onSubmit={onSubmit} className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-5">
               <div>
                 <label htmlFor="prenom" className="block text-sm tracking-[0.12em] uppercase text-muted-foreground font-medium mb-2">{s.prenomLabel}</label>
                 <input id="prenom" type="text" autoComplete="given-name" placeholder={s.prenomPlaceholder}
+                  value={prenom} onChange={(e) => setPrenom(e.target.value)}
                   className="w-full rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring" />
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm tracking-[0.12em] uppercase text-muted-foreground font-medium mb-2">{s.emailLabel}</label>
                 <input id="email" type="email" inputMode="email" required autoComplete="email" placeholder={s.emailPlaceholder}
+                  value={email} onChange={(e) => setEmail(e.target.value)}
                   className="w-full rounded-lg border border-border bg-background px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring" />
               </div>
               <label className="flex items-start gap-3 text-sm text-muted-foreground leading-relaxed">
-                <input type="checkbox" required className="mt-1 accent-primary shrink-0" />
+                <input type="checkbox" required checked={consent} onChange={(e) => setConsent(e.target.checked)} className="mt-1 accent-primary shrink-0" />
                 <span>{tp(s.consent)}</span>
               </label>
-              <button type="submit"
-                className="w-full rounded-lg bg-foreground text-background px-6 py-3 text-base font-medium tracking-wide hover:opacity-90 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">
-                {s.button}
+              <button type="submit" disabled={status === "sending"}
+                className="w-full rounded-lg bg-foreground text-background px-6 py-3 text-base font-medium tracking-wide hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+                {status === "sending" ? s.sending : s.button}
               </button>
+              {status === "error" && (
+                <p role="alert" className="text-sm text-center text-red-600 dark:text-red-400">{tp(s.errorMsg)}</p>
+              )}
               <p className="text-sm text-muted-foreground text-center leading-relaxed">{tp(s.formNote)}</p>
-              <p className="text-xs text-muted-foreground/80 text-center italic leading-relaxed">{tp(s.previewNote)}</p>
             </form>
           )}
 

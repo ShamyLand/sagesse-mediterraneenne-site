@@ -24,6 +24,7 @@ export type Item = { id: string; title: Loc; text: Loc; theme: string | null; in
 export type Payload = { source: "supabase" | "placeholder"; reason?: string; count: number; items: Item[] };
 
 type TrEntry = {
+  title?: Partial<Record<"en" | "es", string>>;
   text?: Partial<Record<"en" | "es", string>>;
   summary?: Partial<Record<"en" | "es", string>>;
   reading?: Partial<Record<"en" | "es", string>>;
@@ -100,7 +101,7 @@ export async function getSiteFragments(): Promise<Payload> {
         const verified = !!s.verified_by;
         return {
           id: String(r.id),
-          title: { fr: title, en: title, es: title }, // titres non traduits (libellés courts)
+          title: { fr: title, en: t?.title?.en || title, es: t?.title?.es || title }, // titres traduits via fragment-translations.json (fallback FR)
           text: {
             fr,
             en: String(r.final_en_text || t?.text?.en || fr),
