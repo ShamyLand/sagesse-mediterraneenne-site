@@ -21,11 +21,15 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const SITE_URL = (process.env.SITE_URL || "https://project-7coik.vercel.app").replace(/\/$/, "");
 
 /** E-mail de bienvenue (J0) — sobre et premium, cohérent avec le site (en-tête, filet or, fond crème). */
-function buildWelcome(senderEmail: string) {
+function buildWelcome(senderEmail: string, prenom: string) {
+  const name = prenom ? prenom.charAt(0).toUpperCase() + prenom.slice(1) : "";
+  const escHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const helloText = name ? `Bonjour ${name},` : "Bonjour,";
+  const helloHtml = name ? `Bonjour ${escHtml(name)},` : "Bonjour,";
   const subject = "Bienvenue dans Les Lois Invisibles";
   const text = `LES LOIS INVISIBLES
 
-Bonjour,
+${helloText}
 
 Merci d'avoir choisi de recevoir ces fragments.
 
@@ -42,7 +46,7 @@ Vous recevez ce message à la suite de votre inscription sur Les Lois Invisibles
       <tr><td style="padding:34px 36px;font-family:Georgia,'Times New Roman',serif;color:#1a1a1a">
         <div style="text-align:center;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#8a6d3b">Les Lois Invisibles</div>
         <div style="height:1px;width:48px;background:#b0894f;margin:14px auto 26px;font-size:0;line-height:1px">&nbsp;</div>
-        <p style="font-size:17px;line-height:1.65;margin:0 0 16px">Bonjour,</p>
+        <p style="font-size:17px;line-height:1.65;margin:0 0 16px">${helloHtml}</p>
         <p style="font-size:17px;line-height:1.65;margin:0 0 16px">Merci d'avoir choisi de recevoir ces fragments.</p>
         <p style="font-size:17px;line-height:1.65;margin:0 0 22px">Des textes brefs, hérités de traditions de sagesse et écrits pour aujourd'hui. Deux par semaine, pas plus. À recevoir sans bruit.</p>
         <div style="text-align:center;margin:26px 0">
@@ -104,7 +108,7 @@ export async function POST(req: Request) {
     const senderEmail = process.env.BREVO_SENDER_EMAIL;
     const senderName = process.env.BREVO_SENDER_NAME || "Les Lois Invisibles";
     if (senderEmail) {
-      const w = buildWelcome(senderEmail);
+      const w = buildWelcome(senderEmail, prenom);
       await fetch("https://api.brevo.com/v3/smtp/email", {
         method: "POST",
         headers: { "api-key": apiKey, "content-type": "application/json", accept: "application/json" },
