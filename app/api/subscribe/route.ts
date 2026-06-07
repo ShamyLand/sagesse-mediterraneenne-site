@@ -29,7 +29,7 @@ Bonjour,
 
 Merci d'avoir choisi de recevoir ces fragments.
 
-Des textes brefs, hérités de traditions de sagesse et écrits pour aujourd'hui. Deux par semaine, pas plus. C'est gratuit, et ça le restera.
+Des textes brefs, hérités de traditions de sagesse et écrits pour aujourd'hui. Deux par semaine, pas plus. À recevoir sans bruit.
 
 Découvrir l'intention du projet : ${SITE_URL}/intention
 
@@ -44,7 +44,7 @@ Vous recevez ce message à la suite de votre inscription sur Les Lois Invisibles
         <div style="height:1px;width:48px;background:#b0894f;margin:14px auto 26px;font-size:0;line-height:1px">&nbsp;</div>
         <p style="font-size:17px;line-height:1.65;margin:0 0 16px">Bonjour,</p>
         <p style="font-size:17px;line-height:1.65;margin:0 0 16px">Merci d'avoir choisi de recevoir ces fragments.</p>
-        <p style="font-size:17px;line-height:1.65;margin:0 0 22px">Des textes brefs, hérités de traditions de sagesse et écrits pour aujourd'hui. Deux par semaine, pas plus. C'est gratuit, et ça le restera.</p>
+        <p style="font-size:17px;line-height:1.65;margin:0 0 22px">Des textes brefs, hérités de traditions de sagesse et écrits pour aujourd'hui. Deux par semaine, pas plus. À recevoir sans bruit.</p>
         <div style="text-align:center;margin:26px 0">
           <a href="${SITE_URL}/intention" style="display:inline-block;background:#1a1a1a;color:#ffffff;text-decoration:none;font-family:Georgia,'Times New Roman',serif;font-size:15px;padding:12px 28px;border-radius:6px">Découvrir l'intention</a>
         </div>
