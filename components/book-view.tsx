@@ -262,7 +262,7 @@ export function BookView() {
               </div>
             </div>
             <div className="mt-6 text-center">
-              <a href="/LES_LOIS_INVISIBLES_EXTRAIT_GRATUIT.pdf" download className="inline-block rounded-md border border-primary/30 px-5 py-2.5 text-sm font-medium text-foreground hover:bg-primary/5 transition">{s.downloadExcerpt}</a>
+              <a href="/LES_LOIS_INVISIBLES_EXTRAIT_V2.pdf" download className="inline-block rounded-md border border-primary/30 px-5 py-2.5 text-sm font-medium text-foreground hover:bg-primary/5 transition">{s.downloadExcerpt}</a>
             </div>
           </section>
 
