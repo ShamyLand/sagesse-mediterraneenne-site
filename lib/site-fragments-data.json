@@ -206,5 +206,85 @@
       "confidence": "high",
       "verified": false
     }
+  },
+  {
+    "id": "jamais-rassasie",
+    "title": "Jamais rassasié",
+    "text": "Celui qui aime l'argent n'en a jamais assez : ce n'est pas la richesse qu'il poursuit, c'est l'angoisse de manquer.",
+    "theme": "avidité / argent",
+    "source": {
+      "type": "thematic",
+      "tradition": "Qohélet",
+      "author": null,
+      "reference": null,
+      "summary": "L'amour de l'argent ne connaît pas de satiété.",
+      "reading": "L'avidité poursuit une peur du manque, jamais un seuil.",
+      "confidence": "high",
+      "verified": false
+    }
+  },
+  {
+    "id": "don-qui-oblige",
+    "title": "Le don qui oblige",
+    "text": "Un cadeau qui attend de la reconnaissance n'en est plus un : c'est un prêt qui n'ose pas dire son nom.",
+    "theme": "générosité / dette",
+    "source": {
+      "type": "parallel",
+      "tradition": "stoïcisme",
+      "author": "Sénèque",
+      "reference": null,
+      "summary": "Un vrai bienfait n'attend rien en retour.",
+      "reading": "Le don qui réclame de la gratitude est une dette déguisée.",
+      "confidence": "high",
+      "verified": false
+    }
+  },
+  {
+    "id": "lhumiliation-faible",
+    "title": "L'humiliation faible",
+    "text": "Humilier plus petit que soi, ce n'est pas être fort : c'est avouer qu'on a besoin de la petitesse d'un autre.",
+    "theme": "pouvoir / humiliation",
+    "source": {
+      "type": "thematic",
+      "tradition": "Proverbes + stoïcisme",
+      "author": null,
+      "reference": null,
+      "summary": "S'en prendre au plus faible n'est pas une force.",
+      "reading": "Qui humilie avoue qu'il a besoin de la petitesse d'autrui.",
+      "confidence": "medium",
+      "verified": false
+    }
+  },
+  {
+    "id": "la-vie-a-valider",
+    "title": "La vie à valider",
+    "text": "Montrer sans cesse sa vie, ce n'est pas la partager : c'est demander à des inconnus de décider si elle vaut quelque chose.",
+    "theme": "réseaux / vanité",
+    "source": {
+      "type": "echo",
+      "tradition": "stoïcisme + Qohélet",
+      "author": "Marc Aurèle / Épictète",
+      "reference": null,
+      "summary": "Remettre sa valeur au jugement d'autrui, c'est s'en faire l'esclave.",
+      "reading": "On demande à des inconnus de décider si notre vie vaut quelque chose.",
+      "confidence": "high",
+      "verified": false
+    }
+  },
+  {
+    "id": "le-merite-et-loubli",
+    "title": "Le mérite et l'oubli",
+    "text": "Donner tout le mérite à celui qu'on voit, c'est confondre la lumière avec le travail — et oublier ceux qui l'ont fait dans l'ombre.",
+    "theme": "reconnaissance / visibilité",
+    "source": {
+      "type": "thematic",
+      "tradition": "Qohélet",
+      "author": null,
+      "reference": null,
+      "summary": "Celui dont le travail sauve est souvent celui qu'on oublie.",
+      "reading": "On récompense la visibilité, pas le travail réel.",
+      "confidence": "medium",
+      "verified": false
+    }
   }
 ]
