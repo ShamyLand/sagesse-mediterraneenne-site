@@ -21,7 +21,7 @@ export function RegistryClient({ data }: { data: Payload }) {
           <p className="text-xs uppercase tracking-widest text-gray-500">Privé · noindex · preuve éditoriale</p>
           <h1 className="mt-1 text-2xl font-bold text-gray-900">Registre des sources</h1>
           <p className="mt-2 text-sm text-gray-600">
-            {data.source === "supabase" ? `${data.count} fragments validés + sources` : "Affichage de secours (set curé)"}
+            {data.source === "repo" ? `${data.count} fragments validés + sources` : "Affichage de secours (set curé)"}
           </p>
         </header>
 

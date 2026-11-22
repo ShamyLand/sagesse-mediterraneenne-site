@@ -1,0 +1,210 @@
+[
+  {
+    "id": "generosite-filmee",
+    "title": "La générosité filmée",
+    "text": "Quand je filme mon acte généreux, je transforme l'autre en décor de ma vertu.",
+    "theme": "ego / réseaux",
+    "source": {
+      "type": "thematic",
+      "tradition": "sagesse évangélique + stoïcisme + éthique abrahamique (riyā')",
+      "author": null,
+      "reference": null,
+      "summary": "Un bienfait accompli pour être vu perd sa valeur.",
+      "reading": "On filme son don ; l'autre devient le décor d'une vertu mise en scène.",
+      "confidence": "high",
+      "verified": false
+    }
+  },
+  {
+    "id": "lorgueil-sourd",
+    "title": "L'orgueil sourd",
+    "text": "L'orgueil ne se voit pas dans ce qu'on dit de soi, mais dans tout ce qu'on refuse d'entendre.",
+    "theme": "orgueil",
+    "source": {
+      "type": "thematic",
+      "tradition": "Proverbes",
+      "author": null,
+      "reference": null,
+      "summary": "L'orgueilleux se ferme au conseil, et c'est par là qu'il tombe.",
+      "reading": "On mesure l'orgueil à tout ce qu'on refuse d'écouter.",
+      "confidence": "high",
+      "verified": false
+    }
+  },
+  {
+    "id": "le-flatteur",
+    "title": "Le flatteur",
+    "text": "Le flatteur ne t'admire pas : il étudie l'endroit où tu baisses la garde.",
+    "theme": "flatterie",
+    "source": {
+      "type": "thematic",
+      "tradition": "Proverbes",
+      "author": null,
+      "reference": null,
+      "summary": "La flatterie est un piège tendu sous les pas.",
+      "reading": "L'admiration intéressée cherche la faille, pas l'estime.",
+      "confidence": "high",
+      "verified": false
+    }
+  },
+  {
+    "id": "le-serment-de-trop",
+    "title": "Le serment de trop",
+    "text": "Celui qui jure pour être cru avoue que sa parole, seule, ne suffit plus.",
+    "theme": "serment / parole",
+    "source": {
+      "type": "thematic",
+      "tradition": "Qohélet + sagesse évangélique",
+      "author": null,
+      "reference": null,
+      "summary": "Multiplier les serments dévalue la parole.",
+      "reading": "Surenchérir de promesses trahit une parole déjà faible.",
+      "confidence": "high",
+      "verified": false
+    }
+  },
+  {
+    "id": "le-pret-qui-tient",
+    "title": "Le prêt qui tient",
+    "text": "Prêter à un proche, c'est parfois acheter le droit de lui rappeler qu'il nous doit.",
+    "theme": "argent / dette morale",
+    "source": {
+      "type": "thematic",
+      "tradition": "Proverbes",
+      "author": null,
+      "reference": null,
+      "summary": "La dette change la relation en rapport de pouvoir.",
+      "reading": "Aider en prêtant, c'est parfois s'acheter un ascendant.",
+      "confidence": "high",
+      "verified": false
+    }
+  },
+  {
+    "id": "pardon-strategique",
+    "title": "Le pardon stratégique",
+    "text": "Pardonner tout haut pour paraître grand, c'est garder la dette en s'offrant le rôle du généreux.",
+    "theme": "ego / relations",
+    "source": {
+      "type": "thematic",
+      "tradition": "pardon « du cœur » + stoïcisme",
+      "author": null,
+      "reference": null,
+      "summary": "Pardonner du bout des lèvres en gardant rancune n'efface rien.",
+      "reading": "Le pardon mis en scène devient une posture qui garde la dette.",
+      "confidence": "high",
+      "verified": false
+    }
+  },
+  {
+    "id": "le-mepris-des-anciens",
+    "title": "Le mépris des anciens",
+    "text": "Une époque qui écarte ses vieillards oublie qu'elle se prépare à être écartée à son tour.",
+    "theme": "vieillesse",
+    "source": {
+      "type": "thematic",
+      "tradition": "Lévitique + Qohélet",
+      "author": null,
+      "reference": null,
+      "summary": "Honorer l'ancien est un devoir ; le mépriser se retourne contre soi.",
+      "reading": "Une société qui jette ses vieux prépare son propre rejet.",
+      "confidence": "high",
+      "verified": false
+    }
+  },
+  {
+    "id": "la-verite-qu-on-ne-veut-pas-entendre",
+    "title": "La vérité qu'on ne veut pas entendre",
+    "text": "On pardonne plus facilement au menteur agréable qu'à celui qui dit la vérité qu'on ne veut pas entendre.",
+    "theme": "vérité / réputation",
+    "source": {
+      "type": "thematic",
+      "tradition": "Proverbes + tradition prophétique",
+      "author": null,
+      "reference": null,
+      "summary": "La vérité dérange plus que le mensonge plaisant.",
+      "reading": "On en veut au franc-parler, on récompense la flatterie.",
+      "confidence": "medium",
+      "verified": false
+    }
+  },
+  {
+    "id": "la-colere-cible",
+    "title": "La colère qui se trompe de cible",
+    "text": "La colère se trompe presque toujours de coupable : elle frappe qui se trouve là, non qui l'a causée.",
+    "theme": "colère",
+    "source": {
+      "type": "echo",
+      "tradition": "stoïcisme + Proverbes",
+      "author": "Sénèque",
+      "reference": null,
+      "summary": "La colère aveugle frappe au hasard et punit l'innocent.",
+      "reading": "On décharge sa colère sur qui est là, pas sur qui l'a causée.",
+      "confidence": "high",
+      "verified": false
+    }
+  },
+  {
+    "id": "la-porte-fermee",
+    "title": "La porte fermée",
+    "text": "On ferme sa porte à l'étranger par peur de ce qu'il prendra, et l'on ne saura jamais ce qu'il apportait.",
+    "theme": "hospitalité / étranger",
+    "source": {
+      "type": "thematic",
+      "tradition": "Lévitique/Deutéronome + hospitalité méditerranéenne",
+      "author": null,
+      "reference": null,
+      "summary": "L'accueil de l'étranger est un devoir, contre la peur.",
+      "reading": "La peur ferme la porte avant de connaître ce que l'autre aurait apporté.",
+      "confidence": "high",
+      "verified": false
+    }
+  },
+  {
+    "id": "delit-de-facies",
+    "title": "Le délit de faciès",
+    "text": "Contrôler quelqu'un d'après son visage, ce n'est pas faire respecter la loi : c'est donner à ses préjugés l'uniforme de l'autorité.",
+    "theme": "préjugé / pouvoir",
+    "source": {
+      "type": "thematic",
+      "tradition": "sagesse biblique (impartialité du juge) + stoïcisme",
+      "author": null,
+      "reference": null,
+      "summary": "La justice vraie ne regarde ni le rang ni le visage, seulement le droit.",
+      "reading": "Le pouvoir n'invente pas le préjugé : il lui prête son uniforme.",
+      "confidence": "high",
+      "verified": false
+    }
+  },
+  {
+    "id": "entre-deux-absences",
+    "title": "Entre deux absences",
+    "text": "L'exilé vit entre deux absences : un pays qui ne le retient plus, un autre qui ne le reconnaît pas encore.",
+    "theme": "exil",
+    "source": {
+      "type": "echo",
+      "tradition": "tradition de l'exil (Psaumes)",
+      "author": null,
+      "reference": null,
+      "summary": "L'exil est la douleur d'être de nulle part.",
+      "reading": "Le déraciné porte deux absences, celle d'avant et celle d'après.",
+      "confidence": "medium",
+      "verified": false
+    }
+  },
+  {
+    "id": "la-rumeur",
+    "title": "La rumeur",
+    "text": "Répéter une rumeur, c'est vendre la réputation de quelqu'un — et toucher, au passage, le petit profit d'être celui qui sait.",
+    "theme": "parole / réputation",
+    "source": {
+      "type": "thematic",
+      "tradition": "interdit du faux témoignage + médisance (lashon hara)",
+      "author": null,
+      "reference": null,
+      "summary": "Répandre une parole non prouvée contre autrui détruit un nom.",
+      "reading": "Colporter une rumeur, c'est un faux témoignage qui ne dit pas son nom.",
+      "confidence": "high",
+      "verified": false
+    }
+  }
+]

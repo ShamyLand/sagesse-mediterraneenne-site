@@ -3,29 +3,29 @@ import { curatedHome, pickByDate } from "@/lib/curated-home-fragments";
 import { HomeView } from "./home-view";
 import type { HomeFragment } from "@/components/daily-fragment";
 
-// Accueil = rituel quotidien. Composant SERVEUR : lit les fragments validés+sourcés (getSiteFragments),
-// choisit 1 fragment matin + 1 soir du jour (rotation déterministe), fallback set curé si Supabase échoue.
-// Chaque carte porte une puce « Voir la source ». /api/daily n'est pas utilisé ; aucun vieux corpus.
+// Accueil = rituel quotidien. Composant SERVEUR : lit les fragments validés+sourcés du dépôt (getSiteFragments),
+// choisit 1 fragment matin + 1 soir du jour. Rotation par numéro de jour (heure de Paris) : chaque fragment
+// passe une fois le matin et une fois le soir par cycle, jamais deux jours de suite, jamais matin = soir.
+// Chaque carte porte une puce « Voir la source ». Aucune base externe ; /api/daily n'est pas utilisé.
 export const dynamic = "force-dynamic";
 
-function hash(s: string): number {
-  let h = 0;
-  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
-  return Math.abs(h);
+// Numéro du jour (date civile à Paris) : stable toute la journée, +1 à minuit heure de Paris.
+function dayNumber(day: string): number {
+  const [y, m, d] = day.split("-").map(Number);
+  return Math.floor(Date.UTC(y, m - 1, d) / 86_400_000);
 }
 
 export default async function Home() {
   const data = await getSiteFragments();
-  const day = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/Paris" });
+  const day = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/Paris" }); // AAAA-MM-JJ
 
   let morning: HomeFragment;
   let evening: HomeFragment;
 
-  if (data.source === "supabase" && data.items.length >= 2) {
+  if (data.source === "repo" && data.items.length >= 2) {
     const n = data.items.length;
-    const mi = hash(day + ":m") % n;
-    let ei = hash(day + ":e") % n;
-    if (ei === mi) ei = (ei + 1) % n;
+    const mi = dayNumber(day) % n;
+    const ei = (mi + Math.ceil(n / 2)) % n;
     const toFrag = (it: (typeof data.items)[number]): HomeFragment => ({
       title: it.title, // Loc {fr,en,es}
       text: it.text, // Loc {fr,en,es}
@@ -34,7 +34,7 @@ export default async function Home() {
     morning = toFrag(data.items[mi]);
     evening = toFrag(data.items[ei]);
   } else {
-    // Fallback set curé statique (pas de source associée) — curatedHome a déjà fr/en/es.
+    // Secours : set curé statique (pas de source associée) — curatedHome a déjà fr/en/es.
     const m = pickByDate(curatedHome.morning, day, "morning");
     const e = pickByDate(curatedHome.evening, day, "evening");
     morning = { title: m.title, text: m.text, source: null };

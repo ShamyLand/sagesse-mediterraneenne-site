@@ -2,8 +2,8 @@ import { NextResponse } from "next/server";
 import { getSiteFragments } from "@/lib/site-fragments";
 
 /**
- * GET /api/fragments — corpus site (lecture SEULE Supabase, server-side).
- * Logique dans lib/site-fragments.ts (partagée avec la page SSR /fragments).
+ * GET /api/fragments — corpus site (fragments validés + sourcés, lus dans le dépôt).
+ * Logique dans lib/site-fragments.ts (partagée avec l'accueil SSR et le registre admin).
  */
 export const dynamic = "force-dynamic";
 
