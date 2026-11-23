@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://project-7coik.vercel.app"),
+  metadataBase: new URL("https://jhgram.vercel.app"),
   // Œuvre éditoriale autonome. Intitulé officiel = titre + sous-titre.
   title: {
     default: "Les Lois Invisibles — Fragments de sagesse pour le monde moderne",

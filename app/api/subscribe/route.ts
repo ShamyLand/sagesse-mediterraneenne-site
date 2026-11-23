@@ -18,7 +18,7 @@ type Body = { email?: string; prenom?: string; consent?: boolean };
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const SITE_URL = (process.env.SITE_URL || "https://project-7coik.vercel.app").replace(/\/$/, "");
+const SITE_URL = (process.env.SITE_URL || "https://jhgram.vercel.app").replace(/\/$/, "");
 
 /** E-mail de bienvenue (J0) — sobre et premium, cohérent avec le site (en-tête, filet or, fond crème). */
 function buildWelcome(senderEmail: string, prenom: string) {
