@@ -202,7 +202,7 @@ export default function RecevoirPage() {
               {status === "error" && (
                 <p role="alert" className="text-sm text-center text-red-600 dark:text-red-400">{tp(s.errorMsg)}</p>
               )}
-              <p className="text-sm text-muted-foreground text-center leading-relaxed">{tp(s.formNote)}</p>
+              <p className="text-sm text-muted-foreground text-center leading-relaxed">{tp(s.formNote)} <Link href="/confidentialite" className="underline underline-offset-4 hover:text-foreground">{lang === "fr" ? "Confidentialité" : lang === "es" ? "Privacidad" : "Privacy"}</Link></p>
             </form>
           )}
 

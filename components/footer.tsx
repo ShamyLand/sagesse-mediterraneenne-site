@@ -26,6 +26,9 @@ export function Footer() {
       <p className="text-sm text-muted-foreground font-normal tracking-wide">
         <span className="text-foreground">{t("work.title")}</span> — {t("work.subtitle")}
       </p>
+      <p className="text-xs text-muted-foreground">
+        <Link href="/confidentialite" className="hover:text-foreground transition-colors">Confidentialité</Link>
+      </p>
     </footer>
   );
 }
