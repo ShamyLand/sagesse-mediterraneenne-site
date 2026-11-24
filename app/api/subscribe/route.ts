@@ -101,7 +101,11 @@ export async function POST(req: Request) {
 
     // 201 créé · 204 mis à jour · 400 = souvent "contact déjà dans la liste" → on considère OK.
     if (!res.ok && res.status !== 204 && res.status !== 400) {
-      return NextResponse.json({ ok: false, error: "provider_error" }, { status: 502 });
+      // Diagnostic sans secret : statut HTTP et code d'erreur Brevo (ex. "unauthorized").
+      let code = "";
+      try { code = String(((await res.json()) as { code?: string }).code || ""); } catch { /* corps vide */ }
+      console.error("brevo_contacts_error", res.status, code);
+      return NextResponse.json({ ok: false, error: "provider_error", provider_status: res.status, provider_code: code }, { status: 502 });
     }
 
     // Email de bienvenue (optionnel) — seulement si un expéditeur vérifié est configuré.
