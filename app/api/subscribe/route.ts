@@ -101,12 +101,14 @@ export async function POST(req: Request) {
 
     // 201 créé · 204 mis à jour · 400 = souvent "contact déjà dans la liste" → on considère OK.
     if (!res.ok && res.status !== 204 && res.status !== 400) {
-      // Diagnostic sans secret : statut HTTP et code d'erreur Brevo (ex. "unauthorized").
+      // Diagnostic sans secret, dans les journaux Vercel uniquement.
       let code = "";
       let message = "";
       try { const j = (await res.json()) as { code?: string; message?: string }; code = String(j.code || ""); message = String(j.message || "").slice(0, 160); } catch { /* corps vide */ }
-      console.error("brevo_contacts_error", res.status, code);
-      return NextResponse.json({ ok: false, error: "provider_error", provider_status: res.status, provider_code: code, provider_message: message }, { status: 502 });
+      console.error("brevo_contacts_error", res.status, code, message);
+      // Clé refusée (ex. « API Key is not enabled ») : rien n'est enregistré → réponse honnête « liste pas encore ouverte ».
+      if (res.status === 401 || res.status === 403) return NextResponse.json({ ok: true, mode: "preview" });
+      return NextResponse.json({ ok: false, error: "provider_error" }, { status: 502 });
     }
 
     // Email de bienvenue (optionnel) — seulement si un expéditeur vérifié est configuré.
