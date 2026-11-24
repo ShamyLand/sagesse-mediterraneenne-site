@@ -103,9 +103,10 @@ export async function POST(req: Request) {
     if (!res.ok && res.status !== 204 && res.status !== 400) {
       // Diagnostic sans secret : statut HTTP et code d'erreur Brevo (ex. "unauthorized").
       let code = "";
-      try { code = String(((await res.json()) as { code?: string }).code || ""); } catch { /* corps vide */ }
+      let message = "";
+      try { const j = (await res.json()) as { code?: string; message?: string }; code = String(j.code || ""); message = String(j.message || "").slice(0, 160); } catch { /* corps vide */ }
       console.error("brevo_contacts_error", res.status, code);
-      return NextResponse.json({ ok: false, error: "provider_error", provider_status: res.status, provider_code: code }, { status: 502 });
+      return NextResponse.json({ ok: false, error: "provider_error", provider_status: res.status, provider_code: code, provider_message: message }, { status: 502 });
     }
 
     // Email de bienvenue (optionnel) — seulement si un expéditeur vérifié est configuré.
