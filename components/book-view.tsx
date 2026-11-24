@@ -18,6 +18,19 @@ const DOMAINES: { n: string; name: Record<Language, string> }[] = [
   { n: "VIII", name: { fr: "Du temps et de la fin", en: "Of Time and the End", es: "Del tiempo y el final" } },
 ];
 
+/** Liens d'achat Amazon (livres en ligne depuis le 23/11/2026). L'espagnol arrive fin novembre :
+ *  en attendant, les lecteurs hispanophones voient « Próximamente » et le renvoi vers FR/EN. */
+const BUY: Partial<Record<Language, { paper: { url: string; price: string }; kindle: { url: string; price: string } }>> = {
+  fr: {
+    paper: { url: "https://www.amazon.fr/dp/B0HSNV9MST", price: "11,90 €" },
+    kindle: { url: "https://www.amazon.fr/dp/B0HSM8K3GL", price: "3,99 €" },
+  },
+  en: {
+    paper: { url: "https://www.amazon.com/dp/B0HSP5D783", price: "$12.99" },
+    kindle: { url: "https://www.amazon.com/dp/B0HSMVVMWC", price: "$3.99" },
+  },
+};
+
 const S: Record<Language, Record<string, string>> = {
   fr: {
     subtitle: "Fragments de sagesse pour le monde moderne",
@@ -39,16 +52,17 @@ const S: Record<Language, Record<string, string>> = {
     ailleursSubtitle: "Quelques fragments d'autres Domaines, pour l'amplitude des thèmes.",
     extraitInspiration: "Chaque fragment est librement inspiré d'une tradition de sagesse — jamais une citation.",
     domainesTitle: "Les huit Domaines",
-    domainesIntro: "Environ 205 fragments, répartis en huit Domaines, ouverts chacun par une méditation. 138 pages.",
+    domainesIntro: "203 fragments et deux scènes, répartis en huit Domaines, ouverts chacun par une méditation. 136 pages.",
     objetTitle: "Se procurer le livre",
     objetIntro: "Le livre est la seule chose payante du projet : les fragments quotidiens, eux, restent gratuits.",
     objetPapier: "Livre papier",
     objetPapierDesc: "Broché 13 × 20 cm, papier crème — un objet sobre et durable.",
     objetEbook: "Ebook",
-    objetEbookDesc: "EPUB · PDF · Kindle.",
-    objetLangues: "Versions anglaise et espagnole en préparation.",
+    objetEbookDesc: "Kindle — à lire sur liseuse, tablette ou téléphone.",
+    objetLangues: "Édition anglaise disponible sur Amazon (The Invisible Laws). Édition espagnole à paraître fin novembre.",
     bientot: "Bientôt disponible",
-    ctaPrevenu: "Être prévenu de la sortie du livre",
+    ctaPrevenu: "Recevoir les fragments gratuits",
+    acheter: "Acheter sur Amazon",
     ctaExtrait: "Lire un extrait",
     ctaRituel: "Découvrir le rituel quotidien",
     ritualTitle: "Un livre, et un rituel quotidien",
@@ -57,7 +71,7 @@ const S: Record<Language, Record<string, string>> = {
     ctaFragments: "Recevoir gratuitement les fragments",
     sourcesTitle: "Sur les sources",
     sourcesP1: "Les fragments sont librement inspirés de grandes familles de sagesse — sapientiale et biblique, évangélique, coranique et méditerranéenne, stoïcienne, grecque, juridique. Ce ne sont pas des citations ; aucune référence précise n'est donnée comme preuve, et aucune fausse référence n'est avancée. Le livre reste laïque dans son usage.",
-    finalTitle: "Recevoir les premiers fragments et être prévenu de la sortie.",
+    finalTitle: "Recevoir gratuitement les fragments, au fil des semaines.",
     finalSub: "Gratuit. Deux fragments par semaine, sans abonnement payant.",
     backTop: "↑ Retour au début",
   },
@@ -81,16 +95,17 @@ const S: Record<Language, Record<string, string>> = {
     ailleursSubtitle: "A few fragments from other Parts, to show the range of themes.",
     extraitInspiration: "Each fragment is freely inspired by a tradition of wisdom — never a quotation.",
     domainesTitle: "The eight Parts",
-    domainesIntro: "About 205 fragments, across eight Parts, each opened by a meditation. 138 pages.",
+    domainesIntro: "203 fragments and two scenes, across eight Parts, each opened by a meditation. 136 pages.",
     objetTitle: "Get the book",
     objetIntro: "The book is the only paid part of the project: the daily fragments stay free.",
     objetPapier: "Paperback",
     objetPapierDesc: "13 × 20 cm, cream paper — a sober, lasting object.",
     objetEbook: "Ebook",
-    objetEbookDesc: "EPUB · PDF · Kindle.",
-    objetLangues: "English and Spanish editions in preparation.",
+    objetEbookDesc: "Kindle — read it on an e-reader, tablet or phone.",
+    objetLangues: "English edition: The Invisible Laws. The original French edition and a Spanish edition (late November) are also available.",
     bientot: "Coming soon",
-    ctaPrevenu: "Be notified when the book is out",
+    ctaPrevenu: "Get the free fragments",
+    acheter: "Buy on Amazon",
     ctaExtrait: "Read an excerpt",
     ctaRituel: "Discover the daily ritual",
     ritualTitle: "A book, and a daily ritual",
@@ -99,7 +114,7 @@ const S: Record<Language, Record<string, string>> = {
     ctaFragments: "Get the fragments for free",
     sourcesTitle: "On the sources",
     sourcesP1: "The fragments are freely inspired by great families of wisdom — sapiential and biblical, evangelical, Qur'anic and Mediterranean, Stoic, Greek, juridical. They are not quotations; no precise reference is given as proof, and no false reference is made. The book remains secular in use.",
-    finalTitle: "Receive the first fragments and be notified of the release.",
+    finalTitle: "Receive the fragments for free, week after week.",
     finalSub: "Free. Two fragments a week, no paid subscription.",
     backTop: "↑ Back to top",
   },
@@ -123,16 +138,17 @@ const S: Record<Language, Record<string, string>> = {
     ailleursSubtitle: "Algunos fragmentos de otras Partes, para mostrar la amplitud de los temas.",
     extraitInspiration: "Cada fragmento está libremente inspirado en una tradición de sabiduría — nunca una cita.",
     domainesTitle: "Las ocho Partes",
-    domainesIntro: "Unos 205 fragmentos, en ocho Partes, abiertas cada una por una meditación. 138 páginas.",
+    domainesIntro: "203 fragmentos y dos escenas, en ocho Partes, abiertas cada una por una meditación. 136 páginas.",
     objetTitle: "Conseguir el libro",
     objetIntro: "El libro es lo único de pago del proyecto: los fragmentos diarios siguen siendo gratuitos.",
     objetPapier: "Libro impreso",
     objetPapierDesc: "13 × 20 cm, papel crema — un objeto sobrio y duradero.",
     objetEbook: "Ebook",
-    objetEbookDesc: "EPUB · PDF · Kindle.",
-    objetLangues: "Ediciones en inglés y español en preparación.",
+    objetEbookDesc: "Kindle — para leer en lector, tableta o móvil.",
+    objetLangues: "La edición española (Las leyes invisibles) llega a finales de noviembre. Mientras tanto, están disponibles la edición original en francés y la edición en inglés.",
     bientot: "Próximamente",
-    ctaPrevenu: "Avisarme de la salida del libro",
+    ctaPrevenu: "Recibir los fragmentos gratis",
+    acheter: "Comprar en Amazon",
     ctaExtrait: "Leer un extracto",
     ctaRituel: "Descubrir el ritual diario",
     ritualTitle: "Un libro, y un ritual diario",
@@ -141,7 +157,7 @@ const S: Record<Language, Record<string, string>> = {
     ctaFragments: "Recibir los fragmentos gratis",
     sourcesTitle: "Sobre las fuentes",
     sourcesP1: "Los fragmentos están libremente inspirados en grandes familias de sabiduría — sapiencial y bíblica, evangélica, coránica y mediterránea, estoica, griega, jurídica. No son citas; ninguna referencia precisa se da como prueba, y no se inventa ninguna referencia falsa. El libro es laico en su uso.",
-    finalTitle: "Recibe los primeros fragmentos y entérate de la salida.",
+    finalTitle: "Recibe los fragmentos gratis, semana tras semana.",
     finalSub: "Gratis. Dos fragmentos por semana, sin suscripción de pago.",
     backTop: "↑ Volver arriba",
   },
@@ -290,21 +306,24 @@ export function BookView() {
             </ol>
           </section>
 
-          {/* 5 — Se procurer (livre payant ; pas de paiement réel) */}
+          {/* 5 — Se procurer (liens Amazon ; aucun paiement sur le site) */}
           <section id="objet" className="mb-16 md:mb-24 scroll-mt-20">
             <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-3">{s.objetTitle}</h2>
             <p className="text-muted-foreground mb-8">{s.objetIntro}</p>
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {[
-                { tt: s.objetPapier, d: s.objetPapierDesc },
-                { tt: s.objetEbook, d: s.objetEbookDesc },
+                { tt: s.objetPapier, d: s.objetPapierDesc, buy: BUY[lang]?.paper },
+                { tt: s.objetEbook, d: s.objetEbookDesc, buy: BUY[lang]?.kindle },
               ].map((c) => (
-                <div key={c.tt} className="rounded-lg border border-primary/15 p-5">
+                <div key={c.tt} className="rounded-lg border border-primary/15 p-5 flex flex-col">
                   <div className="flex items-center justify-between gap-2 mb-2">
                     <span className="text-lg font-medium text-foreground">{c.tt}</span>
-                    <span className="text-xs tracking-wide uppercase text-accent/80 border border-accent/30 rounded px-2 py-0.5">{s.bientot}</span>
+                    <span className="text-xs tracking-wide uppercase text-accent/80 border border-accent/30 rounded px-2 py-0.5">{c.buy ? c.buy.price : s.bientot}</span>
                   </div>
                   <p className="text-sm text-muted-foreground">{c.d}</p>
+                  {c.buy && (
+                    <a href={c.buy.url} target="_blank" rel="noopener noreferrer" className="mt-4 self-start rounded-md bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90 transition">{s.acheter}</a>
+                  )}
                 </div>
               ))}
             </div>

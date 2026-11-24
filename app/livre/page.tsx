@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { BookView } from "@/components/book-view";
 
-// SEO sobre, non trompeur. Pas de promesse commerciale : le livre n'est pas encore en vente.
+// SEO sobre, non trompeur. Le livre est en vente sur Amazon (broché et Kindle) depuis le 23/11/2026.
 // Métadonnées en français (langue de rendu par défaut côté serveur) ; les versions EN/ES
 // sont rendues côté client. Une vraie localisation des métadonnées exigerait des routes /en /es
 // (non en place) — documenté dans LIVRE_PAGE_PREVIEW_QA_REPORT.md.
 const DESCRIPTION =
-  "Les Lois Invisibles — un livre de fragments de sagesse pour mieux lire notre époque. Extraits, les huit Domaines, et le rituel quotidien gratuit.";
+  "Les Lois Invisibles — 203 fragments de sagesse pour mieux lire notre époque. Broché et Kindle sur Amazon, extraits, les huit Domaines, et le rituel quotidien gratuit.";
 
 export const metadata: Metadata = {
   title: "Le livre",
