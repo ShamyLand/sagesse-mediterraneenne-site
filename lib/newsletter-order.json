@@ -1,0 +1,1224 @@
+{
+  "_note": "Ordre de diffusion FIGÉ de la newsletter (mardi + vendredi). Ne jamais réordonner ni retirer une entrée déjà envoyée : l index est calculé depuis le 01/12/2026. Textes copiés à l identique de BOOK_1_PDF_STRUCTURE.json. Les 18 fragments de l accueil sont placés en dernier.",
+  "start": "2026-12-01",
+  "items": [
+    {
+      "n": 1,
+      "livre": "I",
+      "title": "L'humilité affichée",
+      "text": "Afficher son humilité, c'est encore une manière de parler de soi."
+    },
+    {
+      "n": 2,
+      "livre": "II",
+      "title": "Le silence qui arrange",
+      "text": "Se taire pour garder la paix, c'est laisser le mensonge parler à notre place."
+    },
+    {
+      "n": 3,
+      "livre": "III",
+      "title": "Le mur des flatteurs",
+      "text": "Le chef qui n'écoute que les flatteurs s'entoure d'un mur qui le coupe de la vérité."
+    },
+    {
+      "n": 4,
+      "livre": "IV",
+      "title": "La justice rancunière",
+      "text": "Un juge qui condamne par rancune ne rend pas la justice : il se sert de la loi pour se venger."
+    },
+    {
+      "n": 5,
+      "livre": "V",
+      "title": "L'avare et l'héritier",
+      "text": "L'avare amasse pour des héritiers qui n'attendent qu'une chose : qu'il s'en aille enfin."
+    },
+    {
+      "n": 6,
+      "livre": "VI",
+      "title": "L'envie",
+      "text": "L'envieux ne veut pas tant ce que l'autre possède : il veut surtout que l'autre cesse de l'avoir."
+    },
+    {
+      "n": 7,
+      "livre": "VII",
+      "title": "Joignable et seul",
+      "text": "Être joignable à toute heure n'est pas être accompagné : on peut se sentir seul au milieu de mille messages."
+    },
+    {
+      "n": 8,
+      "livre": "VIII",
+      "title": "Le temps qu'on croit infini",
+      "text": "On dépense sa vie comme si elle était sans fin, et l'on s'étonne, trop tard, de l'avoir passée à ce qu'on n'avait pas choisi."
+    },
+    {
+      "n": 9,
+      "livre": "I",
+      "title": "La honte et le regard",
+      "text": "On craint moins de mal agir que d'être vu mal agir : la honte surveille le regard des autres, pas la conscience."
+    },
+    {
+      "n": 10,
+      "livre": "II",
+      "title": "La promesse légère",
+      "text": "Promettre coûte si peu sur l'instant qu'on oublie ce qu'il en coûtera de tenir."
+    },
+    {
+      "n": 11,
+      "livre": "III",
+      "title": "Servir ou s'asseoir",
+      "text": "Certains veulent le pouvoir pour servir, d'autres parlent de servir pour l'obtenir : une fois au pouvoir, on voit lesquels servent encore."
+    },
+    {
+      "n": 12,
+      "livre": "IV",
+      "title": "Juger sans écouter",
+      "text": "Condamner avant d'avoir écouté, c'est déjà avoir choisi : la sentence précède alors le procès."
+    },
+    {
+      "n": 13,
+      "livre": "V",
+      "title": "La générosité sans dette",
+      "text": "Le vrai don ne laisse aucune dette : ni chez celui qui reçoit, ni dans le cœur de celui qui donne."
+    },
+    {
+      "n": 14,
+      "livre": "VI",
+      "title": "L'ingratitude",
+      "text": "On oublie vite la main qui nous a aidés : se souvenir d'un bienfait, c'est se souvenir qu'on a eu besoin."
+    },
+    {
+      "n": 15,
+      "livre": "VII",
+      "title": "La paille et la poutre",
+      "text": "On regarde la faute du voisin à la loupe, et la sienne à travers ses propres excuses."
+    },
+    {
+      "n": 16,
+      "livre": "VIII",
+      "title": "Le deuil et le remords",
+      "text": "On pleure les morts aussi pour ce qu'on ne leur a pas donné vivants : le deuil porte le remords de ce qui restait à faire."
+    },
+    {
+      "n": 17,
+      "livre": "I",
+      "title": "La patience",
+      "text": "Être patient, ce n'est pas ne rien faire : c'est refuser d'agir sous le coup, pour agir au bon moment."
+    },
+    {
+      "n": 18,
+      "livre": "II",
+      "title": "La parole qui transperce",
+      "text": "Une parole lancée pour blesser fait plus de mal qu'un coup : le corps guérit, le mot reste."
+    },
+    {
+      "n": 19,
+      "livre": "III",
+      "title": "Diviser pour régner",
+      "text": "Celui qui dresse les uns contre les autres ne gouverne pas : il se rend indispensable à un désordre qu'il a lui-même créé."
+    },
+    {
+      "n": 20,
+      "livre": "IV",
+      "title": "La justice du pauvre",
+      "text": "On ne mesure pas la justice d'une société à ce qu'elle promet, mais à ce qu'elle tolère pour les plus faibles."
+    },
+    {
+      "n": 21,
+      "livre": "V",
+      "title": "L'héritage non bâti",
+      "text": "Hériter sans avoir bâti, c'est recevoir une maison dont on ignore le prix : on dépense vite ce qu'on n'a pas gagné."
+    },
+    {
+      "n": 22,
+      "livre": "VI",
+      "title": "Le pardon qui fuit",
+      "text": "Pardonner trop vite pour éviter la dispute, ce n'est pas pardonner : c'est ranger sa colère sans l'avoir réglée."
+    },
+    {
+      "n": 23,
+      "livre": "VII",
+      "title": "Le confort de la foule",
+      "text": "Suivre la foule dispense de penser : on échange sa liberté contre le confort d'avoir tort avec les autres."
+    },
+    {
+      "n": 24,
+      "livre": "VIII",
+      "title": "La trace",
+      "text": "On veut laisser une trace ; on oublie que la plupart des noms gravés ne disent déjà plus rien à personne."
+    },
+    {
+      "n": 25,
+      "livre": "I",
+      "title": "La peur imaginée",
+      "text": "La peur nous fait souffrir deux fois : d'abord en imaginant le pire, puis s'il arrive — et souvent il n'arrive pas."
+    },
+    {
+      "n": 26,
+      "livre": "II",
+      "title": "Le secret confié",
+      "text": "Confier un secret à qui aime plaire, c'est le donner d'avance à tous ceux qu'il voudra séduire."
+    },
+    {
+      "n": 27,
+      "livre": "III",
+      "title": "L'ennemi sans défense",
+      "text": "On reconnaît un homme à ce qu'il fait de ses ennemis le jour où il n'a plus rien à craindre d'eux."
+    },
+    {
+      "n": 28,
+      "livre": "IV",
+      "title": "Le faux témoin",
+      "text": "Le faux témoin ne tue pas de ses mains : il prête sa bouche au mensonge des autres."
+    },
+    {
+      "n": 29,
+      "livre": "V",
+      "title": "Le prix et la valeur",
+      "text": "Celui qui apprend le prix de tout finit par ignorer la valeur de ce qui ne s'achète pas."
+    },
+    {
+      "n": 30,
+      "livre": "VI",
+      "title": "La trahison",
+      "text": "On n'est trahi que par ceux qu'on a fait entrer dans son intimité : la trahison est le prix de la confiance accordée."
+    },
+    {
+      "n": 31,
+      "livre": "VII",
+      "title": "L'étranger utile",
+      "text": "On accueille l'étranger tant qu'il sert, et l'on redécouvre qu'il est étranger le jour où il demande."
+    },
+    {
+      "n": 32,
+      "livre": "VIII",
+      "title": "L'honneur des cheveux blancs",
+      "text": "On respecte le vieillard pour ses cheveux blancs et l'on néglige ce qu'il a appris : on honore le symbole, pas le savoir."
+    },
+    {
+      "n": 33,
+      "livre": "I",
+      "title": "Le courage discret",
+      "text": "Le vrai courage ne fait pas de bruit : il agit quand personne ne saura jamais que c'était difficile."
+    },
+    {
+      "n": 34,
+      "livre": "II",
+      "title": "Le conseil non demandé",
+      "text": "Le conseil qu'on n'a pas demandé sert plus souvent celui qui le donne que celui qui l'écoute."
+    },
+    {
+      "n": 35,
+      "livre": "III",
+      "title": "Obéir sans comprendre",
+      "text": "Celui qui exécute sans comprendre se croit innocent : il a seulement confié sa conscience à un autre."
+    },
+    {
+      "n": 36,
+      "livre": "IV",
+      "title": "L'impunité d'en haut",
+      "text": "Là où la faute ne coûte rien aux puissants, la loi devient une leçon réservée aux faibles."
+    },
+    {
+      "n": 37,
+      "livre": "V",
+      "title": "Le sommeil du riche",
+      "text": "Le pauvre dort mal parce qu'il manque ; le riche dort mal parce qu'il craint de manquer : la peur ne se vend pas avec le reste."
+    },
+    {
+      "n": 38,
+      "livre": "VI",
+      "title": "La rancune",
+      "text": "Garder rancune, c'est veiller un feu qui ne brûle que sa propre maison."
+    },
+    {
+      "n": 39,
+      "livre": "VII",
+      "title": "L'exilé et la langue",
+      "text": "L'exilé peut apprendre la langue du pays sans jamais cesser de penser dans celle de son enfance."
+    },
+    {
+      "n": 40,
+      "livre": "VIII",
+      "title": "Dire assez",
+      "text": "Vouloir toujours plus n'est pas de l'ambition : c'est ne jamais savoir reconnaître qu'on a assez."
+    },
+    {
+      "n": 41,
+      "livre": "I",
+      "title": "La distraction",
+      "text": "On s'occupe de mille choses pour n'avoir pas à affronter la seule qui nous attend."
+    },
+    {
+      "n": 42,
+      "livre": "II",
+      "title": "La confidence-piège",
+      "text": "Se confier pour obtenir une confidence en retour, ce n'est pas s'ouvrir : c'est tendre un piège poli."
+    },
+    {
+      "n": 43,
+      "livre": "III",
+      "title": "Ce que craint le tyran",
+      "text": "Le tyran redoute moins ses ennemis armés que l'homme juste qu'il ne peut ni acheter ni faire taire."
+    },
+    {
+      "n": 44,
+      "livre": "IV",
+      "title": "Deux poids, deux mesures",
+      "text": "Une loi dure pour les faibles et clémente pour les puissants n'est plus une loi : c'est un privilège déguisé en règle."
+    },
+    {
+      "n": 45,
+      "livre": "V",
+      "title": "Serviteur ou maître",
+      "text": "L'argent est un bon serviteur quand on l'emploie, et un maître affamé quand on se met à le servir."
+    },
+    {
+      "n": 46,
+      "livre": "VI",
+      "title": "Le pardon et le besoin",
+      "text": "Qui ne pardonne jamais oublie qu'il a, lui aussi, besoin d'être excusé."
+    },
+    {
+      "n": 47,
+      "livre": "VII",
+      "title": "Une personne, un peuple",
+      "text": "On juge un peuple entier sur une seule personne, puis chaque personne sur l'idée qu'on s'est faite de son peuple."
+    },
+    {
+      "n": 48,
+      "livre": "VIII",
+      "title": "Tout passe",
+      "text": "Ce qui paraît immense aujourd'hui — la querelle, la peur, l'humiliation — le temps le réduit à une ligne qu'on oublie."
+    },
+    {
+      "n": 49,
+      "livre": "I",
+      "title": "Le perfectionnisme",
+      "text": "À vouloir le faire parfaitement, on finit par ne pas le faire : l'excellence sert parfois d'alibi à la peur."
+    },
+    {
+      "n": 50,
+      "livre": "II",
+      "title": "La parole donnée",
+      "text": "Tenir parole quand cela coûte, c'est là seulement qu'on voit ce qu'elle valait."
+    },
+    {
+      "n": 51,
+      "livre": "III",
+      "title": "L'autorité empruntée",
+      "text": "L'autorité qui ne tient qu'au titre tombe avec lui ; celle qui tient aux actes n'en a jamais eu besoin."
+    },
+    {
+      "n": 52,
+      "livre": "IV",
+      "title": "La loi du plus fort",
+      "text": "Quand la règle protège ceux qui l'écrivent et accable ceux qui la subissent, on continue de l'appeler justice par habitude."
+    },
+    {
+      "n": 53,
+      "livre": "V",
+      "title": "L'emprunt",
+      "text": "Emprunter, c'est acheter aujourd'hui avec la liberté de demain : la dette change l'avenir en dû."
+    },
+    {
+      "n": 54,
+      "livre": "VI",
+      "title": "Le reproche du passé",
+      "text": "Reprocher sans cesse le passé à quelqu'un, c'est l'enfermer dans ce qu'il était pour ne pas voir ce qu'il devient."
+    },
+    {
+      "n": 55,
+      "livre": "VII",
+      "title": "La frontière du regard",
+      "text": "La frontière la plus dure à franchir n'est pas sur la carte : c'est celle qu'on trace dans le regard de celui qui accueille."
+    },
+    {
+      "n": 56,
+      "livre": "VIII",
+      "title": "Le lendemain dû",
+      "text": "On dit « plus tard » à ce qui compte et « tout de suite » à ce qui presse : la vie s'en va dans l'urgence des choses sans importance."
+    },
+    {
+      "n": 57,
+      "livre": "I",
+      "title": "Le mensonge qu'on se raconte",
+      "text": "Le plus dur à démasquer n'est pas le menteur : c'est le mensonge qu'on se raconte à soi-même pour avoir la paix."
+    },
+    {
+      "n": 58,
+      "livre": "II",
+      "title": "L'ironie qui blesse",
+      "text": "L'ironie permet de blesser tout en gardant le droit de dire qu'on plaisantait."
+    },
+    {
+      "n": 59,
+      "livre": "III",
+      "title": "L'ordre qui descend",
+      "text": "Qui donne un ordre en reste responsable jusqu'au dernier qui l'exécute : commander, c'est répondre aussi de ce qu'on n'a pas vu faire."
+    },
+    {
+      "n": 60,
+      "livre": "IV",
+      "title": "Le présent au juge",
+      "text": "Un cadeau glissé au juge ne change pas la loi : il change seulement les yeux de celui qui l'applique."
+    },
+    {
+      "n": 61,
+      "livre": "V",
+      "title": "La fortune des autres",
+      "text": "On envie ce que les autres possèdent sans jamais voir ce qu'il leur en a coûté de l'obtenir."
+    },
+    {
+      "n": 62,
+      "livre": "VI",
+      "title": "L'amour qui possède",
+      "text": "Aimer en voulant tout contrôler de l'autre, ce n'est pas l'aimer : c'est avoir peur de le perdre."
+    },
+    {
+      "n": 63,
+      "livre": "VII",
+      "title": "Le jugement des autres",
+      "text": "On passe la moitié de sa vie à craindre le jugement de gens qui pensent à nous bien moins qu'on ne l'imagine."
+    },
+    {
+      "n": 64,
+      "livre": "VIII",
+      "title": "Aimer les morts",
+      "text": "On pleure les morts avec une tendresse qu'on a refusée aux vivants : une fois disparus, ils ne réclament plus rien — et c'est ce qui les rend faciles à aimer."
+    },
+    {
+      "n": 65,
+      "livre": "I",
+      "title": "La conscience qu'on endort",
+      "text": "On ne fait pas taire sa conscience d'un coup : on l'étouffe une petite fois, puis mille, jusqu'à ne plus l'entendre."
+    },
+    {
+      "n": 66,
+      "livre": "II",
+      "title": "La parole creuse",
+      "text": "Parler beaucoup pour ne rien dire, c'est cacher le vide sous le bruit."
+    },
+    {
+      "n": 67,
+      "livre": "III",
+      "title": "Récompenser le silence",
+      "text": "Quand se taire rapporte plus que dire vrai, le pouvoir a déjà commencé à pourrir."
+    },
+    {
+      "n": 68,
+      "livre": "IV",
+      "title": "La justice lente",
+      "text": "Pour celui qui attend justice, chaque jour de retard est déjà une part de la peine."
+    },
+    {
+      "n": 69,
+      "livre": "V",
+      "title": "Le prix du temps",
+      "text": "Vendre tout son temps pour de l'argent, c'est s'enrichir d'un côté en se ruinant de l'autre."
+    },
+    {
+      "n": 70,
+      "livre": "VI",
+      "title": "La transmission",
+      "text": "On ne transmet pas ce qu'on dit, mais ce qu'on est : les enfants entendent mal les leçons et retiennent tout des exemples."
+    },
+    {
+      "n": 71,
+      "livre": "VII",
+      "title": "L'autre camp",
+      "text": "On déteste souvent l'autre groupe non pour ce qu'il est, mais pour mieux se sentir du sien."
+    },
+    {
+      "n": 72,
+      "livre": "VIII",
+      "title": "Le présent négligé",
+      "text": "On vit dans le souvenir d'hier et la peur de demain, et l'on oublie le seul jour qu'on possède."
+    },
+    {
+      "n": 73,
+      "livre": "I",
+      "title": "Le masque",
+      "text": "À force de tenir son rôle, on croit au personnage et l'on finit par perdre la personne."
+    },
+    {
+      "n": 74,
+      "livre": "II",
+      "title": "Le silence en réponse",
+      "text": "À celui qui cherche la dispute, le silence répond mieux que la raison."
+    },
+    {
+      "n": 75,
+      "livre": "III",
+      "title": "Gouverner par la peur",
+      "text": "Gouverner par la peur, c'est obtenir l'obéissance et perdre la loyauté."
+    },
+    {
+      "n": 76,
+      "livre": "IV",
+      "title": "La victime soupçonnée",
+      "text": "Demander à la victime ce qu'elle a fait pour mériter cela, c'est déjà passer du côté de celui qui a frappé."
+    },
+    {
+      "n": 77,
+      "livre": "V",
+      "title": "L'obole de la veuve",
+      "text": "Le peu donné par qui manque pèse plus que le beaucoup donné par qui ne s'en aperçoit pas."
+    },
+    {
+      "n": 78,
+      "livre": "VI",
+      "title": "Le parent qui sait tout",
+      "text": "Vouloir épargner toute erreur à son enfant, c'est lui retirer le seul maître qui enseigne vraiment : l'expérience."
+    },
+    {
+      "n": 79,
+      "livre": "VII",
+      "title": "Le spectateur",
+      "text": "Filmer le malheur d'un autre au lieu de l'aider, c'est devenir spectateur de ce qu'on aurait dû empêcher."
+    },
+    {
+      "n": 80,
+      "livre": "VIII",
+      "title": "Le regret",
+      "text": "Le regret n'est pas la mémoire du passé : c'est la facture de ce qu'on n'a pas osé."
+    },
+    {
+      "n": 81,
+      "livre": "I",
+      "title": "L'apitoiement",
+      "text": "Se plaindre soulage un instant et enferme pour longtemps : la plainte prend la place de l'acte."
+    },
+    {
+      "n": 82,
+      "livre": "II",
+      "title": "L'annonce qui dispense",
+      "text": "Annoncer tout haut ce qu'on fera, c'est souvent en avoir déjà tiré le plaisir sans l'avoir fait."
+    },
+    {
+      "n": 83,
+      "livre": "III",
+      "title": "L'habit du pouvoir",
+      "text": "L'habit du pouvoir ne rend pas juste : il rend seulement plus difficile de voir l'injustice de celui qui le porte."
+    },
+    {
+      "n": 84,
+      "livre": "IV",
+      "title": "La loi et l'équité",
+      "text": "La loi traite tout le monde de la même façon ; l'équité regarde la situation de chacun : appliquer la règle sans regarder le cas peut être la pire injustice."
+    },
+    {
+      "n": 85,
+      "livre": "V",
+      "title": "Le luxe",
+      "text": "Le luxe finit par rendre indispensable ce dont on ignorait l'existence la veille."
+    },
+    {
+      "n": 86,
+      "livre": "VI",
+      "title": "Le secret de famille",
+      "text": "Les secrets qu'on tait pour protéger la famille sont souvent ceux qui la rongent en silence."
+    },
+    {
+      "n": 87,
+      "livre": "VII",
+      "title": "La meute",
+      "text": "Seul, on hésite à nuire ; en groupe, on ose : la honte se divise par le nombre."
+    },
+    {
+      "n": 88,
+      "livre": "VIII",
+      "title": "Les mots tus",
+      "text": "On dit aux morts les mots qu'on leur a tus de leur vivant ; le regret arrive toujours trop tard pour qu'ils l'entendent."
+    },
+    {
+      "n": 89,
+      "livre": "I",
+      "title": "La sincérité-prétexte",
+      "text": "\"Je dis ce que je pense\" sert souvent à excuser ce qu'on n'a pas pris la peine de penser."
+    },
+    {
+      "n": 90,
+      "livre": "II",
+      "title": "La critique facile",
+      "text": "Démolir l'œuvre d'un autre demande une phrase ; en faire autant demande une vie."
+    },
+    {
+      "n": 91,
+      "livre": "III",
+      "title": "La responsabilité diluée",
+      "text": "Quand tout le monde décide, personne ne répond : la faute se partage jusqu'à n'être celle de personne."
+    },
+    {
+      "n": 92,
+      "livre": "IV",
+      "title": "Pardonner sans effacer",
+      "text": "Pardonner n'est pas effacer la faute : c'est renoncer à se venger, pas à la vérité."
+    },
+    {
+      "n": 93,
+      "livre": "V",
+      "title": "Acheter les heures",
+      "text": "On peut acheter les heures d'une personne, jamais son zèle : ce qui se commande n'est pas ce qui se donne."
+    },
+    {
+      "n": 94,
+      "livre": "VI",
+      "title": "L'enfant comparé",
+      "text": "Comparer ses enfants entre eux, c'est apprendre à chacun qu'il n'est aimé qu'à la place d'un autre."
+    },
+    {
+      "n": 95,
+      "livre": "VII",
+      "title": "Le déraciné",
+      "text": "On quitte son pays en un jour ; il faut une vie pour que le pays nous quitte."
+    },
+    {
+      "n": 96,
+      "livre": "VIII",
+      "title": "La vieillesse semée",
+      "text": "La vieillesse n'invente rien : elle agrandit ce qu'on a semé, la rancune comme la paix."
+    },
+    {
+      "n": 97,
+      "livre": "I",
+      "title": "L'excuse anticipée",
+      "text": "S'excuser de tout avant même d'agir n'est pas de l'humilité : c'est se mettre à l'abri du reproche."
+    },
+    {
+      "n": 98,
+      "livre": "II",
+      "title": "L'écoute",
+      "text": "Écouter vraiment, c'est se taire sans préparer déjà sa réponse."
+    },
+    {
+      "n": 99,
+      "livre": "III",
+      "title": "Le petit chef",
+      "text": "Donne une once de pouvoir à qui n'en a jamais eu, et tu verras parfois surgir le tyran qui dormait."
+    },
+    {
+      "n": 100,
+      "livre": "IV",
+      "title": "La vengeance",
+      "text": "Se venger, c'est laisser celui qui nous a blessés décider deux fois de notre conduite."
+    },
+    {
+      "n": 101,
+      "livre": "V",
+      "title": "Le salaire et l'aumône",
+      "text": "On réclame un salaire la tête haute ; une aumône mal donnée fait baisser les yeux."
+    },
+    {
+      "n": 102,
+      "livre": "VI",
+      "title": "La jalousie",
+      "text": "La jalousie n'est pas la preuve de l'amour : c'est la peur de ne pas suffire, déguisée en vigilance."
+    },
+    {
+      "n": 103,
+      "livre": "VII",
+      "title": "L'hospitalité",
+      "text": "Recevoir vraiment, ce n'est pas montrer ce qu'on a : c'est faire de la place à ce que l'autre est."
+    },
+    {
+      "n": 104,
+      "livre": "VIII",
+      "title": "La mort cachée",
+      "text": "On cache la mort pour ne pas y penser, et c'est ainsi qu'elle nous prend toujours par surprise."
+    },
+    {
+      "n": 105,
+      "livre": "I",
+      "title": "La paresse déguisée",
+      "text": "On appelle \"attendre le bon moment\" ce qui n'est que la peur de commencer."
+    },
+    {
+      "n": 106,
+      "livre": "II",
+      "title": "La parole qui relève",
+      "text": "Un mot juste au bon moment peut relever quelqu'un que mille discours n'auraient pas touché."
+    },
+    {
+      "n": 107,
+      "livre": "III",
+      "title": "La force qui s'exhibe",
+      "text": "La force qui a besoin de se montrer doute déjà d'elle-même."
+    },
+    {
+      "n": 108,
+      "livre": "IV",
+      "title": "La mesure de la peine",
+      "text": "Une faute légère punie comme un crime et un crime traité comme une faute disent la même chose : la justice a perdu la mesure."
+    },
+    {
+      "n": 109,
+      "livre": "V",
+      "title": "L'avarice du cœur",
+      "text": "On peut être avare sans manquer de rien : il est des riches qui comptent jusqu'à leur tendresse."
+    },
+    {
+      "n": 110,
+      "livre": "VI",
+      "title": "Le deuil des vivants",
+      "text": "On peut perdre quelqu'un sans qu'il meure : il suffit que cesse ce qui nous liait."
+    },
+    {
+      "n": 111,
+      "livre": "VII",
+      "title": "L'uniformité",
+      "text": "À vouloir que tous pensent de la même façon, une société ne gagne pas la paix : elle perd ceux qui auraient pu la corriger."
+    },
+    {
+      "n": 112,
+      "livre": "VIII",
+      "title": "La mort des autres",
+      "text": "Savoir qu'on doit mourir ne sert à rien si l'on vit comme si ce savoir ne concernait que les autres."
+    },
+    {
+      "n": 113,
+      "livre": "I",
+      "title": "Le besoin de plaire",
+      "text": "Vouloir plaire à tous, c'est se condamner à n'être personne pour chacun."
+    },
+    {
+      "n": 114,
+      "livre": "II",
+      "title": "La promesse à l'enfant",
+      "text": "Une promesse faite à un enfant n'est pas petite : c'est là qu'il apprend si la parole des grands vaut quelque chose."
+    },
+    {
+      "n": 115,
+      "livre": "III",
+      "title": "L'ennemi commode",
+      "text": "Le pouvoir aime un ennemi : rien ne fait mieux taire les questions du dedans qu'une peur venue du dehors."
+    },
+    {
+      "n": 116,
+      "livre": "IV",
+      "title": "Punir pour relever",
+      "text": "Punir pour corriger relève celui qu'on punit ; punir pour se venger abaisse aussi celui qui punit."
+    },
+    {
+      "n": 117,
+      "livre": "V",
+      "title": "Le pari sur demain",
+      "text": "Miser tout sur un gain à venir, c'est vendre un présent certain contre un futur qui ne nous appartient pas."
+    },
+    {
+      "n": 118,
+      "livre": "VI",
+      "title": "Crier contre les siens",
+      "text": "On crie le plus fort contre ceux qu'on croit sûrs de rester — jusqu'au jour où ils ne restent plus."
+    },
+    {
+      "n": 119,
+      "livre": "VII",
+      "title": "L'étranger qu'on a été",
+      "text": "Qui n'a jamais été l'étranger quelque part ne sait pas ce qu'il demande à celui qu'il rejette."
+    },
+    {
+      "n": 120,
+      "livre": "VIII",
+      "title": "La mort égalise",
+      "text": "La mort ne respecte ni les titres ni les fortunes : c'est la seule loi que personne n'a jamais contournée."
+    },
+    {
+      "n": 121,
+      "livre": "I",
+      "title": "L'orgueil blessé",
+      "text": "Ce qu'on prend pour de la dignité n'est parfois qu'un orgueil qui n'a pas obtenu ce qu'il voulait."
+    },
+    {
+      "n": 122,
+      "livre": "II",
+      "title": "La vérité-arme",
+      "text": "Dire la vérité sans égard pour celui qui l'entend, c'est s'en servir comme d'une arme."
+    },
+    {
+      "n": 123,
+      "livre": "III",
+      "title": "Le successeur",
+      "text": "Celui qui ne prépare personne à le remplacer ne sert pas l'œuvre : il se sert d'elle."
+    },
+    {
+      "n": 124,
+      "livre": "IV",
+      "title": "L'aveu arraché",
+      "text": "Un aveu obtenu par la peur ne prouve pas la faute : il prouve qu'on a eu plus peur du juge que du mensonge."
+    },
+    {
+      "n": 125,
+      "livre": "V",
+      "title": "Le riche pressé",
+      "text": "Vouloir s'enrichir vite est presque toujours le plus court chemin pour tout perdre."
+    },
+    {
+      "n": 126,
+      "livre": "VI",
+      "title": "Se pardonner",
+      "text": "Il est parfois plus dur de se pardonner que de pardonner : l'orgueil veut une faute irréparable pour s'y accrocher."
+    },
+    {
+      "n": 127,
+      "livre": "VII",
+      "title": "La célébrité",
+      "text": "On envie ceux que tous regardent sans voir qu'être vu de tous, c'est n'être connu de personne."
+    },
+    {
+      "n": 128,
+      "livre": "VIII",
+      "title": "Voler le temps",
+      "text": "Voler le temps de quelqu'un par sa négligence, c'est lui prendre une part de vie qu'on ne lui rendra pas."
+    },
+    {
+      "n": 129,
+      "livre": "I",
+      "title": "La gratitude tardive",
+      "text": "On s'habitue si vite à ce qu'on possède qu'on ne le voit plus qu'une fois perdu."
+    },
+    {
+      "n": 130,
+      "livre": "II",
+      "title": "La médisance",
+      "text": "Médire d'un absent ne le diminue pas : cela éloigne lentement ceux qui écoutent de celui qui parle."
+    },
+    {
+      "n": 131,
+      "livre": "III",
+      "title": "Le privilège invisible",
+      "text": "Qui est né du bon côté prend sa place pour un mérite, et pour de la paresse ce qui n'est souvent que l'absence de portes ouvertes."
+    },
+    {
+      "n": 132,
+      "livre": "IV",
+      "title": "Juger l'intention",
+      "text": "Juger un acte sans chercher son intention, c'est confondre celui qui blesse par maladresse et celui qui blesse par dessein."
+    },
+    {
+      "n": 133,
+      "livre": "V",
+      "title": "L'argent qu'on tait",
+      "text": "On parle peu d'argent par pudeur, et c'est souvent ce silence qui permet à quelques-uns d'en prendre trop."
+    },
+    {
+      "n": 134,
+      "livre": "VI",
+      "title": "La rancune de famille",
+      "text": "Les plus longues rancunes sont de famille : on pardonne à un étranger ce qu'on reproche à vie à un frère."
+    },
+    {
+      "n": 135,
+      "livre": "VII",
+      "title": "Le retour de l'exilé",
+      "text": "L'exilé qui revient trouve un pays qui a continué sans lui : on ne revient jamais au lieu qu'on a quitté, seulement à sa place vide."
+    },
+    {
+      "n": 136,
+      "livre": "VIII",
+      "title": "La dernière fois",
+      "text": "Certains moments ne préviennent pas qu'ils étaient les derniers : on ne le sait qu'après, quand il est trop tard pour les vivre mieux."
+    },
+    {
+      "n": 137,
+      "livre": "I",
+      "title": "La rumination",
+      "text": "Repasser sans fin une blessure, ce n'est pas y réfléchir : c'est la rouvrir pour ne pas avoir à la refermer."
+    },
+    {
+      "n": 138,
+      "livre": "II",
+      "title": "Dire non",
+      "text": "Ne jamais savoir dire non, c'est promettre aux autres une disponibilité qu'on volera à ceux qu'on aime."
+    },
+    {
+      "n": 139,
+      "livre": "III",
+      "title": "La cruauté administrative",
+      "text": "On commet de loin, par un papier signé, ce qu'on n'oserait jamais faire en regardant l'autre dans les yeux."
+    },
+    {
+      "n": 140,
+      "livre": "IV",
+      "title": "Reconnaître et réparer",
+      "text": "Une faute reconnue et réparée pèse moins qu'une faute cachée : ce n'est pas l'erreur qui corrompt, c'est le déni."
+    },
+    {
+      "n": 141,
+      "livre": "V",
+      "title": "Le confort qui endort",
+      "text": "Le confort n'est pas le repos : c'est l'art de ne plus sentir ce qui devrait nous mettre debout."
+    },
+    {
+      "n": 142,
+      "livre": "VI",
+      "title": "La réconciliation",
+      "text": "Se réconcilier, ce n'est pas avoir raison ensemble : c'est préférer le lien à la victoire."
+    },
+    {
+      "n": 143,
+      "livre": "VII",
+      "title": "Le voisin lointain",
+      "text": "On s'émeut d'un drame à l'autre bout du monde et l'on ignore celui qui vit sur notre palier."
+    },
+    {
+      "n": 144,
+      "livre": "VIII",
+      "title": "Vieillir ensemble",
+      "text": "Vieillir auprès de quelqu'un, c'est accepter de le voir changer sans cesser de le choisir."
+    },
+    {
+      "n": 145,
+      "livre": "I",
+      "title": "La peur de l'opinion",
+      "text": "On renonce à ce qu'on désire par peur de ce qu'\"on\" dira — et cet \"on\" n'a ni visage ni mémoire."
+    },
+    {
+      "n": 146,
+      "livre": "II",
+      "title": "Le temps de se taire",
+      "text": "Il y a un temps pour parler et un temps pour se taire ; confondre les deux fait parfois plus de dégâts que le mensonge."
+    },
+    {
+      "n": 147,
+      "livre": "III",
+      "title": "Le chef qui ne porte rien",
+      "text": "Le chef qui ne porte jamais la faute mais réclame toute la gloire apprend aux siens à mentir pour survivre."
+    },
+    {
+      "n": 148,
+      "livre": "IV",
+      "title": "La justice pour soi",
+      "text": "Celui qui ne réclame la justice que lorsqu'il en est victime ne la défend pas : il défend ses intérêts."
+    },
+    {
+      "n": 149,
+      "livre": "VI",
+      "title": "Le parent présent-absent",
+      "text": "Un parent peut être là chaque jour et absent toute une vie : être présent n'est pas accompagner."
+    },
+    {
+      "n": 150,
+      "livre": "VII",
+      "title": "L'indifférence",
+      "text": "Passer sans voir celui qui tombe n'est pas de la neutralité : c'est un choix qui ne veut pas dire son nom."
+    },
+    {
+      "n": 151,
+      "livre": "VIII",
+      "title": "Ce que le temps apprend",
+      "text": "Le temps ne console pas de tout : il apprend seulement à porter ce à quoi on croyait ne pas pouvoir survivre."
+    },
+    {
+      "n": 152,
+      "livre": "I",
+      "title": "La fierté d'être débordé",
+      "text": "Se vanter d'être débordé, c'est confondre l'agitation avec l'importance."
+    },
+    {
+      "n": 153,
+      "livre": "II",
+      "title": "Reprendre en privé",
+      "text": "Corriger quelqu'un devant les autres, c'est moins vouloir l'aider que se grandir de sa faute."
+    },
+    {
+      "n": 154,
+      "livre": "III",
+      "title": "La fonction et soi",
+      "text": "On s'accroche à une fonction comme à soi-même ; le jour où on la quitte, on découvre qui l'on était sans elle."
+    },
+    {
+      "n": 155,
+      "livre": "IV",
+      "title": "Le juge et la foule",
+      "text": "Condamner pour calmer la foule, c'est se laver les mains d'un sang qu'on a pourtant versé."
+    },
+    {
+      "n": 156,
+      "livre": "VI",
+      "title": "L'orgueil des couples",
+      "text": "Trop de liens se brisent non sur une faute, mais sur l'orgueil de ne pas faire le premier pas."
+    },
+    {
+      "n": 157,
+      "livre": "VIII",
+      "title": "L'héritage immatériel",
+      "text": "Ce qu'on laisse de plus durable ne tient ni dans un coffre ni sur une pierre : c'est la trace laissée dans la façon dont les autres vivent."
+    },
+    {
+      "n": 158,
+      "livre": "I",
+      "title": "La maîtrise de soi",
+      "text": "On veut maîtriser le monde et l'on ne tient pas dix minutes sa propre colère."
+    },
+    {
+      "n": 159,
+      "livre": "II",
+      "title": "Le secret qui grandit",
+      "text": "Un secret ne grandit jamais seul : chaque oreille de plus rapproche le jour où tout le monde saura."
+    },
+    {
+      "n": 160,
+      "livre": "III",
+      "title": "La servilité choisie",
+      "text": "Servir un puissant n'oblige pas à ramper : qui rampe choisit, et appelle \"devoir\" ce qui n'est que peur."
+    },
+    {
+      "n": 161,
+      "livre": "IV",
+      "title": "Accuser pour se disculper",
+      "text": "Rejeter sa faute sur un autre ne l'efface pas : on ajoute la lâcheté au tort déjà commis."
+    },
+    {
+      "n": 162,
+      "livre": "VI",
+      "title": "Aimer l'idée",
+      "text": "On s'éprend parfois de l'idée qu'on se fait de quelqu'un, puis on lui en veut de ne pas lui ressembler."
+    },
+    {
+      "n": 163,
+      "livre": "VIII",
+      "title": "Servir encore",
+      "text": "Le vieillard ne redoute pas tant de mourir que d'avoir cessé de servir à quelque chose."
+    },
+    {
+      "n": 164,
+      "livre": "I",
+      "title": "L'attention",
+      "text": "Ce à quoi on prête attention finit par décider qui l'on devient."
+    },
+    {
+      "n": 165,
+      "livre": "II",
+      "title": "La vantardise",
+      "text": "Se vanter, c'est réclamer tout haut une estime qu'on n'ose pas espérer tout bas."
+    },
+    {
+      "n": 166,
+      "livre": "III",
+      "title": "Rendre des comptes",
+      "text": "Un pouvoir qui ne rend de comptes à personne finit toujours par se prendre pour la mesure du bien."
+    },
+    {
+      "n": 167,
+      "livre": "IV",
+      "title": "Le puissant qui s'incline",
+      "text": "Un puissant qui reconnaît son tort fait plus pour la justice que dix lois : il prouve que personne n'est au-dessus d'elle."
+    },
+    {
+      "n": 168,
+      "livre": "VI",
+      "title": "Comprendre ses parents",
+      "text": "On comprend ses parents trop tard : le jour où l'on porte à son tour ce qu'on leur reprochait."
+    },
+    {
+      "n": 169,
+      "livre": "VIII",
+      "title": "Compter ses jours",
+      "text": "Savoir ses jours comptés ne rend pas triste : cela rend attentif."
+    },
+    {
+      "n": 170,
+      "livre": "I",
+      "title": "La discipline",
+      "text": "Être libre, ce n'est pas suivre chaque envie : c'est ne pas en être l'esclave."
+    },
+    {
+      "n": 171,
+      "livre": "II",
+      "title": "La parole crue",
+      "text": "On peut retirer ses paroles, jamais le moment où l'autre les a crues."
+    },
+    {
+      "n": 172,
+      "livre": "III",
+      "title": "L'obéissance des bons",
+      "text": "Il ne faut pas beaucoup de méchants pour faire le mal : il suffit d'assez d'honnêtes gens qui obéissent sans regarder."
+    },
+    {
+      "n": 173,
+      "livre": "IV",
+      "title": "L'engrenage de la vengeance",
+      "text": "La vengeance n'éteint pas l'offense : elle la transmet, intacte, à qui voudra se venger à son tour."
+    },
+    {
+      "n": 174,
+      "livre": "VI",
+      "title": "La fidélité",
+      "text": "La fidélité n'est pas l'absence de tentation : c'est le choix répété de ce qu'on a promis."
+    },
+    {
+      "n": 175,
+      "livre": "VIII",
+      "title": "Mûrir",
+      "text": "On ne devient pas sage en vieillissant : on le devient en tirant les leçons que l'âge se contente d'offrir."
+    },
+    {
+      "n": 176,
+      "livre": "I",
+      "title": "La colère ravalée",
+      "text": "La colère qu'on ravale ne disparaît pas : elle s'installe et gouverne en silence."
+    },
+    {
+      "n": 177,
+      "livre": "II",
+      "title": "S'excuser vraiment",
+      "text": "S'excuser en expliquant pourquoi on avait raison, ce n'est pas demander pardon : c'est plaider non coupable."
+    },
+    {
+      "n": 178,
+      "livre": "IV",
+      "title": "Le bouc émissaire",
+      "text": "Désigner un seul coupable soulage la foule et innocente tous les autres : c'est commode, et c'est presque toujours faux."
+    },
+    {
+      "n": 179,
+      "livre": "VI",
+      "title": "Le cœur blindé",
+      "text": "À se protéger de toute blessure, on finit par ne plus rien sentir : le cœur qu'on blinde cesse aussi de battre pour les autres."
+    },
+    {
+      "n": 180,
+      "livre": "VIII",
+      "title": "Le deuil de soi",
+      "text": "Vieillir, c'est cesser d'en vouloir à la personne qu'on aurait pu être pour faire la paix avec celle qu'on est."
+    },
+    {
+      "n": 181,
+      "livre": "I",
+      "title": "L'image défendue",
+      "text": "On défend son image avec plus d'énergie qu'on n'en met à mériter qu'elle soit vraie."
+    },
+    {
+      "n": 182,
+      "livre": "II",
+      "title": "La langue de bois",
+      "text": "Parler pour ne rien risquer, c'est aligner des mots assez vagues pour que personne ne puisse jamais les reprendre."
+    },
+    {
+      "n": 183,
+      "livre": "IV",
+      "title": "Réparer en secret",
+      "text": "Réparer un tort que personne n'a vu, c'est la seule preuve qu'on regrettait la faute, pas d'avoir été pris."
+    },
+    {
+      "n": 184,
+      "livre": "VIII",
+      "title": "Le temps donné",
+      "text": "Donner son temps à quelqu'un, c'est lui offrir une part de sa vie qu'on ne récupérera pas : c'est le plus vrai des cadeaux."
+    },
+    {
+      "n": 185,
+      "livre": "I",
+      "title": "Le doute mesuré",
+      "text": "Un doute qui interroge fait avancer ; un doute qui condamne enferme : le même mot, tantôt une porte, tantôt une prison."
+    },
+    {
+      "n": 186,
+      "livre": "I",
+      "title": "La générosité filmée",
+      "text": "Quand je filme mon acte généreux, je transforme l'autre en décor de ma vertu."
+    },
+    {
+      "n": 187,
+      "livre": "I",
+      "title": "L'orgueil sourd",
+      "text": "L'orgueil ne se voit pas dans ce qu'on dit de soi, mais dans tout ce qu'on refuse d'entendre."
+    },
+    {
+      "n": 188,
+      "livre": "II",
+      "title": "La vérité qu'on ne veut pas entendre",
+      "text": "On pardonne plus facilement au menteur agréable qu'à celui qui dit la vérité qu'on ne veut pas entendre."
+    },
+    {
+      "n": 189,
+      "livre": "II",
+      "title": "La rumeur",
+      "text": "Répéter une rumeur, c'est vendre la réputation de quelqu'un — et toucher, au passage, le petit profit d'être celui qui sait."
+    },
+    {
+      "n": 190,
+      "livre": "II",
+      "title": "Le serment de trop",
+      "text": "Celui qui jure pour être cru avoue que sa parole, seule, ne suffit plus."
+    },
+    {
+      "n": 191,
+      "livre": "III",
+      "title": "Le flatteur",
+      "text": "Le flatteur ne t'admire pas : il étudie l'endroit où tu baisses la garde."
+    },
+    {
+      "n": 192,
+      "livre": "III",
+      "title": "Le délit de faciès",
+      "text": "Contrôler quelqu'un d'après son visage, ce n'est pas faire respecter la loi : c'est donner à ses préjugés l'uniforme de l'autorité."
+    },
+    {
+      "n": 193,
+      "livre": "III",
+      "title": "L'humiliation faible",
+      "text": "Humilier plus petit que soi, ce n'est pas être fort : c'est avouer qu'on a besoin de la petitesse d'un autre."
+    },
+    {
+      "n": 194,
+      "livre": "V",
+      "title": "Le prêt qui tient",
+      "text": "Prêter à un proche, c'est parfois acheter le droit de lui rappeler qu'il nous doit."
+    },
+    {
+      "n": 195,
+      "livre": "V",
+      "title": "Le don qui oblige",
+      "text": "Un cadeau qui attend de la reconnaissance n'en est plus un : c'est un prêt qui n'ose pas dire son nom."
+    },
+    {
+      "n": 196,
+      "livre": "V",
+      "title": "Jamais rassasié",
+      "text": "Celui qui aime l'argent n'en a jamais assez : ce n'est pas la richesse qu'il poursuit, c'est l'angoisse de manquer."
+    },
+    {
+      "n": 197,
+      "livre": "VI",
+      "title": "Le pardon stratégique",
+      "text": "Pardonner tout haut pour paraître grand, c'est garder la dette en s'offrant le rôle du généreux."
+    },
+    {
+      "n": 198,
+      "livre": "VI",
+      "title": "La colère qui se trompe de cible",
+      "text": "La colère se trompe presque toujours de coupable : elle frappe qui se trouve là, non qui l'a causée."
+    },
+    {
+      "n": 199,
+      "livre": "VII",
+      "title": "Le mérite et l'oubli",
+      "text": "Donner tout le mérite à celui qu'on voit, c'est confondre la lumière avec le travail — et oublier ceux qui l'ont fait dans l'ombre."
+    },
+    {
+      "n": 200,
+      "livre": "VII",
+      "title": "Entre deux absences",
+      "text": "L'exilé vit entre deux absences : un pays qui ne le retient plus, un autre qui ne le reconnaît pas encore."
+    },
+    {
+      "n": 201,
+      "livre": "VII",
+      "title": "La porte fermée",
+      "text": "On ferme sa porte à l'étranger par peur de ce qu'il prendra, et l'on ne saura jamais ce qu'il apportait."
+    },
+    {
+      "n": 202,
+      "livre": "VII",
+      "title": "Le mépris des anciens",
+      "text": "Une époque qui écarte ses vieillards oublie qu'elle se prépare à être écartée à son tour."
+    },
+    {
+      "n": 203,
+      "livre": "VII",
+      "title": "La vie à valider",
+      "text": "Montrer sans cesse sa vie, ce n'est pas la partager : c'est demander à des inconnus de décider si elle vaut quelque chose."
+    }
+  ]
+}
