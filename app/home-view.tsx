@@ -8,8 +8,15 @@ import { LanguageSelector } from "@/components/language-selector";
 import { DailyFragment, type HomeFragment } from "@/components/daily-fragment";
 import { useLanguage } from "@/lib/i18n/LanguageProvider";
 
+// Bandeau de lancement (semaine du 1er au 7 décembre 2026 ; reste ensuite comme renvoi vers le livre).
+const LAUNCH: Record<string, string> = {
+  fr: "Nouveau : le livre « Les Lois Invisibles » est disponible sur Amazon, broché et Kindle →",
+  en: "New: the book “The Invisible Laws” is out on Amazon, paperback and Kindle →",
+  es: "Nuevo: el libro «Las leyes invisibles» llega muy pronto a Amazon →",
+};
+
 export function HomeView({ morning, evening }: { morning: HomeFragment; evening: HomeFragment }) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   // Fragment mis en avant selon l'heure locale : 06h–18h → matin ; sinon → soir.
   const [primary, setPrimary] = useState<"morning" | "evening">("morning");
@@ -25,6 +32,13 @@ export function HomeView({ morning, evening }: { morning: HomeFragment; evening:
       <main className="flex-1 flex flex-col items-center px-4 md:px-6 lg:px-8 py-8 md:py-12">
         <div className="w-full max-w-4xl mx-auto flex flex-col items-center">
           <Header />
+
+          <Link
+            href="/livre"
+            className="w-full max-w-2xl mx-auto mb-6 block rounded-lg border border-primary/40 bg-card px-5 py-3 text-center text-sm md:text-base text-foreground hover:bg-secondary hover:border-primary transition-colors"
+          >
+            {LAUNCH[lang] ?? LAUNCH.fr}
+          </Link>
 
           <section className="w-full mt-2 mb-8 md:mb-10" aria-label="Langue">
             <LanguageSelector />

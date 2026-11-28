@@ -27,6 +27,8 @@ export function Footer() {
         <span className="text-foreground">{t("work.title")}</span> — {t("work.subtitle")}
       </p>
       <p className="text-xs text-muted-foreground">
+        <Link href="/presse" className="hover:text-foreground transition-colors">Presse</Link>
+        <span className="mx-2" aria-hidden="true">·</span>
         <Link href="/confidentialite" className="hover:text-foreground transition-colors">Confidentialité</Link>
       </p>
     </footer>

@@ -12,5 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/intention`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/manifeste`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/confidentialite`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
+    { url: `${BASE}/presse`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
   ];
 }
